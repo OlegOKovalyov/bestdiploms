@@ -1,0 +1,100 @@
+/* Форма ЗАКАЗАТЬ ДИПЛОМ */
+.wrap-form-order {
+    background-image: url(images/frame.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 30rem;
+    margin: -1.5rem !important;
+    margin-top: 1rem;
+    h4 {
+        align-self: center;
+        background: url(images/strip_mdark.png) no-repeat center top;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        height: 5rem;
+        letter-spacing: 2px;
+        margin-top: 3.5rem;
+        padding-top: .7rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+    .form-oder {
+        width: 65%;
+        margin: 1rem auto; 
+        .form-control {
+            align-self: center;
+            background-color: $form-control-color;
+            border: 2px solid $form-control-border;
+            line-height: 1.4;
+            margin: .5rem auto;
+        }        
+        a.btn.btn-danger {
+            @include button_theme(0.3rem, 2rem);
+            align-self: center;
+            margin: 1rem auto;
+            width: 50%;
+            /* &::after {
+                background: url(images/acap_books.png);
+                content: "";
+                left: 75%;
+                top: 68%;
+                position: absolute;
+                width: 280px;
+                height: 310px;
+            } */
+        }
+    }
+    &::after {
+        background: url(images/acap_books.png);
+        content: "";
+        right: 25%;
+        top: 45%;
+        position: relative;
+        width: 280px;
+        height: 310px;
+        z-index: 2;
+    } 
+}
+
+/* Формы ЗАДАТЬ ВОПРОС, НАПИСАТЬ ОТЗЫВ, на странице Контакты (без имени) */ 
+.wrap-faq-form-order,
+.wrap-rev-form-order,
+.wrap-kntkt-form-order {
+    margin: -1.5rem !important;
+    margin-top: 1rem;
+    h4 {
+        align-self: center;
+        background: url(images/strip_mdark.png) no-repeat center top;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        height: 5rem;
+        letter-spacing: 2px;
+        margin-top: 3.5rem;
+        padding-top: .7rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+    .form-oder {
+        width: 65%;
+        margin: 1rem auto 3rem; 
+        .form-control {
+            align-self: center;
+            background-color: $form-control-color;
+            border: 2px solid $form-control-border;
+            line-height: 1.4;
+            margin: .5rem auto;
+        }        
+        a.btn.btn-danger {
+            @include button_theme(0.3rem, 2rem);
+            align-self: center;
+            margin: 1rem auto;
+            width: 50%;
+        }
+    }
+}

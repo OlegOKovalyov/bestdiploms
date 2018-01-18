@@ -1,0 +1,80 @@
+/* Page Bottom */
+/* Why Just Us Advantages */
+.blank-top-row-content {
+    background: $white;
+    height: 20px;
+    z-index: 1;
+}
+#page-bottom {
+    margin-bottom: -5rem;
+    .why-just-us-content {
+        background-color: $why-just-us-bg;
+        /* border-radius: .3125rem; */
+        border-bottom-left-radius: .3125rem;
+        border-bottom-right-radius: .3125rem;
+        box-shadow: 0 0 20px #bbb; 
+        .h4_div {
+            background: url(images/strip_mdwhy.png) no-repeat center top;
+            height: 5rem;
+            margin: 1.5rem auto .8rem;
+        }
+
+        /* p.card-text {
+            font-size: .85rem;
+            &:before {
+                background: url(images/i_starstrips.png) no-repeat;
+                content: "";
+                left: 35%;
+                top: 38%;
+                position: absolute;
+                width: 49px;
+                height: 49px;
+            }
+        } */
+
+        .card-body {
+            @for $i from 1 through 7 {
+                p.card-text#{$i} {
+                    font-size: .85rem;
+                    margin-top: 4rem;
+                    &:before {
+                        background: url(images/icon#{$i}.png) no-repeat;
+                        content: "";
+                        left: 35%;
+                        top: 42%;
+                        position: absolute;
+                        width: 49px;
+                        height: 49px;
+                    }
+                }
+            }
+        }
+
+        .card-deck {
+            margin-bottom: .8rem;
+            padding-right: .5rem;
+            padding-left: .5rem;
+            .card {
+                border: none;
+                border-radius: 0;                
+                margin-right: .25rem;
+                margin-left: .25rem;
+            }
+        }
+        .card-body {
+            padding: 1rem;
+            p.card-text {
+                margin-top: 4rem;
+                text-align: center;
+            }
+        }
+    }
+    .blank-row-content {
+        background: $white;
+        /* border-radius: 0; */
+        border-bottom-left-radius: .3125rem;
+        border-bottom-right-radius: .3125rem;
+        box-shadow: none;
+        height: 5rem;
+    }
+}

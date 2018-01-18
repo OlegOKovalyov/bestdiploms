@@ -1,0 +1,36 @@
+//
+/* Color system */
+//
+$blue:    #5684DB;          // Главное навигационное меню Primary
+$white:   #fff;             // Верхняя часть главного меню Primary
+$red:     #D74343;  // #dc3545; // Кнопка Заказать диплом в Jumbotron
+$red-nav-border:     #FA6060; // Нижняя граница главного меню
+$reviews-title-color: #364B7F;
+$reviews-bg: #4668BB; // Фон отзывов в сайдбаре  primary
+$link-reviews-hover: #98B5E9; // Hover для ссылок на отзывы в сайдбаре primary
+$links-gray-color: #B3B7C3; 
+$form-control-color: #EEF4F9;
+$form-control-border: #C4D7F5; 
+$why-just-us-bg: #EDF1F8; // Фон нижней части страницы Почему именно мы
+$price-gznk: #FA6969; // Цвет подписи цены ГОЗНАК
+$doc-item-bc: #D9E3ED; // Цвет границы карточки товара (документа)
+$links-active-bg: #EFF6FD; // Фон активной ссылки в сайдбаре primary
+$links-active-color: #EE575A; // Цвет текста активной ссылки в сайдбаре primary
+$valid-goznak-color: #32509B; // Цвет текста Настоящие, подлинные бланки ГОЗНАК
+$title-prices-bg: #DBE3F4;
+$faq-body-bg: #F6F9FD;
+$dark-grey-text: #424853; // Цвет телефонного номера на странице Контакты
+
+//
+/* Body */
+//
+// Settings for the `<body>` element.
+$body-bg:       #EEF3FA;
+$body-color:    #5F646D;
+
+//
+/* a */
+//
+a {
+	outline: none;
+}

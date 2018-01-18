@@ -1,0 +1,436 @@
+/*!
+Theme Name: Best Diploms
+Theme URI: http://underscores.me/
+Author: Oleg Kovalyov
+Author URI: https://github.com/OlegOKovalyov/
+Description: Best Diplomas WordPress Site
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bestdiploms
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Best Diploms is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*@import "variables-site/variables-site";
+@import "mixins/mixins-master";*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*@import "normalize";*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*@import "typography/typography";*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*@import "elements/elements";*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*@import "forms/forms";*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*@import "navigation/navigation";*/
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/*@import "modules/accessibility";*/
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*@import "modules/alignments";*/
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*@import "modules/clearings";*/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*@import "site/secondary/widgets";*/
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*@import "site/site";*/
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/*@import "modules/infinite-scroll";*/
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*@import "media/media";*/
+
+
+//
+// Color system
+//
+$blue:    #5684DB;          // Главное навигационное меню Primary
+$white:   #fff;             // Верхняя часть главного меню Primary
+$red:     #D74343;  // #dc3545; // Кнопка Заказать диплом в Jumbotron
+//$red:     #EC5663;
+$reviews-title-color: #364B7F;
+$reviews-bg: #4668BB;
+$links-gray-color: #B3B7C3;
+
+//
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:       #EEF3FA;
+$body-color:    #5F646D;
+
+body {
+	/* background: #5F646D url(images/bg_bodyimg.jpg) repeat-y center top; */
+}
+
+//
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: Roboto, sans-serif;
+// $font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+// $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif;
+
+//
+// Mixins
+//
+@mixin button_theme($mrgl, $mrgr) {
+        color: #eee;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        /* padding-left: $padl;
+        padding-right: $padr; */
+        text-transform: uppercase;
+        i.fa {
+            color: #BD1818; // #C11A1A;
+            margin: .5rem 0;
+            &:first-child {
+                margin-left: $mrgl;
+                margin-right: $mrgr;
+            }
+            &:last-child {
+                margin-left: $mrgr;
+                margin-right: $mrgl;
+            }            
+        }                
+        &:hover {
+            background: darken($red, 7.5%);
+            color: #fff;
+            border: 1px solid rgba($red,.15);
+        } 
+}
+
+// Делаем отступ сверху для всех страниц сайта
+#page.site.container {
+    /*padding-top: 1.5rem; */
+}
+
+// Стилизуем header.php
+// Главное меню сайта primary
+.custom-logo-link {
+    margin-left: -3.5rem;
+    position: absolute;
+    z-index: 1;
+}
+.header-top {
+    box-shadow: 10px -5px 16px #6c8db3;
+}
+.details-body {
+    background-color: $white;
+    border-radius: .25rem;
+    /*width: 105%;*/
+    &> p > a {
+        display: block;
+        margin-right: 25%;
+        padding: .5rem;
+        i.fa {
+            color: $red;
+            margin-right: .3rem;
+        }
+    }
+    &> p:last-child > a {
+        margin-right: 5%;
+    }
+}
+
+// Navbar
+nav.navbar {
+    background-image: linear-gradient( -107deg, rgb(101,157,247) 0%, rgb(70,104,187) 100%);
+    border-bottom: 3px solid #FA6060;
+    border-bottom-right-radius: .3125rem;
+    /*width: 105%;*/
+}
+
+// Jumbotron
+.valid_goznak {
+    margin-bottom: 4rem;
+    margin-top: -2rem; //5rem;
+    h1 {
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        line-height: 1.3;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: 8rem;
+        span.blgznk {
+            font-weight: 700;
+        }
+    }
+    img {
+        display: block;
+        /*margin-left: -1.3rem;*/
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .order_button > a.btn {
+        /*background-color: #EC5663;*/
+        /*background: linear-gradient(to right, rgb(250,92,92) 0%, rgb(250,92,92) 0%, rgb(239,48,48) 0%, rgb(236,86,100) 100%);*/
+        color: #eee;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        i.fa {
+            color: #BD1818; // #C11A1A;
+            margin: .5rem;
+        }        
+        &:hover {
+            /*background: rgba($red,.85);*/
+            background: darken($red, 7.5%);
+            /*background: linear-gradient(to left, rgb(250,92,92) 0%, rgb(250,92,92) 0%, rgb(239,48,48) 0%, rgb(236,86,100)
+             100%);*/
+            color: #fff;
+            /*background-color: beige !important;*/
+            border: 1px solid rgba($red,.15);
+        }
+    }
+}
+
+#content {
+    background: $white;
+}
+
+.col-sidebar-primary {
+    border-right: 1px solid #E8F0FB;
+    margin-top: 1.5rem;
+    padding-right: 1rem;
+}
+
+#sidebar-primary {
+    .widget {
+        p.widget-title {
+            background: url(images/strip_smdark.png) no-repeat;
+            color: #fff;
+            font-size: .95rem;
+            letter-spacing: .9px;
+            margin-bottom: 0;
+            margin-left: -6%;
+            padding: .6rem 0 1.1rem 2rem;
+            text-align: left;
+            text-transform: uppercase;
+            width: 123%;
+        }
+        ul.menu {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+            & > li > a {
+                border-bottom: 1px solid #E8F0FB;
+                display: block;
+                padding: .5rem 0;
+            }
+        }
+        .menu-menu-lsb-bottom-links-container {
+            ul li a {
+                border: none;
+                color: $links-gray-color;
+                padding-bottom: 0;
+                &:hover {
+                    color: #6481C8;
+                }
+            }
+        }        
+    }
+    .widget.widget_recent_comments {
+        background: $reviews-bg;
+        margin-left: -15px;
+        p.widget-title {
+            background: url(images/strip_smlight.png) no-repeat;
+            color: $reviews-title-color;
+            margin-left: 0;
+        }
+        & > ul {
+            margin-bottom: 0;
+            & > li a {
+                color: #fff;
+            }
+        }
+    }
+    .widget.widget_custom_html {
+        background: $reviews-bg;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-left: -15px;
+        padding: 1.5rem 0;
+        .custom-html-widget {
+            display: flex;
+            justify-content: center;
+            a {
+                border-radius: 0.3125rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+#footer {
+    background: url(images/bg_footer.png) no-repeat left top $reviews-bg; // #5079CE; // $reviews-bg;
+    color: #fff;
+    .footer-content {
+        h4 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+        .form-bar {
+            margin: 1rem 0;
+            a.btn.btn-danger {
+                @include button_theme(0.3rem, 2rem);
+            }
+            .form-control {
+                width: 24%;
+                &#inputState {
+                    height: 3rem;
+                }
+            }            
+        }
+        .footer-widget-row {
+            margin-top: 1rem;
+            li.widget-title {
+                font-size: .95rem;
+                letter-spacing: .6px;
+                list-style-type: none;
+                text-transform: uppercase;
+            }
+        }
+        ul.menu {
+            padding-left: 0;
+            & > li {
+                list-style-type: none;
+                a {
+                    color: #fff;
+                    font-size: .85rem;
+                }
+            }
+        }
+        .details-body-row {
+            .details-body-footer {
+                margin-bottom: 1rem;
+                &> p > a {
+                    color: #fff;
+                    display: block;
+                    margin-right: 25%;
+                    padding: .5rem;
+                    i.fa {
+                        color: $red;
+                        margin-right: .3rem;
+                    }
+                }
+    &> p:last-child > a {
+        margin-right: 5%;
+    }
+            }
+            p.smallp {
+                font-size: .85rem;
+            }
+        }
+        .site-branding-footer img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+#colophon {
+    background-color: $reviews-bg;
+}
+
+/*--------------------------------------------------------------
+# Bootstrap 4 Beta 2.0.0
+--------------------------------------------------------------*/
+// Required
+@import "../bower_components/bootstrap/scss/functions";
+@import "../bower_components/bootstrap/scss/variables";
+@import "../bower_components/bootstrap/scss/mixins";
+// Optional
+@import "../bower_components/bootstrap/scss/reboot";
+//@import "../bower_components/bootstrap/scss/type";
+//@import "../bower_components/bootstrap/scss/images";
+//@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+// Мои добавления
+@import "../bower_components/bootstrap/scss/utilities";
+//@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
+@import "../bower_components/bootstrap/scss/dropdown";
+@import "../bower_components/bootstrap/scss/input-group";
+@import "../bower_components/bootstrap/scss/nav";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/transitions";
+@import "../bower_components/bootstrap/scss/breadcrumb";
+//@import "../bower_components/bootstrap/scss/pagination";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/close";

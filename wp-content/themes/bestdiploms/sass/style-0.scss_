@@ -1,0 +1,231 @@
+/*!
+Theme Name: Best Diploms
+Theme URI: http://underscores.me/
+Author: Oleg Kovalyov
+Author URI: https://github.com/OlegOKovalyov/
+Description: Best Diplomas WordPress Site
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bestdiploms
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Best Diploms is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*@import "variables-site/variables-site";
+@import "mixins/mixins-master";*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*@import "normalize";*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*@import "typography/typography";*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*@import "elements/elements";*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*@import "forms/forms";*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*@import "navigation/navigation";*/
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/*@import "modules/accessibility";*/
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*@import "modules/alignments";*/
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*@import "modules/clearings";*/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*@import "site/secondary/widgets";*/
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*@import "site/site";*/
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/*@import "modules/infinite-scroll";*/
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*@import "media/media";*/
+
+
+//
+// Color system
+//
+
+$blue:    #5684DB;          // Главное навигационное меню Primary
+$white:   #fff;             // Верхняя часть главного меню Primary
+$red:     #D74343;  // #dc3545; // Кнопка Заказать диплом в Jumbotron
+//$red:     #EC5663;
+
+// Задаем переменные для сайта
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:       #EEF3FA;
+$body-color:    #5F646D;
+
+body {
+	/* background: #5F646D url(images/bg_bodyimg.jpg) repeat-y center top; */
+}
+
+// Делаем отступ сверху для всех страниц сайта
+#page.site.container {
+    /*padding-top: 1.5rem; */
+}
+
+// Стилизуем header.php
+// Главное меню сайта primary
+.custom-logo-link {
+    margin-left: -3.5rem;
+    position: absolute;
+    z-index: 1;
+}
+.details-body {
+    background-color: $white;
+    border-radius: .25rem;
+    /*width: 105%;*/
+    &> p > a {
+        display: block;
+        padding: .5rem;
+    }
+}
+
+// Navbar
+nav.navbar {
+    background-image: linear-gradient( -107deg, rgb(101,157,247) 0%, rgb(70,104,187) 100%);
+    border-bottom: 3px solid #FA6060;
+    border-bottom-right-radius: .3125rem;
+    /*width: 105%;*/
+}
+
+// Jumbotron
+.valid_goznak {
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+    img {
+        display: block;
+        /*margin-left: -1.3rem;*/
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .order_button > a.btn {
+        /*background-color: #EC5663;*/
+        /*background: linear-gradient(to right, rgb(250,92,92) 0%, rgb(250,92,92) 0%, rgb(239,48,48) 0%, rgb(236,86,100) 100%);*/
+        color: #eee;
+        text-transform: uppercase;
+        /*display: inline-block;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        border-radius: 0.3125rem;
+        transition: all 0.15s ease-in-out;*/
+        &:hover {
+            /*background: rgba($red,.85);*/
+            background: darken($red, 7.5%);
+            /*background: linear-gradient(to left, rgb(250,92,92) 0%, rgb(250,92,92) 0%, rgb(239,48,48) 0%, rgb(236,86,100)
+             100%);*/
+            color: #fff;
+            /*background-color: beige !important;*/
+            border: 1px solid rgba($red,.15);
+        }
+    }
+}
+
+#content {
+    background: $white;
+}
+
+/*--------------------------------------------------------------
+# Bootstrap 4 Beta 2.0.0
+--------------------------------------------------------------*/
+// Required
+@import "../bower_components/bootstrap/scss/functions";
+@import "../bower_components/bootstrap/scss/variables";
+@import "../bower_components/bootstrap/scss/mixins";
+// Optional
+@import "../bower_components/bootstrap/scss/reboot";
+//@import "../bower_components/bootstrap/scss/type";
+//@import "../bower_components/bootstrap/scss/images";
+//@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+// Мои добавления
+@import "../bower_components/bootstrap/scss/utilities";
+//@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
+@import "../bower_components/bootstrap/scss/dropdown";
+@import "../bower_components/bootstrap/scss/input-group";
+@import "../bower_components/bootstrap/scss/nav";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/transitions";
+@import "../bower_components/bootstrap/scss/breadcrumb";
+//@import "../bower_components/bootstrap/scss/pagination";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/close";

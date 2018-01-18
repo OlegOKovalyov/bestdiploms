@@ -1,0 +1,30 @@
+//
+/* Mixins */
+//
+// .btn-danger mixin
+@mixin button_theme($mrgl, $mrgr) {
+        color: #eee;
+        border-radius: 0.3125rem;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        /* padding-left: $padl;
+        padding-right: $padr; */
+        text-transform: uppercase;
+        i.fa {
+            color: #BD1818; // #C11A1A;
+            margin: .5rem 0;
+            &:first-child {
+                margin-left: $mrgl;
+                margin-right: $mrgr;
+            }
+            &:last-child {
+                margin-left: $mrgr;
+                margin-right: $mrgl;
+            }            
+        }                
+        &:hover {
+            background: darken($red, 7.5%);
+            color: #fff;
+            border: 1px solid rgba($red,.15);
+        } 
+}

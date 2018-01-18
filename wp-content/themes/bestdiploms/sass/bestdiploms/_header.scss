@@ -1,0 +1,119 @@
+/* Делаем отступ сверху для всех страниц сайта */
+#page.site.container {
+    /*padding-top: 1.5rem; */
+}
+
+/* Стилизуем header.php */
+/* Главное меню сайта primary */
+.custom-logo-link {
+    margin-left: -3.5rem;
+    position: absolute;
+    z-index: 1;
+}
+.header-top {
+    border-top-right-radius: .3125rem;
+    box-shadow: 10px -5px 16px #6c8db3;
+}
+.details-body {
+    background-color: $white;
+    border-radius: .25rem;
+    /*width: 105%;*/
+    &> p > a {
+        display: block;
+        margin-right: 25%;
+        padding: .5rem;
+        i.fa {
+            color: $red;
+            margin-right: .3rem;
+        }
+    }
+    &> p:last-child > a {
+        margin-right: 5%;
+    }
+}
+
+/* Navbar */
+nav.navbar {
+    background-image: linear-gradient( -107deg, rgb(101,157,247) 0%, rgb(70,104,187) 100%);
+    border-bottom: 3px solid $red-nav-border;
+    border-bottom-right-radius: .3125rem;
+    padding: 0;
+    #navbarNavAltMarkup {
+        ul {
+            & > li {
+                padding: .5rem 0;
+                & > a {
+                    border-right: 1px solid $reviews-bg;
+                    color: #fff;
+                    font-size: .8rem;
+                    padding: 0.6rem 1.65rem .7rem;
+                    text-transform: uppercase;
+                    &:hover {
+                       /*  color: #c92b2b; */
+                        /* color: #ededed; */
+                        color: darken(#fff, 7%);
+                        text-decoration: none;
+                    }
+                }
+            }
+            & > li:last-child a {
+                border: none;
+            }
+            li.current_page_item > a {
+                /* background-color: lighten($blue, 5.5%); */
+                /* color: #c92b2b; */
+                /* color: #ededed; */
+                /* border-bottom: 3px solid lighten($red-nav-border, 30%); */
+                /* border-bottom: 3px solid $white; */
+                //border-bottom: 3px solid $blue;
+                border-top: 3px solid darken($red, 3.5%);
+                //border-top: 3px solid $red-nav-border;
+                //border-right: 3px solid $red-nav-border; 
+                //border-left: 3px solid $red-nav-border;
+                color: darken(#fff, 7%);
+            }
+        }
+    }
+}
+
+// Jumbotron
+.valid_goznak {
+    margin-bottom: 2rem;
+    /* margin-top: -2rem; */ //5rem;
+    div.site-title {
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        line-height: 1.3;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: 6.5rem;
+        span.blgznk {
+            font-weight: 700;
+        }
+    }
+    img {
+        display: block;
+        /*margin-left: -1.3rem;*/
+        /* margin-top: 1.5rem; */
+        width: 100%;
+    }
+    .order_button > a.btn {
+        @include button_theme(0, 0);
+        /* color: #eee;
+        font-size: .9rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        i.fa {
+            color: #BD1818;
+            margin: .5rem;
+        }        
+        &:hover {
+            background: darken($red, 7.5%);
+            color: #fff;
+            border: 1px solid rgba($red,.15);
+        } */
+    }
+}

@@ -1,0 +1,26 @@
+/* Right Sidebar secondary */
+aside#sidebar-secondary {
+	margin-top: 1rem;
+	div#media_gallery-2 {
+		/* float: right; */
+	}
+    .articles-cat-link {
+        ul { 
+        	padding-left: 0;
+			text-align: center;
+	        li {
+	        	list-style-type: none;
+	        	margin: .65rem 0;
+		         a {
+		            border: none;
+		            color: $links-gray-color;
+		            font-size: .8rem;
+		            &:hover {
+		                //color: #6481C8;
+		                color: $blue;
+		            }
+		        }
+		    }
+        }
+    }   	
+}

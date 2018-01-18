@@ -1,0 +1,61 @@
+/* Основной контент #primary.content-area #main.site-main */
+/* Карусель */
+.carousel-block {
+    height: auto;
+    .owl-carousel {
+        margin: 1rem;
+        .owl-stage {
+            margin-bottom: 2rem;
+        }
+        .owl-prev {
+            top: 35%;
+            position: absolute;
+            left: -20px; //-5px;
+        }
+        .owl-next {
+            top: 35%;
+            position: absolute;
+            right: 0;
+        }
+    }
+    .owl-stage-outer {
+        /* padding-left: 1.8rem; */
+        margin-left: -10px;
+    }
+}
+.owl-item {
+    /* margin-right: 15px !important; */
+    .doc-item {
+        border: 1px solid $doc-item-bc;
+        border-radius: .25rem;
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;        
+        p {
+            align-self: center;
+            font-size: .9rem;
+        }
+        h4.doc-item-title {
+            align-self: center;
+            font-weight: 500;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        p.doc-price-gznk {
+            color: $price-gznk;
+            font-weight: 500;
+            margin-top: .3rem;
+            margin-bottom: 0;
+        }
+        p.doc-price-tpgrf {
+            font-weight: 500;
+        }
+        a.btn.btn-danger {
+            @include button_theme(0.3rem, 2rem);
+            padding: 0.3rem 0;
+            margin: 0 auto;
+            margin-bottom: -1.5rem;
+            width: 80%;
+        }
+    }
+}

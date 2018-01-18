@@ -1,0 +1,87 @@
+/* Site Footer */
+#footer {
+    background: url(images/bg_footer.png) no-repeat left top $reviews-bg; // #5079CE; // $reviews-bg;
+    color: #fff;
+    padding-top: 5rem;
+    .footer-content {
+        h4 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+        .form-bar {
+            margin: 1rem 0;
+            a.btn.btn-danger {
+                @include button_theme(0.3rem, 2rem);
+            }
+            .form-control {
+                background-color: $form-control-color;
+                border: 2px solid $form-control-border;
+                width: 24%;
+                &#inputStateFooter {
+                    height: 3.07rem;
+                }
+            }            
+        }
+        .footer-widget-row {
+            margin-top: 1rem;
+            .study-cats {
+                display: flex;
+                width: 85%;
+                .widget-title {
+                    margin-bottom: 0;
+                }
+            }
+            .widget.widget_nav_menu {
+                padding-left: 2%;
+            }
+            .widget-title {
+                font-size: .95rem;
+                letter-spacing: .6px;
+                list-style-type: none;
+                text-transform: uppercase;
+            }
+        }
+        ul {
+            padding-left: 0;
+            & > li {
+                list-style-type: none;
+                a {
+                    color: #fff;
+                    font-size: .85rem;
+                }
+            }
+        }
+        .details-body-row {
+            .details-body-footer {
+                margin-bottom: 1rem;
+                &> p > a {
+                    color: #fff;
+                    display: block;
+                    margin-right: 25%;
+                    padding: .5rem;
+                    i.fa {
+                        color: $red;
+                        margin-right: .3rem;
+                    }
+                }
+    &> p:last-child > a {
+        margin-right: 5%;
+    }
+            }
+            p.smallp {
+                font-size: .85rem;
+            }
+        }
+        .site-branding-footer img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+#colophon {
+    background-color: $reviews-bg;
+}

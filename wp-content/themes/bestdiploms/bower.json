@@ -1,0 +1,25 @@
+{
+  "name": "bestdiploms",
+  "description": "Best Diplomas WordPress Site",
+  "main": "index.js",
+  "authors": [
+    "Oleg Kovalyov"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Keywords"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "owl.carousel": "owl-carousel2#^2.2.1"
+  }
+}
