@@ -16,10 +16,10 @@ function fp_carousel() {
 				<div class="owl-carousel owl-theme">
 
 				    <?php 
-				    // Displaying the Custom Post 'etalage' in Owl Carousel (can display anywhere). 
+				    // Displaying the Custom Post 'study' in Owl Carousel (can display anywhere). 
 				        $args = array(
 				        	'order'			 	=> 'ASC',
-				            'post_type' 		=> 'etalage',
+				            'post_type' 		=> 'study',
 				            //'category_name' 	=> 'education-all', // Все виды образования
 				            //'category_name' 	=> 'education1',
 				            //'category_name' 	=> 'education2',
@@ -57,7 +57,7 @@ function fp_carousel() {
 					            } else {
 					                echo '<p>empty</p>';
 					        } ?>
-					        <span class="doc-item-content"><?php the_content(); ?></span>
+					        <span class="doc-item-content"><?php /*the_content();*/ ?></span>
 					        <a class="btn btn-danger" href="#" role="button">Заказать</a>
 						</div><!-- .doc-item -->
 

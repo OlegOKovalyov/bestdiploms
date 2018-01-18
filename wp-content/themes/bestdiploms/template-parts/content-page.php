@@ -43,18 +43,18 @@
 	<?php elseif ( 369 == get_the_ID() ) : ?>
 		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
-		<!-- Вывод эталажей (CPT 'etalage') на странице Цены -->
+		<!-- Вывод эталажей (CPT 'study') на странице Цены -->
 		<div class="row">
 			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>
 
-				    <!-- Displaying the Custom Post 'etalage' on Price Page (can display anywhere). --> 
+				    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
 				    <?php $args = array(
 			        	'order'			 => 'DESC',
-			        	'post_parent'	 => 173, // ID эталажа Образование (дочерняя запись к записи Документы)
+			        	'post_parent'	 => 143, // ID эталажа Образование (дочерняя запись к записи Документы)
 			        	'orderby'		 => 'parent',
-			            'post_type' 	 => 'etalage',
+			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,
 			            'category_name'  => 'education-all', // Все виды образования
 			            //'category_name' => 'education1',
@@ -79,7 +79,7 @@
 						        	'order'			 => 'ASC',
 						        	'post_parent'	 => $post_id,
 						        	//'orderby'		 => 'parent',
-						            'post_type' 	 => 'etalage',
+						            'post_type' 	 => 'study',
 						            'posts_per_page' => -1,
 						            'category_name'  => 'education-all', // Все виды образования
 						            //'category_name' => 'education1',
