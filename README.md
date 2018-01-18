@@ -30,4 +30,4 @@ Tools and Technologies:
 - Custom Post Types WordPress Technology,
 - Custom Meta Boxes WordPress Technology,
 - Own Custom ShortCodes,
-- Own Custom Wiget Functions.
+- Own Custom Widget Functions.

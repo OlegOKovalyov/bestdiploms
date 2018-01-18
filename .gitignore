@@ -49,7 +49,8 @@ wp-content/themes/bestdiploms/tmp/*
 wp-content/plugins/hello.php
 wp-content/themes/bestdiploms/LICENSE
 wp-content/themes/bestdiploms/bower-sample.json_
-
+wp-content/themes/bestdiploms/owlcarousel-old/*
+wp-content/themes/bestdiploms/tmp/*
 
 
 # ignore all files starting with . or ~ 
