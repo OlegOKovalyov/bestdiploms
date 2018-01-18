@@ -40,8 +40,17 @@ xmlrpc.php
 # unless explicitly whitelisted at the end of this file
 wp-content/mu-plugins/*
 wp-content/plugins/*
-wp-content/themes/*
-wp-content/uploads/*
+#wp-content/themes/*
+#wp-content/uploads/*
+wp-content/themes/twentyfifteen/*
+wp-content/themes/twentyseventeen/*
+wp-content/themes/twentysixteen/*
+wp-content/themes/bestdiploms/tmp/*
+wp-content/plugins/hello.php
+wp-content/themes/bestdiploms/LICENSE
+wp-content/themes/bestdiploms/bower-sample.json_
+
+
 
 # ignore all files starting with . or ~ 
 .*
@@ -116,10 +125,16 @@ Thumbs.db
 #!wp-content/mu-plugins/example-mu-plugin/
 #!wp-content/plugins/functionsphp.php
 !wp-content/themes/bestdiploms/*.php
-!wp-content/themes/bestdiploms/sass/*.scss
-!wp-content/themes/bestdiploms/sass/bestdiploms/*.scss
-!wp-content/themes/bestdiploms/functions/*
-!wp-content/themes/bestdiploms/inc/*
-!wp-content/themes/bestdiploms/js/*
-!wp-content/themes/bestdiploms/js/src/*
-!wp-content/themes/bestdiploms/template-parts/*
+!wp-content/themes/bestdiploms/sass/
+!wp-content/themes/bestdiploms/sass/bestdiploms/
+!wp-content/themes/bestdiploms/functions/
+!wp-content/themes/bestdiploms/inc/
+!wp-content/themes/bestdiploms/js/
+!wp-content/themes/bestdiploms/js/src/
+!wp-content/themes/bestdiploms/template-parts/
+!wp-content/themes/bestdiploms/style.css
+!wp-content/themes/bestdiploms/package.json
+!wp-content/themes/bestdiploms/gulpfile.js
+!wp-content/themes/bestdiploms/fonts/
+!wp-content/themes/bestdiploms/bower.json
+!wp-content/themes/bestdiploms/README.md
