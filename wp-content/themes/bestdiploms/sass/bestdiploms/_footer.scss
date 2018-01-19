@@ -80,6 +80,17 @@
             margin: 0 auto;
         }
     }
+    #menu-menu-primary-links-1 {
+        .current-menu-item {
+            a {
+                color: $links-active-color;
+                &:hover {
+                    cursor: default;
+                    text-decoration: none;
+                }
+            }               
+        }
+    }    
 }
 
 #colophon {

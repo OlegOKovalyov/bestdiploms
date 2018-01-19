@@ -28,6 +28,6 @@ get_header(); ?>
 
     <div class="col-lg-3 col-sidebar-primary">
         <?php get_sidebar(); ?>
-    </div>          
-  
-<?php get_footer(); 
+    </div>
+
+<?php get_footer();

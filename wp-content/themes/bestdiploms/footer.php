@@ -171,5 +171,6 @@
 
 <!-- <script src="<?php /*echo get_template_directory_uri()*/ ?>/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> -->
 <!-- <script src="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/owl.carousel.min.js"></script> -->
+
 </body>
 </html>

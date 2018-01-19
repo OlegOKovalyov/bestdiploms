@@ -1,6 +1,6 @@
 <?php
  /**
-  * The template for displaying all CPT etalage posts
+  * The template for displaying all CPT etalage posts - можно удалить
   *
   * @package Best_Diploms  
   */

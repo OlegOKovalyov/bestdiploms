@@ -5661,6 +5661,11 @@ nav.navbar {
   #footer .footer-content .site-branding-footer img {
     display: block;
     margin: 0 auto; }
+  #footer #menu-menu-primary-links-1 .current-menu-item a {
+    color: #EE575A; }
+    #footer #menu-menu-primary-links-1 .current-menu-item a:hover {
+      cursor: default;
+      text-decoration: none; }
 
 #colophon {
   background-color: #4668BB; }
@@ -5853,7 +5858,7 @@ div.divaccordion {
   margin-top: -2rem; }
 
 /* Стилизуем содержимое страницы вывода Документа (study). */
-#post-98 h2 {
+.single-study h2 {
   background: url(images/strip_mdlight.png) no-repeat center top;
   color: #364B7F;
   font-size: 1.7rem;
@@ -5864,6 +5869,27 @@ div.divaccordion {
   text-align: center;
   text-transform: uppercase; }
 
+.single-study .study-ul-menu .study-link-title a.active {
+  background-color: #EFF6FD;
+  border-bottom: none;
+  color: #EE575A; }
+  .single-study .study-ul-menu .study-link-title a.active:hover {
+    text-decoration: unset; }
+
+.single-study #footer .study-ul-menu .study-link-title a.active {
+  background-color: transparent;
+  color: #EE575A;
+  cursor: default; }
+
+.single-study .why-just-us {
+  display: none; }
+
+.single-study .blank-top-row-content {
+  border-bottom-left-radius: .3125rem;
+  border-bottom-right-radius: .3125rem;
+  height: 5rem;
+  margin-bottom: -2rem; }
+
 .study.type-study .entry-content > img.wp-post-image {
   border: 1px solid #DBE3F4;
   border-radius: .25rem;
@@ -5872,15 +5898,17 @@ div.divaccordion {
   width: 100%;
   height: auto; }
 
-.postid-98 .why-just-us {
-  display: none; }
-
-.postid-98 .blank-top-row-content {
-  border-bottom-left-radius: .3125rem;
-  border-bottom-right-radius: .3125rem;
-  height: 5rem;
-  margin-bottom: -2rem; }
-
+/* .single-study {
+	.why-just-us {
+		display: none;
+	}
+	.blank-top-row-content {
+	    border-bottom-left-radius: .3125rem;
+	    border-bottom-right-radius: .3125rem;
+	    height: 5rem;
+	    margin-bottom: -2rem;
+	}
+} */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying CPT study content in single.php
+ * Template part for displaying CPT etalage content in single-etalage.php - можно удалить
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

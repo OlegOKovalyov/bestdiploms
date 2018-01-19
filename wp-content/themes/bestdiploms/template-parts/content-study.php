@@ -188,3 +188,26 @@
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+
+
+<script>
+// Делаем текущую ссылку на страницу CPT study (Документы) активной (добавляем класс active для нее)	
+jQuery(function () { 
+    jQuery('.study-link-title a').each(function () {
+        var location = window.location.href;
+        var link = this.href; 
+        if(location == link) {
+            jQuery(this).addClass('active');
+        }
+    });
+});
+</script> 
+
+<script>
+/*function myFunction() {
+    var x = document.getElementsByClassName("study-link-title");
+    x[0].innerHTML = "Hello World!";
+}*/
+</script>
+
+ <!-- onclick="myFunction()" -->

@@ -182,6 +182,7 @@ include('functions/d-breadcrumbs.php');
 /**
  * Load Front Page Carousel file.
  */
+//include('functions/fp-carousel.php');
 include('functions/site-carousels.php');
 
 
@@ -558,11 +559,11 @@ function studies_in_sidebars() { ?>
 					    ); ?>
 
 						<div class="study-cat-link">
-							<ul class="study-ul-menu">
+							<ul>
 							    <?php $in_loop = new WP_query ( $intro_args );
 								if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); ?>					
 								        <li class="study-link-title">
-								        	<a class="a-study-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+								        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 								    	</li>
 
 								<?php endwhile; endif; ?>

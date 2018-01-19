@@ -302,16 +302,50 @@ div.divaccordion  {
 
 /* Стилизуем содержимое страницы вывода Документа (study). */
 // Верхние ссылки левого primary сайдбара.
-#post-98 h2 {
-    background: url(images/strip_mdlight.png) no-repeat center top;
-    color: #364B7F;
-    font-size: 1.7rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    padding: .8rem 1.1rem 1.1rem;
-    text-align: center;
-    text-transform: uppercase;
+.single-study { 
+	h2 {
+	    background: url(images/strip_mdlight.png) no-repeat center top;
+	    color: #364B7F;
+	    font-size: 1.7rem;
+	    font-weight: 500;
+	    letter-spacing: 2px;
+	    margin-bottom: 1rem;
+	    padding: .8rem 1.1rem 1.1rem;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+	.study-ul-menu {
+		.study-link-title {
+			a.active {
+				background-color: $links-active-bg;
+				border-bottom: none;
+				color: $links-active-color;
+				&:hover {
+					text-decoration: unset;
+				}
+			}
+		}
+	}
+	#footer {
+		.study-ul-menu {
+			.study-link-title {
+				a.active {
+					background-color: transparent;
+					color: $links-active-color;
+					cursor: default;
+				}
+			}
+		}
+	}
+	.why-just-us {
+		display: none;
+	}
+	.blank-top-row-content {
+	    border-bottom-left-radius: .3125rem;
+	    border-bottom-right-radius: .3125rem;
+	    height: 5rem;
+	    margin-bottom: -2rem;
+	}
 }
 .study.type-study {
 	.entry-content > img.wp-post-image {
@@ -323,7 +357,7 @@ div.divaccordion  {
 		height: auto;
 	}
 }
-.postid-98 {
+/* .single-study {
 	.why-just-us {
 		display: none;
 	}
@@ -333,7 +367,7 @@ div.divaccordion  {
 	    height: 5rem;
 	    margin-bottom: -2rem;
 	}
-}
+} */
 
 
 
