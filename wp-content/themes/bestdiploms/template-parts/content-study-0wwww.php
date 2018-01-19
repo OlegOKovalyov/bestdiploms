@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying CPT study content in single-study.php
+ * Template part for displaying CPT study content in single.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,19 +16,20 @@
 
 		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
-		<!-- Вывод документов (CPT 'study') на странице одного документа (по ссылке из левого primary сайдбара) -->
+		<!-- Вывод документов (CPT 'study') на странице одного документа -->
 		<div class="row">
 			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>
-
 				<!-- Display CPT study content -->
 				<?php the_post_thumbnail( array( 580, 408 ) );
-					$post_id = $post->ID; // Current CPT				
-					//$post_parent_id = wp_get_post_parent_id ($post->ID); echo $post_parent_id; // Parent CPT
+					$post_parent_id = wp_get_post_parent_id ($post->ID); echo $post_parent_id; // Current CPT
 				?>
-
             	<div class="entry-content"><?php $curstudycntnt = get_the_content(); ?></div>
+
+
+
+
 
 						<div class="price-item">
 
@@ -36,11 +37,11 @@
 				    		//$wp_post_parent_cat_id = wp_get_post_parent_id( $post->ID );
 				    		//$post_cat_id = $post->ID;
 				            //while( $post_id == wp_get_post_parent_id( $post->ID ) ) { ?>
-				                <!-- <h3 class="doc-item-title"><?php /*the_title();*/ ?></h3> -->
+				                <h3 class="doc-item-title"><?php the_title(); ?></h3>
 						
 								<?php $in_args = array(
 						        	'order'			 => 'ASC',
-						        	'post_parent'	 => $post_id,
+						        	'post_parent'	 => $post_parent_id,
 						        	'orderby'		 => 'parent',
 						            'post_type' 	 => 'study',
 						            'posts_per_page' => -1,
@@ -56,31 +57,31 @@
 								$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
 								$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
 								$value = get_post_field( "price" );	// Meta-box for Typography Price
-								$postin_id = $post->ID; /*echo $postin_id;*/
+								$postin_id = $post->ID; echo $postin_id;
 						            if( $value || $value2 ) { ?>
 
-										<span>
+										<section>
 									        <a href="#" target="_blank" rel="noopener">
 									            <?php if ( has_post_thumbnail() ) {
 									                the_post_thumbnail();
 									            } ?>
 									        </a>
-										    <!-- <div class="price-props"> -->
-										        <!-- <h4 class="price-item-title"><?php /*the_title();*/ ?> <span class="price-item-year"> <?php /*echo $value1;*/ ?></span></h4> -->
+										    <div class="price-props">
+										        <h4 class="price-item-title"><?php the_title(); ?> <span class="price-item-year"> <?php echo $value1; ?></span></h4>
 
 										        <?php					            
-									                /*echo '<p class="page-price-gznk">' . $value2 . '</p>';
-									                echo '<p class="page-price-tpgrf">' . $value . '</p>';*/
+									                echo '<p class="page-price-gznk">' . $value2 . '</p>';
+									                echo '<p class="page-price-tpgrf">' . $value . '</p>';
 								        		?>
 
-								                <!-- <a class="btn btn-danger" href="#" role="button">Заказать</a> -->
+								                <a class="btn btn-danger" href="#" role="button">Заказать</a>
 
-											<?php  } else {
-												/* echo '<p>empty</p>';*/
-											} ?>
+									<?php  } else {
+										/* echo '<p>empty</p>';*/
+									} ?>
 
-											<!-- </div> --><!-- .price-props -->
-							    		</span>
+									    </div><!-- .price-props -->
+							    	</section>
 				        
 							<?php endwhile; 
 							endif; /*}*/ ?>
@@ -155,7 +156,7 @@
 
 					?>
 				<?php echo $curstudycntnt; ?>
-			</div><!-- .entry-content . col-lg-9 -->
+			</div><!-- .entry-content -->
 
 			<div class="col-lg-3 sb-secondry">
 		        <?php get_sidebar( 'right' ); ?>
