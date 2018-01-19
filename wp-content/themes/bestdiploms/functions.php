@@ -534,11 +534,11 @@ function studies_in_sidebars() { ?>
 	     
 		    <?php $extra_args = array(
 		    	'order'			 => 'ASC',
-		        'post_parent'	 => 143,
+		        'post_parent'	 => 141,
 		        //'orderby'		 => 'parent',		    	
 		        'post_type' => 'study',
 		        'posts_per_page' => -1,
-		        'category_name' => 'education-all'
+		        //'category_name' => 'education-all'
 		    ); ?>
 
 		    <?php 
