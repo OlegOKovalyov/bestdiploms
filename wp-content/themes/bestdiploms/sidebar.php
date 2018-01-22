@@ -13,6 +13,7 @@ if ( ! is_active_sidebar( 'left-sidebar' ) ) {
 ?>
 
 <aside id="sidebar-primary" class="widget-area">
+	<?php /*dynamic_sidebar( 'left-sidebar' );*/ ?>	
 	<?php studies_in_sidebars() ?>
 	<?php reviews_in_sidebars(); ?>
 	<?php articles_in_sidebars(); ?>

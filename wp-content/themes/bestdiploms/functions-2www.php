@@ -538,7 +538,7 @@ function studies_in_sidebars() { ?>
 		        //'orderby'		 => 'parent',		    	
 		        'post_type' => 'study',
 		        'posts_per_page' => -1,
-		        //'category_name' => 'education-cat', // Если убрать выводятся все дочерние категории к категории 141:Все документы об образовании 
+		        //'category_name' => 'education-all'
 		    ); ?>
 
 		    <?php 
@@ -546,7 +546,7 @@ function studies_in_sidebars() { ?>
 			if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post(); ?>
 					<div class="study-cats-item col">
 						<p class="widget-title"><?php the_title() ?></p>
-						<?php $extra_studyid = get_the_ID(); /*echo '$extra_studyid = ' . $extra_studyid;*/ ?>
+						<?php $extra_studyid = get_the_ID(); ?>
 
 					    <?php $intro_args = array(
 					    	'order'			 => 'ASC',
@@ -554,8 +554,7 @@ function studies_in_sidebars() { ?>
 					        'orderby'		 => 'parent',		    	
 					        'post_type' => 'study',
 					        'posts_per_page' => -1,
-					        //'category_name' => 'education-all',
-					        //'category_name' => 'education-kind',
+					        'category_name' => 'education-all'
 					    ); ?>
 
 						<div class="study-cat-link">
