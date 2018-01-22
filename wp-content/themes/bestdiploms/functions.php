@@ -117,8 +117,12 @@ function bestdiploms_scripts() {
 	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic', false, false, 'all');
 	
 	wp_enqueue_style( 'bestdiploms-fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css' );
+
+	wp_enqueue_style( 'bestdiploms-fancybox3', get_template_directory_uri() . '/bower_components/fancybox/dist/jquery.fancybox.min.css' );	
 	
 	wp_enqueue_script( 'jquery' );
+
+	wp_enqueue_script( 'bestdiploms-fancybox3', get_template_directory_uri() . '/bower_components/fancybox/dist/jquery.fancybox.min.js', array(), '20151215', true );	
 
 	wp_enqueue_script( 'bestdiploms-app', get_template_directory_uri() . '/js/app.js', array(), '20151215', true );
 

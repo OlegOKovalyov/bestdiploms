@@ -60,11 +60,14 @@
 							            if( $value || $value2 ) { ?>
 
 											<section>
-										        <a href="#" target="_blank" rel="noopener">
+										        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
 										            <?php if ( has_post_thumbnail() ) {
 										                the_post_thumbnail( array( 280, 128 ) );
 										            } ?>
 										        </a>
+										        <!-- <a href="https://source.unsplash.com/RF5sv5dv1Zc/1500x1000" data-fancybox data-caption="This image has a caption">
+										              <img src="https://source.unsplash.com/RF5sv5dv1Zc/240x160" />
+										          </a> -->
 											    <div class="price-props">
 											        <h4 class="price-item-title"><?php echo $newtext ?> <span class="price-item-year"> <?php echo $value1; ?></span></h4>
 

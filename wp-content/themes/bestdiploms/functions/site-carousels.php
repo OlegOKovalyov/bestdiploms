@@ -58,7 +58,7 @@ function fp_carousel() {
 					        <p class="doc-item-year"><?php echo $value1; ?></p>
 					        <a href="#" target="_blank" rel="noopener">
 					            <?php if ( has_post_thumbnail() ) {
-					                the_post_thumbnail();
+					                the_post_thumbnail( array( 280, 128 ) );
 					            } ?>
 					        </a>
 					        <?php
@@ -152,7 +152,7 @@ function other_study_carousel( $cat_arg ) {
 					        <p class="doc-item-year"><?php echo $value1; ?></p>
 					        <a href="#" target="_blank" rel="noopener">
 					            <?php if ( has_post_thumbnail() ) {
-					                the_post_thumbnail();
+					                the_post_thumbnail( array( 280, 128 ) );
 					            } ?>
 					        </a>
 					        <?php
