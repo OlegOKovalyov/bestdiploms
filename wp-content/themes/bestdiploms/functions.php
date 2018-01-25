@@ -294,7 +294,7 @@ function show_orderform( $atts, $content, $tag ) {
 					<option>5</option>
 				</select>
 
-				<a class="btn btn-danger" href="#" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>
+				<a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>
  Заказать <i class="fa fa-angle-left" aria-hidden="true"></i></a>
 
 			</div><!-- .form-bar -->
@@ -388,6 +388,155 @@ function show_kontaktorderform( $atts, $content, $tag ) {
 
 			</div><!-- .form-order -->
 		</div><!-- .row -->
+
+	<?php 
+	return ob_get_clean();
+}
+
+/**
+ * Шорткод. Форма обратной связи Заказать диплом на странице Заказать диплом. Использование:
+ * - в админке WordPress:
+ * [orderdiplform]
+ * <?php echo do_shortcode('[orderdiplform]'); ?>
+ */
+add_shortcode( 'orderdiplform', 'show_orderdiplform');
+function show_orderdiplform( $atts, $content, $tag ) {
+
+	ob_start();
+	?>
+
+		<!-- <div class="wrap-order-dipl-form row flex-column px-4"> -->
+		<div class="wrap-kntkt-form-order row flex-column px-4">
+			<div class="form-oder d-flex flex-column">
+
+				<form action="">
+
+					<div class="form-row">
+					    <div class="form-group col-md-6">
+					        <label for="inputState"></label>
+					        <select id="inputState" class="form-control">
+						        <option selected>Качество необходимого документа</option>
+						        <option>Бланк ГОЗНАК</option>
+						        <option>Типографский бланк</option>
+					        </select>
+					    </div>
+					    <div class="form-group col-md-6">
+					        <label for="inputState"></label>
+							<select id="inputState" class="form-control">
+								<option selected>Тип документа</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+					    </div>
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+							<input type="text" class="form-control" placeholder="Фамилия">
+						</div>
+						<div class="form-group col-md-4">
+							<input type="text" class="form-control" placeholder="Имя">
+						</div>
+						<div class="form-group col-md-4">
+							<input type="text" class="form-control" placeholder="Отчество">
+						</div>
+					</div><!-- .form-row -->  
+
+					<div class="form-row">
+						<div class="form-group input-group col-md-3">
+							<div class="input-group date">
+						        <input type="text" id="datepicker" class="form-control" placeholder="Дата рождения" >
+						    </div>
+						</div>
+						<div class="form-group col-md-3">
+							<input type="text" class="form-control" placeholder="Город обучения">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" placeholder="ВУЗ">
+						</div><!-- .form-group -->
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<input type="text" class="form-control" placeholder="Специальность">		
+						</div><!-- .form-group -->
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-4">
+						    <input type="text" class="form-control" placeholder="Форма обучения" >
+						</div>
+						<div class="form-group col-md-4">
+							<input type="text" class="form-control" placeholder="Год поступления">
+						</div>
+						<div class="form-group col-md-4">
+							<input type="text" class="form-control" placeholder="Год окончания">
+						</div><!-- .form-group -->
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-3">
+						    <input type="text" class="form-control" placeholder="Дата выдачи" >
+						</div>
+						<div class="form-group col-md-9">
+							<input type="text" class="form-control" placeholder="Документ о предыдущем образованнии">
+						</div>
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<textarea type="textarea" class="form-control" placeholder="Ваши комментарии и пожелания"  rows="3"></textarea>
+						</div>
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						    <input type="text" class="form-control" placeholder="Адрес доставки" >
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" placeholder="ФИО получателя">
+						</div>
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						    <input type="text" class="form-control" placeholder="E-mail" >
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" placeholder="Телефон">
+						</div>
+					</div><!-- .form-row -->
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+						    <a class="btn btn-danger" href="#" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i> Заказать <i class="fa fa-angle-left" aria-hidden="true"></i></a>
+						</div>
+					</div><!-- .form-row -->	
+
+				</form>
+
+			</div><!-- .form-order -->
+		</div><!-- .wrap-order-dipl-form -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/bootstrap-datepicker.ru.min.js" charset="UTF-8"></script>	
+		<script>
+	        /*jQuery('#datepicker').datepicker();*/
+	        jQuery('#datepicker').datepicker({
+			    format: 'dd/mm/yyyy',
+			    startDate: '-3d',
+			    startDate: '01/01/1945',
+			    language: "ru",
+			    changeYear : true,
+			    startDate: '01/01/1900',
+			    endDate: '01/01/2010',
+			    startView: 2,
+			    title: 'Выберите декаду',
+			    uiLibrary: 'bootstrap4'
+			});
+	    </script>
 
 	<?php 
 	return ob_get_clean();

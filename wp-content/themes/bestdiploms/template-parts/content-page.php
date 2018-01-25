@@ -492,8 +492,29 @@
 			<div class="col-lg-3 sb-secondry">
 		        <?php get_sidebar( 'right' ); ?>
 		    </div>
-	    </div><!-- .row -->  	    
+	    </div><!-- .row -->  	 
 
+	<!-- 485: Заказать диплом -->
+	<?php elseif ( 485 == get_the_ID() ) : ?>
+		<?php global $mytheme; ?>
+
+		<div class="row">
+			<div class="entry-content col-lg-12 pl-3">
+				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+				<h1><?php the_title() ?></h1>		
+
+				<?php the_content(); ?>
+
+				<?php echo do_shortcode('[orderdiplform]'); ?>
+
+				<?php wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
+						'after'  => '</div>',
+					) );
+				?>
+
+			</div><!-- .entry-content -->
+	    </div><!-- .row --> 
 
     <?php 
 	endif; ?>

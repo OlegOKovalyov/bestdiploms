@@ -40,19 +40,19 @@ get_header(); ?>
 	        <?php get_sidebar( 'minus' ); ?>
 	    </div>
 
-	<!-- 282: Отзывы  -->
-	<?php elseif ( 282 == get_the_ID() ) : ?>
+	<!-- 282: Отзывы; 328: Города; 357: Контакты; 485: Заказать диплом -->
+	<?php elseif ( 282 == get_the_ID() || 328 == get_the_ID() || 357 == get_the_ID() || 485 == get_the_ID() ) : ?>
 
 	    <div class="col-lg-3 col-sidebar-primary">
 	        <?php get_sidebar( 'minmin' ); ?>
 	    </div>		
 
 	<!-- 328: Города; 357: Контакты  -->
-	<?php elseif ( 328 == get_the_ID() || 357 == get_the_ID() ) : ?>
-
-	    <div class="col-lg-3 col-sidebar-primary">
-	        <?php get_sidebar( 'minmin' ); ?>
-	    </div>			    
+	<!-- <?php /*elseif ( 328 == get_the_ID() || 357 == get_the_ID() ) :*/ ?>
+				    
+        <div class="col-lg-3 col-sidebar-primary">
+            <?php /*get_sidebar( 'minmin' );*/ ?>
+        </div> -->			    
 
 	<?php else : ?>
 

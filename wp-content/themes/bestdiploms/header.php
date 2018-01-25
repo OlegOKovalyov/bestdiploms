@@ -20,6 +20,9 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">-->
 	<!-- <link rel="stylesheet" href="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/assets/owl.theme.default.css" /> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" />
+		
 	<?php global $mytheme; ?>
 
 	<?php wp_head(); ?>

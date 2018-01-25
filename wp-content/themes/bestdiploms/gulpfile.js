@@ -38,12 +38,12 @@ gulp.task('sass', function() {
 
 // *** JAVASCRIPT ***
 // Создаем JS-task для обработки файлов JavaScript
-gulp.task('js', function() {
+gulp.task('jsjs', function() {
   return gulp.src(['./js/src/*.js'])
-    gulp.src(['./js/src/main.js'])
+    //gulp.src(['./js/src/main.js'])
     .pipe(plumber())
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
+    //.pipe(jshint())
+    //.pipe(jshint.reporter('default'))
     .pipe(rigger())
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./js'))     
@@ -51,6 +51,16 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('./js'))
 });
+// Создаем еще JS-task для обработки файлов JavaScript
+gulp.task('scripts', function() {
+    return gulp.src(['./js/src/*.js'])
+        .pipe(plumber())
+        .pipe(rigger())
+        .pipe(concat('libs.js')) // Собираем их в кучу в новом файле libs.min.js
+        //.pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('./js')); // Выгружаем в папку js
+});
+
 
 // *** IMAGES ***
 // Создаем images-task для минимизации изображений
@@ -60,7 +70,7 @@ gulp.task('images', function() {
     .pipe(imagemin({optimizationLevel: 7, progressive: false})) // очень плохо сжимает изображения
     .pipe(gulp.dest('./images'));
 });
-// Создаем tiny-task для минимизации изображений
+// Создаем tiny-task для минимизации изображений .png
 gulp.task('tinypng', function(cb) {
     gulp.src('./images/src/*')
         .pipe(tiny())
