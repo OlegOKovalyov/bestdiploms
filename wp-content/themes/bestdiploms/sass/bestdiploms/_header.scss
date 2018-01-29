@@ -13,6 +13,26 @@
 .header-top {
     border-top-right-radius: .3125rem;
     box-shadow: 10px -5px 16px #6c8db3;
+    a {
+        color: $dark-grey-text;
+        font-size: .9rem;
+    }
+    .details-que {
+        a {
+            color: $price-gznk;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .details-tel {
+        a {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+    }
 }
 .details-body {
     background-color: $white;
@@ -60,11 +80,11 @@ nav.navbar {
                 border: none;
             }
             li.current_page_item > a {
-                /* background-color: lighten($blue, 5.5%); */
-                /* color: #c92b2b; */
-                /* color: #ededed; */
-                /* border-bottom: 3px solid lighten($red-nav-border, 30%); */
-                /* border-bottom: 3px solid $white; */
+                //* background-color: lighten($blue, 5.5%); */
+                //* color: #c92b2b; */
+                //* color: #ededed; */
+                //* border-bottom: 3px solid lighten($red-nav-border, 30%); */
+                //* border-bottom: 3px solid $white; */
                 //border-bottom: 3px solid $blue;
                 border-top: 3px solid darken($red, 3.5%);
                 //border-top: 3px solid $red-nav-border;
@@ -101,7 +121,7 @@ nav.navbar {
         width: 100%;
     }
     .order_button > a.btn {
-        @include button_theme(0, 0);
+        @include button_theme(.2rem, .2rem);
         /* color: #eee;
         font-size: .9rem;
         letter-spacing: 2px;

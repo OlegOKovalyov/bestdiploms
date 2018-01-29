@@ -530,53 +530,84 @@
 			    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
 			    <?php $args = array(
 			        	'order'			 => 'DESC',
-			        	'post_parent__in' => array( 429, 454 ), // Высшее образование, Аттестаты школы
+			        	'post_parent__in' => array( 429, 454 ),
 			        	'orderby'		 => 'parent',
 			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,
 			            'category_name'  => 'education-kind', // Все виды образования
 		        	);  
-				?>
+		        /*$extra_loop = new WP_Query( $args );
+		        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
+			        $post_id = $post->ID;*/ // Current CPT ?>
 
-				<div class="price-item">
-				
-					<?php $in_args = array(
-				        	'order'			 => 'ASC',
-				            'post_type' 	 => 'study',
-				            'posts_per_page' => -1,
-				            'category_name'  => 'education-doc',
-					    ); 		
+					<div class="price-item">
 
-						$in_loop = new WP_Query( $in_args );
-		        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post();
+				    	<?php /*while(  $post->ID  == $post_id ) {*/ ?>
 
-			        		$post_in_id = $post->ID; // Current inner CPT
-							$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
-							$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
-							$value = get_post_field( "price" );	// Meta-box for Typography Price
-							$value3 = get_post_field( "iframe-html" );	// Meta-box for Video <iframe> HTML Block
-							
-							// Уменьшаем заголовок карты до Диплом бакалавра, Диплом магистра (без дат выпуска)
-							$card_title = get_the_title();
-							$array_title = explode(" ", $card_title); // Переводим строку в массив
-							$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
-							$newtext = implode(" ", $array_title); // Массив снова переводим в строку								
+			                <!-- <h3 class="doc-item-title"><?php /*the_title();*/ ?></h3> -->
+					
+							<?php $in_args = array(
+						        	'order'			 => 'ASC',
+						        	//'post_parent'	 => $post_id,
+									//'orderby'		 => 'menu_order',						        
+						        	//'orderby'		 => 'parent',
+						            'post_type' 	 => 'study',
+						            'posts_per_page' => -1,
+						            'category_name'  => 'education-doc', // Вид категории Образование (например, Диплом бакалавра, Диплом магистра)
+							    ); 		
+
+								$in_loop = new WP_Query( $in_args );
+				        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post();
+
+				        		$post_in_id = $post->ID; // Current inner CPT
+								$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
+								$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
+								$value = get_post_field( "price" );	// Meta-box for Typography Price
+								$value3 = get_post_field( "iframe-html" );	// Meta-box for Video <iframe> HTML Block
+								
+								// Уменьшаем заголовок карты до Диплом бакалавра, Диплом магистра (без дат выпуска)
+								$card_title = get_the_title();
+								$array_title = explode(" ", $card_title); // Переводим строку в массив
+								$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
+								$newtext = implode(" ", $array_title); // Массив снова переводим в строку								
 					            if( $value || $value2 ) { ?>
 
-					                <div class="all-video" id="video-<?php echo $post_in_id ?>">
+									<!-- <section> -->
+								        <!-- <a href="<?php /*echo get_the_post_thumbnail_url( $post->ID, array(580,408) );*/ ?>"  data-fancybox data-caption="<?php /*the_title()*/ ?>">
+										            <?php if ( has_post_thumbnail() ) {
+										                /*the_post_thumbnail( array( 280, 128 ) );*/
+										            } ?>
+										        </a>
+									    <div class="price-props">
+									        <h4 class="price-item-title"><?php /*the_title();*/  /*echo $newtext*/  ?> <span class="price-item-year"> <?php /*echo $value1;*/ ?></span></h4>
 
-										<?php echo $value3; ?>
+									        <?php					            
+								                /*echo '<p class="page-price-gznk">' . $value2 . '</p>';
+								                echo '<p class="page-price-tpgrf">' . $value . '</p>';*/
+							        		?>
 
-									</div>
+							                <a class="btn btn-danger" href="#" role="button">Заказать</a>
+							                <a class="video-link" href="<?php /*echo home_url() . '/video-dokumentov/'*/ ?>"><img src="<?php /*bloginfo('template_url');*/ ?>/images/i_filmstrip.png" alt="Filmstrip Icon">Видео документа</a> -->
+							                <div class="" id="video-<?php echo $post_in_id ?>">
+												<?php					            
+											        //echo '<span class="page-price-gznk">' . $value3 . '</span>';
+											        echo $value3;
+												?>
+											</div>
+									    <!-- </div> --><!-- .price-props -->
+							    	<!-- </section> -->
 
 								<?php  } else {
 									echo '<p>empty</p>';
 								} ?>						    	
-		        
-						<?php endwhile; endif; wp_reset_postdata(); ?>
+			        
+						<?php endwhile; 
+						endif; wp_reset_postdata(); /*}*/ ?>
 
-				</div><!-- .price-item -->
+					</div><!-- .price-item -->
 
+				<?php /*endwhile; endif; wp_reset_postdata();*/ ?>  
+	
 				<?php the_content();
 			
 				wp_link_pages( array(
@@ -585,9 +616,24 @@
 				) ); 
 				?>
 
+
+
+
+
 				<?php the_content(); ?>
 
+				<?php //echo do_shortcode('[kontaktorderform]'); ?>
 				<?php echo do_shortcode('[orderform]'); ?>
+
+				<!-- <p>Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php //echo $mytheme['email']; ?></a></span></p>
+				
+				<p>Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php //echo $mytheme['phone']; ?>.</a></span></p> -->
+
+				<?php wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
+						'after'  => '</div>',
+					) );
+				?>
 
 			</div><!-- .entry-content -->
 

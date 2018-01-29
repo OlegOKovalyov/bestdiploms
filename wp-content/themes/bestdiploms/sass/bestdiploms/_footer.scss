@@ -22,7 +22,7 @@
                 border: 2px solid $form-control-border;
                 width: 24%;
                 &#inputStateFooter {
-                    height: 3.07rem;
+                    height: 2.8rem;
                 }
             }            
         }
@@ -61,11 +61,27 @@
                 &> p > a {
                     color: #fff;
                     display: block;
+                    font-size: .9rem;
                     margin-right: 25%;
                     padding: .5rem;
                     i.fa {
                         color: $red;
                         margin-right: .3rem;
+                    }
+                }
+                .details-tel {
+                    a {
+                        font-size: 1.1rem;
+                    }
+                }
+                .details-que {
+                    a {
+                        color: $price-gznk;
+                        text-decoration: underline;
+                        text-decoration-style: dotted;
+                        &:hover {
+                            text-decoration: underline;
+                        }                        
                     }
                 }
     &> p:last-child > a {

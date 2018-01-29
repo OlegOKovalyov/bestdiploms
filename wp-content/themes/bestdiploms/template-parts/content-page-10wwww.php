@@ -107,7 +107,7 @@
 							        		?>
 
 							                <a class="btn btn-danger" href="#" role="button">Заказать</a>
-							                <a  id="#video-<?php echo $post->ID ?>" class="video-link" href="<?php echo home_url() . '/video-dokumentov/' . '#video-' .  $post->ID ?>"><img src="<?php bloginfo('template_url'); ?>/images/i_filmstrip.png" alt="Filmstrip Icon">Видео документа</a>
+							                <a class="video-link" href="<?php echo home_url() . '/video-dokumentov/' ?>"><img src="<?php bloginfo('template_url'); ?>/images/i_filmstrip.png" alt="Filmstrip Icon">Видео документа</a>
 									    </div><!-- .price-props -->
 							    	</section>
 
@@ -525,69 +525,21 @@
 		<div class="row">
 			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-				<h1><?php the_title() ?></h1>
-
-			    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
-			    <?php $args = array(
-			        	'order'			 => 'DESC',
-			        	'post_parent__in' => array( 429, 454 ), // Высшее образование, Аттестаты школы
-			        	'orderby'		 => 'parent',
-			            'post_type' 	 => 'study',
-			            'posts_per_page' => -1,
-			            'category_name'  => 'education-kind', // Все виды образования
-		        	);  
-				?>
-
-				<div class="price-item">
-				
-					<?php $in_args = array(
-				        	'order'			 => 'ASC',
-				            'post_type' 	 => 'study',
-				            'posts_per_page' => -1,
-				            'category_name'  => 'education-doc',
-					    ); 		
-
-						$in_loop = new WP_Query( $in_args );
-		        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post();
-
-			        		$post_in_id = $post->ID; // Current inner CPT
-							$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
-							$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
-							$value = get_post_field( "price" );	// Meta-box for Typography Price
-							$value3 = get_post_field( "iframe-html" );	// Meta-box for Video <iframe> HTML Block
-							
-							// Уменьшаем заголовок карты до Диплом бакалавра, Диплом магистра (без дат выпуска)
-							$card_title = get_the_title();
-							$array_title = explode(" ", $card_title); // Переводим строку в массив
-							$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
-							$newtext = implode(" ", $array_title); // Массив снова переводим в строку								
-					            if( $value || $value2 ) { ?>
-
-					                <div class="all-video" id="video-<?php echo $post_in_id ?>">
-
-										<?php echo $value3; ?>
-
-									</div>
-
-								<?php  } else {
-									echo '<p>empty</p>';
-								} ?>						    	
-		        
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-
-				</div><!-- .price-item -->
-
-				<?php the_content();
-			
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
-					'after'  => '</div>',
-				) ); 
-				?>
+				<h1><?php the_title() ?></h1>		
 
 				<?php the_content(); ?>
 
-				<?php echo do_shortcode('[orderform]'); ?>
+				<?php echo do_shortcode('[kontaktorderform]'); ?>
+
+				<p>Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
+
+				<p>Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php echo $mytheme['phone']; ?>.</a></span></p>
+
+				<?php wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
+						'after'  => '</div>',
+					) );
+				?>
 
 			</div><!-- .entry-content -->
 

@@ -33,10 +33,10 @@
             margin: .5rem auto;
         }        
         a.btn.btn-danger {
-            @include button_theme(0.3rem, 2rem);
+            @include button_theme(0.2rem, 2rem);
             align-self: center;
             margin: 1rem auto;
-            width: 50%;
+            width: 60%;
             /* &::after {
                 background: url(images/acap_books.png);
                 content: "";
@@ -91,10 +91,10 @@
             margin: .5rem auto;
         }        
         a.btn.btn-danger {
-            @include button_theme(0.3rem, 2rem);
+            @include button_theme(.2rem, .2rem);
             align-self: center;
             margin: 1rem auto;
-            width: 50%;
+            width: 60%;
         }
     }
 }

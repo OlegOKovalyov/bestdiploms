@@ -97,11 +97,9 @@ function study_meta_box(WP_Post $post) {
         $field_name1 = 'make';
         $field_name2 = 'gznk-price';
         $field_name = 'price';
-        $field_name3 = 'iframe-html';
         $field_value1 = get_post_meta($post->ID, $field_name1, true);
         $field_value2 = get_post_meta($post->ID, $field_name2, true);
         $field_value = get_post_meta($post->ID, $field_name, true);
-        $field_value3 = get_post_meta($post->ID, $field_name3, true);
         wp_nonce_field('study_nonce', 'study_nonce');
         ?>
         
@@ -131,15 +129,6 @@ function study_meta_box(WP_Post $post) {
                    value="<?php echo esc_attr($field_value); ?>"
             />
         </p>
-
-        <p><label for="<?php echo $field_name3; ?>">Поле для ввода внешнего видео-контента (iframe)</label></p>
-        <p>
-            <input id="<?php echo $field_name3; ?>"
-                   name="<?php echo $field_name3; ?>"
-                   type="textarea" style="width:100%;min-height:2rem;"
-                   value="<?php echo esc_attr($field_value3); ?>"
-            />
-        </p>        
        
         <?php
     });
@@ -157,7 +146,6 @@ add_action('save_post', function($post_id){
     $field_name1 = 'make';
     $field_name2 = 'gznk-price';
     $field_name = 'price';
-    $field_name3 = 'iframe-html';
 
     // Do not save meta for a revision or on autosave
     if ( $post->post_type != 'study' || $is_revision )
@@ -170,9 +158,7 @@ add_action('save_post', function($post_id){
     if( !isset($_POST[$field_name2]) )
         return;
     if( !isset($_POST[$field_name]) )
-        return;
-    if( !isset($_POST[$field_name3]) )
-        return;               
+        return;        
 
     // Secure with nonce field check
     if( ! check_admin_referer('study_nonce', 'study_nonce') )
@@ -182,7 +168,6 @@ add_action('save_post', function($post_id){
     $field_value1 = trim($_POST[$field_name1]);
     $field_value2 = trim($_POST[$field_name2]);
     $field_value = trim($_POST[$field_name]);    
-    $field_value3 = trim($_POST[$field_name3]);    
 
     // Do the saving and deleting
     if( ! empty_str( $field_value1 ) ) {
@@ -201,15 +186,8 @@ add_action('save_post', function($post_id){
         update_post_meta($post_id, $field_name, $field_value);
     } elseif( empty_str( $field_value ) ) {
         delete_post_meta($post_id, $field_name);
-    }
-
-    if( ! empty_str( $field_value3 ) ) {
-        update_post_meta($post_id, $field_name3, $field_value3);
-    } elseif( empty_str( $field_value3 ) ) {
-        delete_post_meta($post_id, $field_name3);
-    }      
-
-} , 10, 4);
+    }    
+} , 10, 3);
 
 // 4. Регистрируем функцию подключения шаблона для вывода CPT 'study'. 
 add_filter( 'template_include', 'include_template_function', 1 );

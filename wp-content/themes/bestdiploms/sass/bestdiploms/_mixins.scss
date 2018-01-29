@@ -16,6 +16,9 @@
             &:first-child {
                 margin-left: $mrgl;
                 margin-right: $mrgr;
+                &:before {
+                    padding-right: .4rem;
+                }
             }
             &:last-child {
                 margin-left: $mrgr;

@@ -27,69 +27,74 @@
 				 $curstudycntnt = get_the_content();
 			?>
 
-				<div class="price-block">
+			<div class="price-block">
 
-					<?php 
-						$in_args = array(
-				        	'order'			 => 'ASC',
-				        	'post_parent'	 => $post_id,
-				        	'orderby'		 => 'parent',
-				            'post_type' 	 => 'study',
-				            'posts_per_page' => -1,
-				            'category_name'  => 'education-cat',
-					        ); 		
-						$i_loop = 0;
-						$in_loop = new WP_Query( $in_args );
-		        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); 		
+				<?php 
+					$in_args = array(
+			        	'order'			 => 'ASC',
+			        	'post_parent'	 => $post_id,
+			        	'orderby'		 => 'parent',
+			            'post_type' 	 => 'study',
+			            'posts_per_page' => -1,
+			            'category_name'  => 'education-cat',
+				        ); 		
+					$i_loop = 0;
+					$in_loop = new WP_Query( $in_args );
+	        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); 		
 
-							// Формируем массив документов об образовании, которые будут выводиться на странице CPT study (Документы) при клике на ссылку в левом primary сайдбаре
-							$post_doc_id[$i_loop] = $post->ID;
+						// Формируем массив документов об образовании, которые будут выводиться на странице CPT study (Документы) при клике на ссылку в левом primary сайдбаре
+						$post_doc_id[$i_loop] = $post->ID;
 
-							// Уменьшаем заголовок карты до Диплом бакалавра, Диплом магистра (без дат выпуска)
-							$card_title = get_the_title();
-							$array_title = explode(" ", $card_title); // Переводим строку в массив
-							$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
-							$newtext = implode(" ", $array_title); // Массив снова переводим в строку
-				 	?>
+						// Уменьшаем заголовок карты до Диплом бакалавра, Диплом магистра (без дат выпуска)
+						$card_title = get_the_title();
+						$array_title = explode(" ", $card_title); // Переводим строку в массив
+						$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
+						$newtext = implode(" ", $array_title); // Массив снова переводим в строку
+			 	?>
 
-							<div class="price-item">
-									<?php
-									$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
-									$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
-									$value = get_post_field( "price" );	// Meta-box for Typography Price
-							            if( $value || $value2 ) { ?>
+				<div class="price-item">
+						<?php
+						$value1 = get_post_field( "make" ); // Meta-box for Document Creation Date
+						$value2 = get_post_field( "gznk-price" ); // Meta-box for GOZNAK Price
+						$value = get_post_field( "price" );	// Meta-box for Typography Price
+						$value3 = get_post_field( "iframe-html" );	// Meta-box for Video <iframe> HTML Block 
+				            if( $value || $value2 ) { ?>
 
-											<section>
-										        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
-										            <?php if ( has_post_thumbnail() ) {
-										                the_post_thumbnail( array( 280, 128 ) );
-										            } ?>
-										        </a>
-										        <!-- <a href="https://source.unsplash.com/RF5sv5dv1Zc/1500x1000" data-fancybox data-caption="This image has a caption">
-										              <img src="https://source.unsplash.com/RF5sv5dv1Zc/240x160" />
-										          </a> -->
-											    <div class="price-props">
-											        <h4 class="price-item-title"><?php echo $newtext ?> <span class="price-item-year"> <?php echo $value1; ?></span></h4>
+								<h4 class="price-item-title"><?php echo $newtext ?> <span class="price-item-year"> <?php echo ' ' . $value1; ?></span></h4>
+								<section>
+								     <!-- <div class="row"> -->
+									    <div class="price-props">
 
-											        <?php					            
-										                echo '<p class="page-price-gznk">' . $value2 . '</p>';
-										                echo '<p class="page-price-tpgrf">' . $value . '</p>';
-									        		?>
+							        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
+							            <?php if ( has_post_thumbnail() ) {
+							                the_post_thumbnail( array( 280, 128 ) );
+							            } ?>
+							        </a>												    	
 
-									                <a class="btn btn-danger" href="#" role="button">Заказать</a>
+									        <?php					            
+								                echo '<p class="page-price-gznk">' . $value2 . '</p>';
+								                echo '<p class="page-price-tpgrf">' . $value . '</p>';
+							        		?>
 
-										    	</div><!-- .price-props -->
-								    		</section>
+							                <a class="btn btn-danger" href="#" role="button">Заказать</a>
+								    	</div><!-- .price-props -->
+										<div class="" id="video-<?php echo $post_doc_id[$i_loop] ?>">
+											<?php					            
+										        echo '<p class="page-price-gznk">' . $value3 . '</p>';
+											?>
+										</div>
+									<!-- </div> --><!-- .row -->								    	
+					    		</section>
 
-										<?php  } else {
-											echo '<p>empty</p>';
-										} ?>							    	
+							<?php  } else {
+								echo '<p>empty</p>';
+							} ?>							    	
 
-							</div><!-- .price-item -->            	
-		        
-						<?php $i_loop = $i_loop + 1; endwhile; endif; wp_reset_postdata(); ?>
+				</div><!-- .price-item -->            	
+	        
+				<?php $i_loop = $i_loop + 1; endwhile; endif; wp_reset_postdata(); ?>
 
-				</div><!-- .price-block -->
+			</div><!-- .price-block -->
 
 				<?php echo $curstudycntnt; // Выводим содержимое записи CPT study (Документы) - контент из админ-панели. ?>
 	

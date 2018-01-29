@@ -2,6 +2,12 @@
 /* Карусель */
 .carousel-block {
     height: auto;
+    .owl-theme .owl-nav [class*="owl-"] {
+        background-color: $nav-carousel;
+        &:hover {
+            background-color: $blue;
+        }
+    }    
     .owl-carousel {
         margin: 1rem;
         .owl-stage {

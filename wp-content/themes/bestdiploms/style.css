@@ -5325,6 +5325,19 @@ tbody.collapse.show {
   border-top-right-radius: .3125rem;
   -webkit-box-shadow: 10px -5px 16px #6c8db3;
           box-shadow: 10px -5px 16px #6c8db3; }
+  .header-top a {
+    color: #434549;
+    font-size: .9rem; }
+  .header-top .details-que a {
+    color: #FA6969;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted; }
+    .header-top .details-que a:hover {
+      text-decoration: underline; }
+  .header-top .details-tel a {
+    font-size: 1.1rem;
+    font-weight: 500; }
 
 .details-body {
   background-color: #fff;
@@ -5362,11 +5375,6 @@ nav.navbar {
   nav.navbar #navbarNavAltMarkup ul > li:last-child a {
     border: none; }
   nav.navbar #navbarNavAltMarkup ul li.current_page_item > a {
-    /* background-color: lighten($blue, 5.5%); */
-    /* color: #c92b2b; */
-    /* color: #ededed; */
-    /* border-bottom: 3px solid lighten($red-nav-border, 30%); */
-    /* border-bottom: 3px solid $white; */
     border-top: 3px solid #d43434;
     color: #ededed; }
 
@@ -5415,11 +5423,13 @@ nav.navbar {
       color: #BD1818;
       margin: .5rem 0; }
       .valid_goznak .order_button > a.btn i.fa:first-child {
-        margin-left: 0;
-        margin-right: 0; }
+        margin-left: 0.2rem;
+        margin-right: 0.2rem; }
+        .valid_goznak .order_button > a.btn i.fa:first-child:before {
+          padding-right: .4rem; }
       .valid_goznak .order_button > a.btn i.fa:last-child {
-        margin-left: 0;
-        margin-right: 0; }
+        margin-left: 0.2rem;
+        margin-right: 0.2rem; }
     .valid_goznak .order_button > a.btn:hover {
       background: #c92b2b;
       color: #fff;
@@ -5429,6 +5439,10 @@ nav.navbar {
 /* Карусель */
 .carousel-block {
   height: auto; }
+  .carousel-block .owl-theme .owl-nav [class*="owl-"] {
+    background-color: #EAEEF6; }
+    .carousel-block .owl-theme .owl-nav [class*="owl-"]:hover {
+      background-color: #5684DB; }
   .carousel-block .owl-carousel {
     margin: 1rem; }
     .carousel-block .owl-carousel .owl-stage {
@@ -5493,6 +5507,8 @@ nav.navbar {
         .owl-item .doc-item a.btn.btn-danger i.fa:first-child {
           margin-left: 0.3rem;
           margin-right: 2rem; }
+          .owl-item .doc-item a.btn.btn-danger i.fa:first-child:before {
+            padding-right: .4rem; }
         .owl-item .doc-item a.btn.btn-danger i.fa:last-child {
           margin-left: 2rem;
           margin-right: 0.3rem; }
@@ -5582,7 +5598,7 @@ nav.navbar {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 2px;
-  padding: 1.5rem 0 1.5rem 1.5rem; }
+  padding: 1.5rem 0 .8rem 1.5rem; }
   .price-item section a {
     display: block; }
   .price-item section:last-child {
@@ -5601,7 +5617,22 @@ nav.navbar {
           justify-content: space-between;
   margin-left: 1.2rem; }
   .price-item div.price-props h4.price-item-title {
-    margin-bottom: 0; }
+    margin-bottom: .5rem; }
+  .price-item div.price-props a.video-link {
+    font-size: .8rem;
+    position: relative;
+    right: -68%;
+    top: -13%; }
+    .price-item div.price-props a.video-link img {
+      display: inline-block;
+      margin-bottom: 3px;
+      margin-right: 5px; }
+    .price-item div.price-props a.video-link:before {
+      /* content: "";
+                display: inline-block;
+                background: url("images/i_filmstrip.png") no-repeat;
+                width: 20px;
+                height: 15px; */ }
 
 .price-item p {
   font-size: .9rem;
@@ -5611,6 +5642,7 @@ nav.navbar {
 .price-item h4.price-item-title {
   font-weight: 400;
   letter-spacing: -.5px;
+  margin-bottom: .5rem;
   text-transform: uppercase; }
   .price-item h4.price-item-title span {
     font-size: .85rem;
@@ -5620,12 +5652,11 @@ nav.navbar {
 .price-item p.page-price-gznk {
   color: #FA6969;
   font-size: .85rem;
-  font-weight: 500;
-  margin-bottom: .3rem; }
+  font-weight: 500; }
 
 .price-item p.page-price-tpgrf {
   font-size: .85rem;
-  margin-top: -1rem; }
+  margin-bottom: 1.3rem; }
 
 .price-item a.btn.btn-danger {
   color: #eee;
@@ -5644,6 +5675,8 @@ nav.navbar {
     .price-item a.btn.btn-danger i.fa:first-child {
       margin-left: 0;
       margin-right: 0; }
+      .price-item a.btn.btn-danger i.fa:first-child:before {
+        padding-right: .4rem; }
     .price-item a.btn.btn-danger i.fa:last-child {
       margin-left: 0;
       margin-right: 0; }
@@ -5679,6 +5712,8 @@ nav.navbar {
       .valid_goznak-pages .order_button a.btn.btn-danger i.fa:first-child {
         margin-left: 0.3rem;
         margin-right: 1.5rem; }
+        .valid_goznak-pages .order_button a.btn.btn-danger i.fa:first-child:before {
+          padding-right: .4rem; }
       .valid_goznak-pages .order_button a.btn.btn-danger i.fa:last-child {
         margin-left: 1.5rem;
         margin-right: 0.3rem; }
@@ -5686,6 +5721,270 @@ nav.navbar {
       background: #c92b2b;
       color: #fff;
       border: 1px solid rgba(215, 67, 67, 0.15); }
+
+/* Стилизуем содержимое страницы Оплата и доставка */
+#post-376 #gallery-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+/* Стилизуем содержимое страницы Вопросы и ответы */
+div.divaccordion {
+  margin-top: 2rem; }
+  div.divaccordion .card {
+    border-radius: 0;
+    margin-bottom: 1rem; }
+    div.divaccordion .card .card-header {
+      background-color: #C4D7F5;
+      border-radius: 0;
+      border: 2px solid #b5cdf2; }
+      div.divaccordion .card .card-header h5 {
+        /* margin-bottom: 0;    
+                margin-left: 2.5rem;
+                margin-right: 1.5rem; */
+        margin: auto 1.5rem 0 2.5rem;
+        text-transform: uppercase; }
+        div.divaccordion .card .card-header h5 p {
+          font-size: .9rem;
+          font-weight: 400;
+          line-height: 1.3;
+          margin: 0;
+          text-align: left; }
+        div.divaccordion .card .card-header h5 a:hover {
+          text-decoration: none; }
+        div.divaccordion .card .card-header h5:before {
+          content: "";
+          position: absolute;
+          top: 1rem;
+          left: 3%;
+          width: 28px;
+          height: 24px;
+          background: url(images/i_que.png); }
+        div.divaccordion .card .card-header h5 a i {
+          position: absolute;
+          right: 5%;
+          top: 1rem; }
+    div.divaccordion .card .card-body {
+      background-color: #F6F9FD;
+      border-right: none;
+      border-bottom: none;
+      border-left: 2px solid #e7effa; }
+      div.divaccordion .card .card-body p {
+        font-size: .85rem;
+        margin: 0;
+        text-align: left; }
+
+.wrap-page-numbers {
+  margin: 1.5rem 0; }
+
+.page-numbers {
+  background-color: #5684DB;
+  border: 2px solid #5684DB;
+  border-radius: .25rem;
+  color: #fff;
+  padding: .23rem .4rem .1rem; }
+  .page-numbers:hover {
+    background-color: #D9E3ED;
+    border: 2px solid #D9E3ED;
+    color: #5684DB;
+    text-decoration: none; }
+  .page-numbers.current {
+    background-color: #fff;
+    color: #5684DB; }
+    .page-numbers.current:hover {
+      border: 2px solid #5684DB; }
+
+/* Стилизуем содержимое страницы Статьи */
+.article-links {
+  background-color: #EEF4F9;
+  border: 1px solid #e1ebf4;
+  border-left: 2px solid #d4e3f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto; }
+  .article-links .attachment-post-thumbnail {
+    margin: 1rem 1.5rem; }
+  .article-links .media-body h4 {
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 1.5rem auto 1rem;
+    text-transform: uppercase; }
+  .article-links .media-body p {
+    margin-right: .5rem;
+    text-align: left; }
+
+/* Стилизуем содержимое страницы Отзывы */
+#reviews {
+  margin-top: 2rem; }
+
+.rev-props {
+  background-color: #4668BB;
+  border-radius: .3125rem;
+  color: #fff;
+  margin-bottom: .3rem;
+  padding: .5rem 1rem .5rem; }
+  .rev-props .rev-item-name {
+    border-bottom: 1px solid #8c8c8c;
+    font-size: .9rem;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: .5rem; }
+    .rev-props .rev-item-name span.rev-item-date {
+      background-color: #364B7F;
+      border-radius: .25rem;
+      color: #b3b3b3;
+      padding: 0 .8rem; }
+  .rev-props p {
+    text-align: left; }
+
+/* Стилизуем содержимое страницы Города */
+#post-328 h1 {
+  background: url(images/strip_cutlglight.png) no-repeat center top; }
+
+.cities-links {
+  -webkit-column-count: 3;
+          column-count: 3;
+  height: auto;
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin: 2rem auto; }
+  .cities-links .city-link ul {
+    list-style-type: none; }
+    .cities-links .city-link ul li.city-link-title {
+      margin-bottom: .5rem; }
+      .cities-links .city-link ul li.city-link-title a {
+        font-size: .88rem; }
+
+.cities-ordeform {
+  margin: 5rem auto; }
+
+/* Стилизуем содержимое страницы Контакты */
+.page-id-357 p.margin-y {
+  margin: 3rem auto; }
+
+.page-id-357 .why-just-us.row {
+  display: none; }
+
+.page-id-357 .blank-top-row-content {
+  border-bottom-left-radius: .3125rem;
+  border-bottom-right-radius: .3125rem;
+  height: 5rem;
+  margin-bottom: -2rem; }
+
+.page-id-357 .addr-email {
+  font-size: 1rem; }
+
+.page-id-357 .tel-num a {
+  color: #434549;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: .2rem; }
+
+#footer {
+  margin-top: -2rem; }
+
+/* Стилизуем содержимое страницы вывода CPT study (Документы) шаблон сontent-study.php. */
+.single-study h2 {
+  background: url(images/strip_mdlight.png) no-repeat center top;
+  color: #364B7F;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  padding: .8rem 1.1rem 1.1rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+.single-study .study-ul-menu .study-link-title a.active {
+  background-color: #EFF6FD;
+  border-bottom: none;
+  color: #EE575A; }
+  .single-study .study-ul-menu .study-link-title a.active:hover {
+    text-decoration: unset; }
+
+.single-study #footer .study-ul-menu .study-link-title a.active {
+  background-color: transparent;
+  color: #EE575A;
+  cursor: default; }
+
+.single-study .why-just-us {
+  display: none; }
+
+.single-study .blank-top-row-content {
+  border-bottom-left-radius: .3125rem;
+  border-bottom-right-radius: .3125rem;
+  height: 5rem;
+  margin-bottom: -2rem; }
+
+.study.type-study .entry-content > img.wp-post-image {
+  border: 1px solid #DBE3F4;
+  border-radius: .25rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 100%;
+  height: auto; }
+
+.study.type-study .price-block .price-item section {
+  border: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: .3rem 0 .8rem 0; }
+  .study.type-study .price-block .price-item section .price-props {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 0; }
+    .study.type-study .price-block .price-item section .price-props .page-price-tpgrf {
+      margin-bottom: 0.3rem; }
+  .study.type-study .price-block .price-item section a.btn.btn-danger {
+    width: 100%; }
+
+/* Стилизуем содержимое страницы Заказать диплом. */
+.page-id-485 .form-oder {
+  width: 100% !important; }
+  .page-id-485 .form-oder .form-group {
+    margin-bottom: 0; }
+    .page-id-485 .form-oder .form-group textarea {
+      margin-bottom: 1.7rem; }
+  .page-id-485 .form-oder a.btn.btn-danger {
+    display: block;
+    margin: 1rem auto;
+    width: 30%; }
+
+.page-id-485 .why-just-us {
+  display: none; }
+
+.page-id-485 .blank-top-row-content {
+  border-bottom-left-radius: .3125rem;
+  border-bottom-right-radius: .3125rem;
+  height: 5rem; }
+
+.page-id-485 #footer {
+  margin-top: -5rem; }
+
+/* Стилизуем содержимое страницы Видео документов */
+#post-487 {
+  margin-bottom: 4rem; }
+  #post-487 .entry-content h1 {
+    margin-bottom: 1.5rem; }
+  #post-487 .price-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 3rem; }
 
 /* Форма ЗАКАЗАТЬ ДИПЛОМ */
 .wrap-form-order {
@@ -5732,7 +6031,7 @@ nav.navbar {
       -ms-flex-item-align: center;
           align-self: center;
       margin: 1rem auto;
-      width: 50%;
+      width: 60%;
       /* &::after {
                 background: url(images/acap_books.png);
                 content: "";
@@ -5746,11 +6045,13 @@ nav.navbar {
         color: #BD1818;
         margin: .5rem 0; }
         .wrap-form-order .form-oder a.btn.btn-danger i.fa:first-child {
-          margin-left: 0.3rem;
+          margin-left: 0.2rem;
           margin-right: 2rem; }
+          .wrap-form-order .form-oder a.btn.btn-danger i.fa:first-child:before {
+            padding-right: .4rem; }
         .wrap-form-order .form-oder a.btn.btn-danger i.fa:last-child {
           margin-left: 2rem;
-          margin-right: 0.3rem; }
+          margin-right: 0.2rem; }
       .wrap-form-order .form-oder a.btn.btn-danger:hover {
         background: #c92b2b;
         color: #fff;
@@ -5814,7 +6115,7 @@ nav.navbar {
       -ms-flex-item-align: center;
           align-self: center;
       margin: 1rem auto;
-      width: 50%; }
+      width: 60%; }
       .wrap-faq-form-order .form-oder a.btn.btn-danger i.fa,
       .wrap-rev-form-order .form-oder a.btn.btn-danger i.fa,
       .wrap-kntkt-form-order .form-oder a.btn.btn-danger i.fa {
@@ -5823,13 +6124,17 @@ nav.navbar {
         .wrap-faq-form-order .form-oder a.btn.btn-danger i.fa:first-child,
         .wrap-rev-form-order .form-oder a.btn.btn-danger i.fa:first-child,
         .wrap-kntkt-form-order .form-oder a.btn.btn-danger i.fa:first-child {
-          margin-left: 0.3rem;
-          margin-right: 2rem; }
+          margin-left: 0.2rem;
+          margin-right: 0.2rem; }
+          .wrap-faq-form-order .form-oder a.btn.btn-danger i.fa:first-child:before,
+          .wrap-rev-form-order .form-oder a.btn.btn-danger i.fa:first-child:before,
+          .wrap-kntkt-form-order .form-oder a.btn.btn-danger i.fa:first-child:before {
+            padding-right: .4rem; }
         .wrap-faq-form-order .form-oder a.btn.btn-danger i.fa:last-child,
         .wrap-rev-form-order .form-oder a.btn.btn-danger i.fa:last-child,
         .wrap-kntkt-form-order .form-oder a.btn.btn-danger i.fa:last-child {
-          margin-left: 2rem;
-          margin-right: 0.3rem; }
+          margin-left: 0.2rem;
+          margin-right: 0.2rem; }
       .wrap-faq-form-order .form-oder a.btn.btn-danger:hover,
       .wrap-rev-form-order .form-oder a.btn.btn-danger:hover,
       .wrap-kntkt-form-order .form-oder a.btn.btn-danger:hover {
@@ -6103,6 +6408,8 @@ nav.navbar {
         #footer .footer-content .form-bar a.btn.btn-danger i.fa:first-child {
           margin-left: 0.3rem;
           margin-right: 2rem; }
+          #footer .footer-content .form-bar a.btn.btn-danger i.fa:first-child:before {
+            padding-right: .4rem; }
         #footer .footer-content .form-bar a.btn.btn-danger i.fa:last-child {
           margin-left: 2rem;
           margin-right: 0.3rem; }
@@ -6115,7 +6422,7 @@ nav.navbar {
       border: 2px solid #C4D7F5;
       width: 24%; }
       #footer .footer-content .form-bar .form-control#inputStateFooter {
-        height: 3.07rem; }
+        height: 2.8rem; }
   #footer .footer-content .footer-widget-row {
     margin-top: 1rem; }
     #footer .footer-content .footer-widget-row .study-cats {
@@ -6144,11 +6451,21 @@ nav.navbar {
     #footer .footer-content .details-body-row .details-body-footer > p > a {
       color: #fff;
       display: block;
+      font-size: .9rem;
       margin-right: 25%;
       padding: .5rem; }
       #footer .footer-content .details-body-row .details-body-footer > p > a i.fa {
         color: #D74343;
         margin-right: .3rem; }
+    #footer .footer-content .details-body-row .details-body-footer .details-tel a {
+      font-size: 1.1rem; }
+    #footer .footer-content .details-body-row .details-body-footer .details-que a {
+      color: #FA6969;
+      text-decoration: underline;
+      -webkit-text-decoration-style: dotted;
+              text-decoration-style: dotted; }
+      #footer .footer-content .details-body-row .details-body-footer .details-que a:hover {
+        text-decoration: underline; }
     #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
       margin-right: 5%; }
   #footer .footer-content .details-body-row p.smallp {
@@ -6182,239 +6499,6 @@ aside#sidebar-secondary {
         font-size: .8rem; }
         aside#sidebar-secondary .articles-cat-link ul li a:hover {
           color: #5684DB; }
-
-/* Стилизуем содержимое страницы Оплата и доставка */
-#post-376 #gallery-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-
-/* Стилизуем содержимое страницы Вопросы и ответы */
-div.divaccordion {
-  margin-top: 2rem; }
-  div.divaccordion .card {
-    border-radius: 0;
-    margin-bottom: 1rem; }
-    div.divaccordion .card .card-header {
-      background-color: #C4D7F5;
-      border-radius: 0;
-      border: 2px solid #b5cdf2; }
-      div.divaccordion .card .card-header h5 {
-        /* margin-bottom: 0;	
-				margin-left: 2.5rem;
-				margin-right: 1.5rem; */
-        margin: auto 1.5rem 0 2.5rem;
-        text-transform: uppercase; }
-        div.divaccordion .card .card-header h5 p {
-          font-size: .9rem;
-          font-weight: 400;
-          line-height: 1.3;
-          margin: 0;
-          text-align: left; }
-        div.divaccordion .card .card-header h5 a:hover {
-          text-decoration: none; }
-        div.divaccordion .card .card-header h5:before {
-          content: "";
-          position: absolute;
-          top: 1rem;
-          left: 3%;
-          width: 28px;
-          height: 24px;
-          background: url(images/i_que.png); }
-        div.divaccordion .card .card-header h5 a i {
-          position: absolute;
-          right: 5%;
-          top: 1rem; }
-    div.divaccordion .card .card-body {
-      background-color: #F6F9FD;
-      border-right: none;
-      border-bottom: none;
-      border-left: 2px solid #e7effa; }
-      div.divaccordion .card .card-body p {
-        font-size: .85rem;
-        margin: 0;
-        text-align: left; }
-
-.wrap-page-numbers {
-  margin: 1.5rem 0; }
-
-.page-numbers {
-  background-color: #5684DB;
-  border: 2px solid #5684DB;
-  border-radius: .25rem;
-  color: #fff;
-  padding: .23rem .4rem .1rem; }
-  .page-numbers:hover {
-    background-color: #D9E3ED;
-    border: 2px solid #D9E3ED;
-    color: #5684DB;
-    text-decoration: none; }
-  .page-numbers.current {
-    background-color: #fff;
-    color: #5684DB; }
-    .page-numbers.current:hover {
-      border: 2px solid #5684DB; }
-
-/* Стилизуем содержимое страницы Статьи */
-.article-links {
-  background-color: #EEF4F9;
-  border: 1px solid #e1ebf4;
-  border-left: 2px solid #d4e3f0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1rem auto; }
-  .article-links .attachment-post-thumbnail {
-    margin: 1rem 1.5rem; }
-  .article-links .media-body h4 {
-    font-size: .9rem;
-    font-weight: 500;
-    margin: 1.5rem auto 1rem;
-    text-transform: uppercase; }
-  .article-links .media-body p {
-    margin-right: .5rem;
-    text-align: left; }
-
-/* Стилизуем содержимое страницы Отзывы */
-#reviews {
-  margin-top: 2rem; }
-
-.rev-props {
-  background-color: #4668BB;
-  border-radius: .3125rem;
-  color: #fff;
-  margin-bottom: .3rem;
-  padding: .5rem 1rem .5rem; }
-  .rev-props .rev-item-name {
-    border-bottom: 1px solid #8c8c8c;
-    font-size: .9rem;
-    font-weight: 500;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-bottom: .5rem; }
-    .rev-props .rev-item-name span.rev-item-date {
-      background-color: #364B7F;
-      border-radius: .25rem;
-      color: #b3b3b3;
-      padding: 0 .8rem; }
-  .rev-props p {
-    text-align: left; }
-
-/* Стилизуем содержимое страницы Города */
-#post-328 h1 {
-  background: url(images/strip_cutlglight.png) no-repeat center top; }
-
-.cities-links {
-  -webkit-column-count: 3;
-          column-count: 3;
-  height: auto;
-  list-style-position: inside;
-  list-style-type: decimal;
-  margin: 2rem auto; }
-  .cities-links .city-link ul {
-    list-style-type: none; }
-    .cities-links .city-link ul li.city-link-title {
-      margin-bottom: .5rem; }
-      .cities-links .city-link ul li.city-link-title a {
-        font-size: .88rem; }
-
-.cities-ordeform {
-  margin: 5rem auto; }
-
-/* Стилизуем содержимое страницы Контакты */
-.page-id-357 p.margin-y {
-  margin: 3rem auto; }
-
-.page-id-357 .why-just-us.row {
-  display: none; }
-
-.page-id-357 .blank-top-row-content {
-  border-bottom-left-radius: .3125rem;
-  border-bottom-right-radius: .3125rem;
-  height: 5rem;
-  margin-bottom: -2rem; }
-
-.page-id-357 .addr-email {
-  font-size: 1rem; }
-
-.page-id-357 .tel-num a {
-  color: #424853;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-left: .2rem; }
-
-#footer {
-  margin-top: -2rem; }
-
-/* Стилизуем содержимое страницы вывода CPT study (Документы) шаблон сontent-study.php. */
-.single-study h2 {
-  background: url(images/strip_mdlight.png) no-repeat center top;
-  color: #364B7F;
-  font-size: 1.7rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  padding: .8rem 1.1rem 1.1rem;
-  text-align: center;
-  text-transform: uppercase; }
-
-.single-study .study-ul-menu .study-link-title a.active {
-  background-color: #EFF6FD;
-  border-bottom: none;
-  color: #EE575A; }
-  .single-study .study-ul-menu .study-link-title a.active:hover {
-    text-decoration: unset; }
-
-.single-study #footer .study-ul-menu .study-link-title a.active {
-  background-color: transparent;
-  color: #EE575A;
-  cursor: default; }
-
-.single-study .why-just-us {
-  display: none; }
-
-.single-study .blank-top-row-content {
-  border-bottom-left-radius: .3125rem;
-  border-bottom-right-radius: .3125rem;
-  height: 5rem;
-  margin-bottom: -2rem; }
-
-.study.type-study .entry-content > img.wp-post-image {
-  border: 1px solid #DBE3F4;
-  border-radius: .25rem;
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 100%;
-  height: auto; }
-
-/* Стилизуем содержимое страницы Заказать диплом. */
-.page-id-485 .form-oder {
-  width: 100% !important; }
-  .page-id-485 .form-oder .form-group {
-    margin-bottom: 0; }
-    .page-id-485 .form-oder .form-group textarea {
-      margin-bottom: 1.7rem; }
-  .page-id-485 .form-oder a.btn.btn-danger {
-    display: block;
-    margin: 1rem auto;
-    width: 30%; }
-
-.page-id-485 .why-just-us {
-  display: none; }
-
-.page-id-485 .blank-top-row-content {
-  border-bottom-left-radius: .3125rem;
-  border-bottom-right-radius: .3125rem;
-  height: 5rem; }
-
-.page-id-485 #footer {
-  margin-top: -5rem; }
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
