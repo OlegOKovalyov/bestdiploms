@@ -477,11 +477,11 @@
 
 				<?php the_content(); ?>
 
-				<?php echo do_shortcode('[kontaktorderform]'); ?>
+				<?php //echo do_shortcode('[kontaktorderform]'); ?>
 
-				<p>Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
+				<p class="sm-text">Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
 
-				<p>Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php echo $mytheme['phone']; ?>.</a></span></p>
+				<p class="sm-text">Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php echo $mytheme['phone']; ?>.</a></span></p>
 
 				<?php wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),

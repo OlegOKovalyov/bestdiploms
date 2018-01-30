@@ -2,7 +2,7 @@
 .breadcrumbs {
     color: $blue;
     font-size: .85rem;
-    margin: 1rem 0 2rem 1.7rem;
+    margin: 1rem 0 2rem -1rem;
     .current {
         color: lighten($blue, 12%);
     }
@@ -353,6 +353,9 @@ div.divaccordion  {
     p.margin-y {
         margin: 3rem auto;
     }
+    p.sm-text {
+        font-size: .8rem;
+    }
     .why-just-us.row {
         display: none;
     }
@@ -363,11 +366,11 @@ div.divaccordion  {
         margin-bottom: -2rem;
     }
     .addr-email {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .tel-num a {
         color: $dark-grey-text;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 500;
         margin-left: .2rem;
     }

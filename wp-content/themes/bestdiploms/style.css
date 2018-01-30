@@ -5521,7 +5521,7 @@ nav.navbar {
 .breadcrumbs {
   color: #5684DB;
   font-size: .85rem;
-  margin: 1rem 0 2rem 1.7rem; }
+  margin: 1rem 0 2rem -1rem; }
   .breadcrumbs .current {
     color: #88a9e6; }
 
@@ -5870,6 +5870,9 @@ div.divaccordion {
 .page-id-357 p.margin-y {
   margin: 3rem auto; }
 
+.page-id-357 p.sm-text {
+  font-size: .8rem; }
+
 .page-id-357 .why-just-us.row {
   display: none; }
 
@@ -5880,11 +5883,11 @@ div.divaccordion {
   margin-bottom: -2rem; }
 
 .page-id-357 .addr-email {
-  font-size: 1rem; }
+  font-size: .9rem; }
 
 .page-id-357 .tel-num a {
   color: #434549;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin-left: .2rem; }
 
@@ -6020,7 +6023,7 @@ div.divaccordion {
       border: 2px solid #C4D7F5;
       line-height: 1.4;
       margin: .5rem auto; }
-    .wrap-form-order .form-oder a.btn.btn-danger {
+    .wrap-form-order .form-oder .btn.btn-danger {
       color: #eee;
       border-radius: 0.3125rem;
       font-size: .9rem;
@@ -6041,18 +6044,18 @@ div.divaccordion {
                 width: 280px;
                 height: 310px;
             } */ }
-      .wrap-form-order .form-oder a.btn.btn-danger i.fa {
+      .wrap-form-order .form-oder .btn.btn-danger i.fa {
         color: #BD1818;
         margin: .5rem 0; }
-        .wrap-form-order .form-oder a.btn.btn-danger i.fa:first-child {
+        .wrap-form-order .form-oder .btn.btn-danger i.fa:first-child {
           margin-left: 0.2rem;
           margin-right: 2rem; }
-          .wrap-form-order .form-oder a.btn.btn-danger i.fa:first-child:before {
+          .wrap-form-order .form-oder .btn.btn-danger i.fa:first-child:before {
             padding-right: .4rem; }
-        .wrap-form-order .form-oder a.btn.btn-danger i.fa:last-child {
+        .wrap-form-order .form-oder .btn.btn-danger i.fa:last-child {
           margin-left: 2rem;
           margin-right: 0.2rem; }
-      .wrap-form-order .form-oder a.btn.btn-danger:hover {
+      .wrap-form-order .form-oder .btn.btn-danger:hover {
         background: #c92b2b;
         color: #fff;
         border: 1px solid rgba(215, 67, 67, 0.15); }
@@ -6141,6 +6144,54 @@ div.divaccordion {
         background: #c92b2b;
         color: #fff;
         border: 1px solid rgba(215, 67, 67, 0.15); }
+  .wrap-faq-form-order .wpcf7-form-control-wrap.contact-textarea textarea,
+  .wrap-rev-form-order .wpcf7-form-control-wrap.contact-textarea textarea,
+  .wrap-kntkt-form-order .wpcf7-form-control-wrap.contact-textarea textarea {
+    height: 6rem; }
+  .wrap-faq-form-order p,
+  .wrap-rev-form-order p,
+  .wrap-kntkt-form-order p {
+    margin: 0; }
+  .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger,
+  .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger,
+  .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+    color: #eee;
+    border-radius: 0.3125rem;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    /* padding-left: $padl;
+        padding-right: $padr; */
+    text-transform: uppercase;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: 45%; }
+    .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa,
+    .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa,
+    .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa {
+      color: #BD1818;
+      margin: .5rem 0; }
+      .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child,
+      .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child,
+      .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child {
+        margin-left: 0.3rem;
+        margin-right: 0.2rem; }
+        .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child:before,
+        .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child:before,
+        .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:first-child:before {
+          padding-right: .4rem; }
+      .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:last-child,
+      .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:last-child,
+      .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger i.fa:last-child {
+        margin-left: 0.2rem;
+        margin-right: 0.3rem; }
+    .wrap-faq-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger:hover,
+    .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger:hover,
+    .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger:hover {
+      background: #c92b2b;
+      color: #fff;
+      border: 1px solid rgba(215, 67, 67, 0.15); }
 
 /* Левый сайдбар */
 .col-sidebar-primary {
@@ -6256,7 +6307,7 @@ div.divaccordion {
   z-index: 1; }
 
 #page-bottom {
-  margin-bottom: -5rem; }
+  margin-bottom: -2rem; }
   #page-bottom .why-just-us-content {
     background-color: #EDF1F8;
     /* border-radius: .3125rem; */

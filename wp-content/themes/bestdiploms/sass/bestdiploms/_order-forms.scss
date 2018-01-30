@@ -32,7 +32,7 @@
             line-height: 1.4;
             margin: .5rem auto;
         }        
-        a.btn.btn-danger {
+        .btn.btn-danger {
             @include button_theme(0.2rem, 2rem);
             align-self: center;
             margin: 1rem auto;
@@ -97,4 +97,20 @@
             width: 60%;
         }
     }
+    // After activation Contact Form 7:
+    .wpcf7-form-control-wrap.contact-textarea {
+        textarea {
+            height: 6rem;
+        }
+    }
+    p {
+        margin: 0;
+    }
+    .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+        @include button_theme(.3rem, .2rem);
+        align-self: center;
+        margin: 1rem auto;
+        padding: .5rem;
+        width: 45%;        
+    }   
 }
