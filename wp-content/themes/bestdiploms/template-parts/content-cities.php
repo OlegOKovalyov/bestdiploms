@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying CPT article content in single-article.php
+ * Template part for displaying CPT cities content in single-cities.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

@@ -6552,6 +6552,9 @@ aside#sidebar-secondary {
           color: #5684DB; }
 
 /* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+.type-article h1 {
+  background: url(images/strip_cutlglight.png) no-repeat center top; }
+
 .sb-secondry .articles-link-title a.active {
   color: #5684DB !important;
   text-decoration: underline; }

@@ -296,7 +296,7 @@
 			            } ?>
 
 						<div class="media-body">
-							<h4><a href="'. get_permalink() .'"><?php the_title() ?></a></h4>
+							<h4><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h4>
 							<p>
 
 								<?php $content = get_the_content();
