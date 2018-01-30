@@ -121,7 +121,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 //@import "layout/responsive";
 
 
-
+/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+// Шаблон сontent-article.php.
+// Шаблоны single-article.php и single-articles.php не работают.
+// Нижнние ссылки правого secondary сайдбара.
+.sb-secondry {
+    .articles-link-title {
+        a.active {
+            color: $blue !important;
+            text-decoration: underline;
+        }
+    }
+}
 
 
 

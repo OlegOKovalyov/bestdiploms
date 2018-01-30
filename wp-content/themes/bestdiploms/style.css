@@ -6551,6 +6551,11 @@ aside#sidebar-secondary {
         aside#sidebar-secondary .articles-cat-link ul li a:hover {
           color: #5684DB; }
 
+/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+.sb-secondry .articles-link-title a.active {
+  color: #5684DB !important;
+  text-decoration: underline; }
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------

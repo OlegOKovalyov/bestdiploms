@@ -4,7 +4,7 @@
  * Таксономия и пользовательский тип записи Документы (study).
  */
 // 1. Регистрация новой таксономии (присутствует).
-/*function register_taxstudy_taxonomy() {
+function register_taxstudy_taxonomy() {
   register_taxonomy( 'taxstudy', 'study',
     array(
       'labels' => array(
@@ -26,7 +26,7 @@
       )
     );
 }
-add_action( 'init', 'register_taxstudy_taxonomy' );*/
+add_action( 'init', 'register_taxstudy_taxonomy' );
 
 // 2. Регистрация пользовательского типа записи Документы (study).
 // At the top of functions.php you need to register your post type first.
@@ -417,7 +417,7 @@ add_action( 'init', function() {
         'taxonomies' => ['post_tag', 'category', 'article'], // Add post tags and post categories
         //'register_meta_box_cb' => 'article_meta_box', // Register a meta box
         //'register_meta_box_cb' => 'custom_meta_box_markup', // Register a meta box        
-        'rewrite' => [ 'slug' => 'articles' ], // Change the archive page URL
+        'rewrite' => [ 'slug' => 'article' ], // Change the archive page URL
         'has_archive' => true, // Enable archive page
         'rest_base' => 'article',
         'show_in_rest' => true,

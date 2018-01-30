@@ -1,13 +1,9 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Best_Diploms
- *
- * Output CPT Article (Статьи). Template sigle-article.php adn single-articles are not working.
- */
+ /**
+  * The template for displaying all CPT article posts
+  *
+  * @package Best_Diploms  
+  */
 
 get_header(); ?>
 
@@ -31,7 +27,7 @@ get_header(); ?>
     </div><!-- #primary -->
 
     <div class="col-lg-3 col-sidebar-primary">
-        <?php get_sidebar('minus'); ?>
+        <?php get_sidebar(); echo 'single-articles.php'; ?>
     </div>
 
 <?php get_footer();
