@@ -90,6 +90,26 @@
 
 		<?php echo do_shortcode('[contact-form-7 id="499" title="Напишите, какой документ вас интересует"]'); ?>
 
+		<div class="row flex-column">
+			<h4>Напишите, какой документ вас интересует</h4>
+			<p>и мы свяжемся с вами в ближайшее время</p>
+			<div class="form-bar d-flex justify-content-between">
+				<input type="text" class="form-control" placeholder="Ваше имя">
+				<input type="text" class="form-control" placeholder="Телефон или e-mail">
+				<select id="inputStateFooter" class="form-control">
+					<option selected>Тип документа</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<!-- <button type="submit" class="btn btn-danger">Заказать</button> -->
+				<a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>
+ Заказать <i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			</div><!-- .form-bar -->
+		</div><!-- .row -->
+
 		<div class="footer-widget-row row">
 			<?php studies_in_sidebars() ?>
 			<?php dynamic_sidebar( 'footer-5' ); ?>
@@ -128,8 +148,8 @@
 				<p class="smallp">За каждым клиентом закрепляется личный менеджер нашей компании, который обеспечивает надлежащее и комфортное сопровождение всей сделки от момента поступления заявки до момента получения документа на руки и оплаты за него.</p>
 				<p>Изготовление документов только на оригинальных бланках ГОЗНАК</p>
 			</div></div>
-			<div class="site-branding-footer col-2"><a href="<?php echo home_url() ?>">
-				<img src="<?php echo get_template_directory_uri() ?>/images/logosm.png" alt="Small footer logo"></a>
+			<div class="site-branding-footer col-2">
+				<img src="<?php echo get_template_directory_uri() ?>/images/logosm.png" alt="Small footer logo">
 			</div>
 		</div>
 

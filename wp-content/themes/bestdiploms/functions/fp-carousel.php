@@ -7,7 +7,7 @@
  * Лицензия: MIT
  */
 
-function fp_carousel() {
+function fp_carousel() { // Не используется (см. site-carousel.php)
 	ob_start(); ?>	
 		<div class="row">
 			<div class="carousel-block col-lg-12"><!-- Здесь будет карусель -->

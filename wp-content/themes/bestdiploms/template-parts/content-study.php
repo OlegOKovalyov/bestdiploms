@@ -76,7 +76,7 @@
 								                echo '<p class="page-price-tpgrf">' . $value . '</p>';
 							        		?>
 
-							                <a class="btn btn-danger" href="#" role="button">Заказать</a>
+							                <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button">Заказать</a>
 								    	</div><!-- .price-props -->
 										<div class="" id="video-<?php echo $post_doc_id[$i_loop] ?>">
 											<?php					            

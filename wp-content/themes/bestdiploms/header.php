@@ -90,7 +90,7 @@
 						<div class="site-title"><?php the_title(); ?></div>
 			            <img src="<?php echo get_template_directory_uri() ?>/images/strip_big.png" alt="Strip header">
 		            <div class="order_button d-lg-flex justify-content-lg-center mt-1 mb-3">
-		                <a class="btn btn-danger" href="#" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>
+		                <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>
 		            </div><!-- .order_button -->
 		        </div><!-- .valid_goznak .col-lg-9 --> 
 			<?php else : ?>
@@ -101,7 +101,7 @@
 						<!-- <div>Настоящие, подлинные <span>бланки ГОЗНАК</span></div> -->
 						<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 			            <div class="order_button d-lg-flex justify-content-lg-left mt-4">
-			                <a class="btn btn-danger" href="#" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			                <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>
 			            </div><!-- .order_button -->					
 					</div><!-- .valid_goznak -->
 				<!-- </div>.row -->  

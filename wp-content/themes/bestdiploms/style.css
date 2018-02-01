@@ -5400,7 +5400,10 @@ nav.navbar {
     width: 100%; }
   .valid_goznak .order_button > a.btn {
     color: #eee;
+    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
+    opacity: 8;
     font-size: .9rem;
     letter-spacing: 2px;
     /* padding-left: $padl;
@@ -5433,7 +5436,10 @@ nav.navbar {
     .valid_goznak .order_button > a.btn:hover {
       background: #c92b2b;
       color: #fff;
-      border: 1px solid rgba(215, 67, 67, 0.15); }
+      border: 1px solid rgba(215, 67, 67, 0.15);
+      opacity: 1;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in; }
 
 /* Основной контент #primary.content-area #main.site-main */
 /* Карусель */
@@ -5479,6 +5485,7 @@ nav.navbar {
     .owl-item .doc-item h4.doc-item-title {
       -ms-flex-item-align: center;
           align-self: center;
+      font-size: .9rem;
       font-weight: 500;
       margin-bottom: 0;
       text-transform: uppercase; }
@@ -5491,7 +5498,10 @@ nav.navbar {
       font-weight: 500; }
     .owl-item .doc-item a.btn.btn-danger {
       color: #eee;
+      background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+      background: linear-gradient(to right, #FF1B30, #FF4C62);
       border-radius: 0.3125rem;
+      opacity: 8;
       font-size: .9rem;
       letter-spacing: 2px;
       /* padding-left: $padl;
@@ -5515,7 +5525,10 @@ nav.navbar {
       .owl-item .doc-item a.btn.btn-danger:hover {
         background: #c92b2b;
         color: #fff;
-        border: 1px solid rgba(215, 67, 67, 0.15); }
+        border: 1px solid rgba(215, 67, 67, 0.15);
+        opacity: 1;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
 
 /* Содержимое страниц сайта .entry-content */
 .breadcrumbs {
@@ -5558,7 +5571,7 @@ nav.navbar {
   .entry-content p.p-last {
     margin-bottom: 3rem; }
   .entry-content p.p-first {
-    margin-top: 2rem; }
+    margin-top: 3rem; }
 
 #content {
   background: #fff;
@@ -5660,7 +5673,10 @@ nav.navbar {
 
 .price-item a.btn.btn-danger {
   color: #eee;
+  background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+  background: linear-gradient(to right, #FF1B30, #FF4C62);
   border-radius: 0.3125rem;
+  opacity: 8;
   font-size: .9rem;
   letter-spacing: 2px;
   /* padding-left: $padl;
@@ -5683,7 +5699,10 @@ nav.navbar {
   .price-item a.btn.btn-danger:hover {
     background: #c92b2b;
     color: #fff;
-    border: 1px solid rgba(215, 67, 67, 0.15); }
+    border: 1px solid rgba(215, 67, 67, 0.15);
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
 
 /* Стилизуем содержимое остальных страниц сайта (отличных от front-page) */
 .valid_goznak-pages p {
@@ -5700,7 +5719,10 @@ nav.navbar {
   margin-bottom: 2rem; }
   .valid_goznak-pages .order_button a.btn.btn-danger {
     color: #eee;
+    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
+    opacity: 8;
     font-size: .9rem;
     letter-spacing: 2px;
     /* padding-left: $padl;
@@ -5720,7 +5742,10 @@ nav.navbar {
     .valid_goznak-pages .order_button a.btn.btn-danger:hover {
       background: #c92b2b;
       color: #fff;
-      border: 1px solid rgba(215, 67, 67, 0.15); }
+      border: 1px solid rgba(215, 67, 67, 0.15);
+      opacity: 1;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in; }
 
 /* Стилизуем содержимое страницы Оплата и доставка */
 #post-376 #gallery-1 {
@@ -5867,35 +5892,45 @@ div.divaccordion {
   margin: 5rem auto; }
 
 /* Стилизуем содержимое страницы Контакты */
-.page-id-357 p.margin-y {
-  margin: 3rem auto; }
-
-.page-id-357 p.sm-text {
-  font-size: .8rem; }
-
-.page-id-357 .why-just-us.row {
-  display: none; }
-
-.page-id-357 .blank-top-row-content {
-  border-bottom-left-radius: .3125rem;
-  border-bottom-right-radius: .3125rem;
-  height: 5rem;
-  margin-bottom: -2rem; }
-
-.page-id-357 .addr-email {
-  font-size: .9rem; }
-
-.page-id-357 .tel-num a {
-  color: #434549;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-left: .2rem; }
+.page-id-357 {
+  /* .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+        margin-bottom: 0;
+    }
+    .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors,
+    .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+        margin-top: 0;
+    } */ }
+  .page-id-357 p.margin-y {
+    margin: 3rem auto; }
+  .page-id-357 p.sm-text {
+    font-size: .8rem; }
+  .page-id-357 .why-just-us.row {
+    display: none; }
+  .page-id-357 .blank-top-row-content {
+    border-bottom-left-radius: .3125rem;
+    border-bottom-right-radius: .3125rem;
+    height: 5rem;
+    margin-bottom: -2rem; }
+  .page-id-357 .addr-email {
+    font-size: .9rem; }
+  .page-id-357 .tel-num a {
+    color: #434549;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: .2rem; }
 
 #footer {
   margin-top: -2rem; }
 
 /* Стилизуем содержимое страницы вывода CPT study (Документы) шаблон сontent-study.php. */
-.single-study h2 {
+/* .single-study */
+.type-study .breadcrumbs span:nth-child(3) {
+  display: none; }
+
+.type-study .breadcrumbs span:nth-child(4).sep {
+  display: none; }
+
+.type-study h2 {
   background: url(images/strip_mdlight.png) no-repeat center top;
   color: #364B7F;
   font-size: 1.7rem;
@@ -5906,22 +5941,22 @@ div.divaccordion {
   text-align: center;
   text-transform: uppercase; }
 
-.single-study .study-ul-menu .study-link-title a.active {
+.type-study .study-ul-menu .study-link-title a.active {
   background-color: #EFF6FD;
   border-bottom: none;
   color: #EE575A; }
-  .single-study .study-ul-menu .study-link-title a.active:hover {
+  .type-study .study-ul-menu .study-link-title a.active:hover {
     text-decoration: unset; }
 
-.single-study #footer .study-ul-menu .study-link-title a.active {
+.type-study #footer .study-ul-menu .study-link-title a.active {
   background-color: transparent;
   color: #EE575A;
   cursor: default; }
 
-.single-study .why-just-us {
+.type-study .why-just-us {
   display: none; }
 
-.single-study .blank-top-row-content {
+.type-study .blank-top-row-content {
   border-bottom-left-radius: .3125rem;
   border-bottom-right-radius: .3125rem;
   height: 5rem;
@@ -5951,15 +5986,19 @@ div.divaccordion {
     width: 100%; }
 
 /* Стилизуем содержимое страницы Заказать диплом. */
+.page-id-485 .breadcrumbs {
+  margin-left: .7rem; }
+
 .page-id-485 .form-oder {
   width: 100% !important; }
   .page-id-485 .form-oder .form-group {
     margin-bottom: 0; }
     .page-id-485 .form-oder .form-group textarea {
       margin-bottom: 1.7rem; }
-  .page-id-485 .form-oder a.btn.btn-danger {
+  .page-id-485 .form-oder .btn.btn-danger {
     display: block;
     margin: 1rem auto;
+    padding: .9rem 0;
     width: 30%; }
 
 .page-id-485 .why-just-us {
@@ -6022,10 +6061,15 @@ div.divaccordion {
       background-color: #EEF4F9;
       border: 2px solid #C4D7F5;
       line-height: 1.4;
-      margin: .5rem auto; }
+      margin: 0 auto; }
+    .wrap-form-order .form-oder p {
+      margin: 0.7rem !important; }
     .wrap-form-order .form-oder .btn.btn-danger {
       color: #eee;
+      background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+      background: linear-gradient(to right, #FF1B30, #FF4C62);
       border-radius: 0.3125rem;
+      opacity: 8;
       font-size: .9rem;
       letter-spacing: 2px;
       /* padding-left: $padl;
@@ -6033,17 +6077,9 @@ div.divaccordion {
       text-transform: uppercase;
       -ms-flex-item-align: center;
           align-self: center;
-      margin: 1rem auto;
-      width: 60%;
-      /* &::after {
-                background: url(images/acap_books.png);
-                content: "";
-                left: 75%;
-                top: 68%;
-                position: absolute;
-                width: 280px;
-                height: 310px;
-            } */ }
+      margin: .5rem auto;
+      padding: 0.65rem;
+      width: 50%; }
       .wrap-form-order .form-oder .btn.btn-danger i.fa {
         color: #BD1818;
         margin: .5rem 0; }
@@ -6058,23 +6094,42 @@ div.divaccordion {
       .wrap-form-order .form-oder .btn.btn-danger:hover {
         background: #c92b2b;
         color: #fff;
-        border: 1px solid rgba(215, 67, 67, 0.15); }
+        border: 1px solid rgba(215, 67, 67, 0.15);
+        opacity: 1;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+    .wrap-form-order .form-oder .fa {
+      color: #BD1818; }
+    .wrap-form-order .form-oder .fa-angle-right {
+      position: relative;
+      right: -2rem;
+      top: .2rem; }
+    .wrap-form-order .form-oder .fa-angle-left {
+      position: relative;
+      left: -3.5rem;
+      top: .2rem; }
   .wrap-form-order::after {
     background: url(images/acap_books.png);
     content: "";
-    right: 25%;
-    top: 45%;
+    right: -75%;
+    top: -45%;
     position: relative;
     width: 280px;
     height: 310px;
     z-index: 2; }
 
+.wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+  margin-bottom: 0; }
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors,
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+  margin-top: 0; }
+
 /* Формы ЗАДАТЬ ВОПРОС, НАПИСАТЬ ОТЗЫВ, на странице Контакты (без имени) */
 .wrap-faq-form-order,
 .wrap-rev-form-order,
 .wrap-kntkt-form-order {
-  margin: -1.5rem !important;
-  margin-top: 1rem; }
+  margin: -1.5rem !important; }
   .wrap-faq-form-order h4,
   .wrap-rev-form-order h4,
   .wrap-kntkt-form-order h4 {
@@ -6095,7 +6150,7 @@ div.divaccordion {
   .wrap-rev-form-order .form-oder,
   .wrap-kntkt-form-order .form-oder {
     width: 65%;
-    margin: 1rem auto 3rem; }
+    margin: 1rem auto .5rem; }
     .wrap-faq-form-order .form-oder .form-control,
     .wrap-rev-form-order .form-oder .form-control,
     .wrap-kntkt-form-order .form-oder .form-control {
@@ -6109,7 +6164,10 @@ div.divaccordion {
     .wrap-rev-form-order .form-oder a.btn.btn-danger,
     .wrap-kntkt-form-order .form-oder a.btn.btn-danger {
       color: #eee;
+      background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+      background: linear-gradient(to right, #FF1B30, #FF4C62);
       border-radius: 0.3125rem;
+      opacity: 8;
       font-size: .9rem;
       letter-spacing: 2px;
       /* padding-left: $padl;
@@ -6143,7 +6201,10 @@ div.divaccordion {
       .wrap-kntkt-form-order .form-oder a.btn.btn-danger:hover {
         background: #c92b2b;
         color: #fff;
-        border: 1px solid rgba(215, 67, 67, 0.15); }
+        border: 1px solid rgba(215, 67, 67, 0.15);
+        opacity: 1;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
   .wrap-faq-form-order .wpcf7-form-control-wrap.contact-textarea textarea,
   .wrap-rev-form-order .wpcf7-form-control-wrap.contact-textarea textarea,
   .wrap-kntkt-form-order .wpcf7-form-control-wrap.contact-textarea textarea {
@@ -6156,7 +6217,10 @@ div.divaccordion {
   .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger,
   .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
     color: #eee;
+    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
+    opacity: 8;
     font-size: .9rem;
     letter-spacing: 2px;
     /* padding-left: $padl;
@@ -6191,7 +6255,30 @@ div.divaccordion {
     .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger:hover {
       background: #c92b2b;
       color: #fff;
-      border: 1px solid rgba(215, 67, 67, 0.15); }
+      border: 1px solid rgba(215, 67, 67, 0.15);
+      opacity: 1;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in; }
+
+/* Форма ЗАКАЗАТЬ ДИПЛОМ (полная форма) на странице Заказать диплом */
+#post-485 .wrap-kntkt-form-order .form-control {
+  font-size: .8rem; }
+
+#post-485 .wrap-kntkt-form-order .btn.btn-danger {
+  padding: .8rem 0;
+  width: 26%; }
+
+#post-485 .wrap-kntkt-form-order .fa {
+  color: #BD1818;
+  position: relative;
+  top: 40%; }
+
+#post-485 .wrap-kntkt-form-order .fa-angle-right {
+  left: 40%;
+  top: 40%; }
+
+#post-485 .wrap-kntkt-form-order .fa-angle-left {
+  right: 42%; }
 
 /* Левый сайдбар */
 .col-sidebar-primary {
@@ -6442,36 +6529,72 @@ div.divaccordion {
     font-weight: 400;
     margin-bottom: 0;
     margin-top: 1rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 100%; }
   #footer .footer-content .form-bar {
-    margin: 1rem 0; }
-    #footer .footer-content .form-bar a.btn.btn-danger {
-      color: #eee;
-      border-radius: 0.3125rem;
-      font-size: .9rem;
-      letter-spacing: 2px;
-      /* padding-left: $padl;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1rem 0 0;
+    width: 100%; }
+    #footer .footer-content .form-bar p {
+      width: 26%; }
+      #footer .footer-content .form-bar p:last-child {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 2.5rem;
+        width: 20%;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+        #footer .footer-content .form-bar p:last-child .btn.btn-danger {
+          color: #eee;
+          background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+          background: linear-gradient(to right, #FF1B30, #FF4C62);
+          border-radius: 0.3125rem;
+          opacity: 8;
+          font-size: .9rem;
+          letter-spacing: 2px;
+          /* padding-left: $padl;
         padding-right: $padr; */
-      text-transform: uppercase; }
-      #footer .footer-content .form-bar a.btn.btn-danger i.fa {
-        color: #BD1818;
-        margin: .5rem 0; }
-        #footer .footer-content .form-bar a.btn.btn-danger i.fa:first-child {
-          margin-left: 0.3rem;
-          margin-right: 2rem; }
-          #footer .footer-content .form-bar a.btn.btn-danger i.fa:first-child:before {
-            padding-right: .4rem; }
-        #footer .footer-content .form-bar a.btn.btn-danger i.fa:last-child {
-          margin-left: 2rem;
-          margin-right: 0.3rem; }
-      #footer .footer-content .form-bar a.btn.btn-danger:hover {
-        background: #c92b2b;
-        color: #fff;
-        border: 1px solid rgba(215, 67, 67, 0.15); }
+          text-transform: uppercase;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 140%; }
+          #footer .footer-content .form-bar p:last-child .btn.btn-danger i.fa {
+            color: #BD1818;
+            margin: .5rem 0; }
+            #footer .footer-content .form-bar p:last-child .btn.btn-danger i.fa:first-child {
+              margin-left: 0.3rem;
+              margin-right: 2rem; }
+              #footer .footer-content .form-bar p:last-child .btn.btn-danger i.fa:first-child:before {
+                padding-right: .4rem; }
+            #footer .footer-content .form-bar p:last-child .btn.btn-danger i.fa:last-child {
+              margin-left: 2rem;
+              margin-right: 0.3rem; }
+          #footer .footer-content .form-bar p:last-child .btn.btn-danger:hover {
+            background: #c92b2b;
+            color: #fff;
+            border: 1px solid rgba(215, 67, 67, 0.15);
+            opacity: 1;
+            -webkit-transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in; }
+    #footer .footer-content .form-bar .fa {
+      color: #BD1818;
+      position: relative;
+      top: .7rem; }
+    #footer .footer-content .form-bar .fa-angle-right {
+      right: -2rem; }
+    #footer .footer-content .form-bar .fa-angle-left {
+      left: -3.5rem; }
     #footer .footer-content .form-bar .form-control {
       background-color: #EEF4F9;
-      border: 2px solid #C4D7F5;
-      width: 24%; }
+      border: 2px solid #C4D7F5; }
       #footer .footer-content .form-bar .form-control#inputStateFooter {
         height: 2.8rem; }
   #footer .footer-content .footer-widget-row {
@@ -6552,6 +6675,12 @@ aside#sidebar-secondary {
           color: #5684DB; }
 
 /* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+.type-article .breadcrumbs span:nth-child(3) {
+  display: none; }
+
+.type-article .breadcrumbs span:nth-child(4).sep {
+  display: none; }
+
 .type-article h1 {
   background: url(images/strip_cutlglight.png) no-repeat center top; }
 

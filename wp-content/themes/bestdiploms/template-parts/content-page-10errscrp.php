@@ -512,9 +512,8 @@
 				<?php the_content(); ?>
 
 				<?php //echo do_shortcode('[orderdiplform]'); ?>
-				<?php //echo do_shortcode('[contact-form-7 id="505" title="Заказать диплом 2"]'); ?>
-				<?php echo do_shortcode('[contact-form-7 id="504" title="Заказать диплом (полная форма)"]'); ?>
-
+				<?php echo do_shortcode('[contact-form-7 id="505" title="Заказать диплом 2"]'); ?>
+				<?php //echo do_shortcode('[contact-form-7 id="504" title="Заказать диплом (полная форма)"]'); ?>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
 				<script src="<?php bloginfo('template_url'); ?>/bootstrap-datepicker.ru.min.js" charset="UTF-8"></script>	
 				<script>
@@ -611,8 +610,7 @@
 
 				<?php the_content(); ?>
 
-				<?php //echo do_shortcode('[orderform]'); ?>
-				<?php echo do_shortcode('[contact-form-7 id="496" title="Заказать диплом"]'); ?>
+				<?php echo do_shortcode('[orderform]'); ?>
 
 			</div><!-- .entry-content -->
 

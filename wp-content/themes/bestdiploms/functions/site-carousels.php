@@ -69,7 +69,7 @@ function fp_carousel() {
 					                echo '<p>empty</p>';
 					        } ?>
 					        <span class="doc-item-content"><?php /*the_content();*/ ?></span>
-					        <a class="btn btn-danger" href="#" role="button">Заказать</a>
+					        <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button">Заказать</a>
 						</div><!-- .doc-item -->
 
 				    <?php endwhile; endif; wp_reset_postdata(); ?>  
@@ -163,7 +163,7 @@ function other_study_carousel( $cat_arg ) {
 					                echo '<p>empty</p>';
 					        } ?>
 					        <span class="doc-item-content"><?php /*the_content();*/ ?></span>
-					        <a class="btn btn-danger" href="#" role="button">Заказать</a>
+					        <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button">Заказать</a>
 						</div><!-- .doc-item -->
 						<?php /*}*/ ?>						
 

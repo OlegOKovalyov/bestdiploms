@@ -45,7 +45,7 @@
         margin-bottom: 3rem;
     }
     p.p-first {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 }
 
@@ -350,6 +350,13 @@ div.divaccordion  {
 
 /* Стилизуем содержимое страницы Контакты */
 .page-id-357 {
+    /* .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+        margin-bottom: 0;
+    }
+    .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors,
+    .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+        margin-top: 0;
+    } */
     p.margin-y {
         margin: 3rem auto;
     }
@@ -381,7 +388,16 @@ div.divaccordion  {
 
 /* Стилизуем содержимое страницы вывода CPT study (Документы) шаблон сontent-study.php. */
 // Верхние ссылки левого primary сайдбара.
-.single-study { 
+/* .single-study */
+.type-study { 
+    .breadcrumbs {
+        span:nth-child(3) {
+            display: none;
+        }
+        span:nth-child(4).sep {
+            display: none;
+        }       
+    }    
     h2 {
         background: url(images/strip_mdlight.png) no-repeat center top;
         color: #364B7F;
@@ -458,6 +474,9 @@ div.divaccordion  {
 
 /* Стилизуем содержимое страницы Заказать диплом. */
 .page-id-485 {
+    .breadcrumbs {
+        margin-left: .7rem;
+    }
     .form-oder {
         width: 100% !important;
         .form-group {
@@ -466,9 +485,10 @@ div.divaccordion  {
                 margin-bottom: 1.7rem;
             }
         }
-        a.btn.btn-danger {
+        .btn.btn-danger {
             display: block;
             margin: 1rem auto;
+            padding: .9rem 0;            
             width: 30%;
         }
     }
