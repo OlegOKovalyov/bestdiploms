@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying CPT study content in single-study.php
+ * Template part for displaying CPT study content in single-otherdoc.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,14 +16,14 @@
 
 		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
-	<!-- Вывод документов (CPT 'study') на странице одного документа (по ссылке из левого primary сайдбара) -->
+	<!-- Вывод документов (CPT 'otherdoc') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">
 		<div class="entry-content col-lg-9">
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-			<h1><?php the_title() ?></h1>
+			<h1><?php the_title(); echo 'hello'; ?></h1>
 
-			<?php // Display CPT study content
-				 $post_id = $post->ID; /*echo 'content-study.php';*/
+			<?php // Display CPT otherdoc content
+				 $post_id = $post->ID; 
 				 $curstudycntnt = get_the_content();
 			?>
 
@@ -34,9 +34,9 @@
 			        	'order'			 => 'ASC',
 			        	'post_parent'	 => $post_id,
 			        	'orderby'		 => 'parent',
-			            'post_type' 	 => 'study',
+			            'post_type' 	 => 'otherdoc',
 			            'posts_per_page' => -1,
-			            'category_name'  => 'education-cat',
+			            //'category_name'  => 'education-cat',
 				        ); 		
 					$i_loop = 0;
 					$in_loop = new WP_Query( $in_args );
@@ -96,7 +96,7 @@
 
 			</div><!-- .price-block -->
 
-				<?php echo $curstudycntnt; // Выводим содержимое записи CPT study (Документы) - контент из админ-панели. ?>
+				<?php echo $curstudycntnt; // Выводим содержимое записи CPT otherdoc (Документы) - контент из админ-панели. ?>
 	
 				<?php
 					wp_link_pages( array(
@@ -144,7 +144,7 @@
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <script>
-// Делаем текущую ссылку на страницу CPT study (Документы) активной (добавляем класс active для нее)	
+// Делаем текущую ссылку на страницу CPT otherdoc (Документы) активной (добавляем класс active для нее)	
 jQuery(function () { 
     jQuery('.study-link-title a').each(function () {
         var location = window.location.href;

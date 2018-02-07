@@ -52,7 +52,7 @@
 			    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
 			    <?php $args = array(
 			        	'order'			 => 'DESC',
-			        	'post_parent__in' => array( 429, 454 ),
+			        	'post_parent__in' => array( 429, 454, 554, 565 ),
 			        	'orderby'		 => 'parent',
 			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,

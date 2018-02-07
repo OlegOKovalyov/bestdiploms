@@ -1,0 +1,227 @@
+/* xl-размер (>=1200px) */
+/* CSS для >=1200px */
+     
+/* lg-размер (<=1199px) */
+@media (max-width: 1199px) {
+
+}
+     
+/* md-размер (<=991px) */
+@media only screen and  (max-width: 991px) {
+  /* CSS для ширины от 768px до 991px */
+    body.custom-background {
+        background-position: center 1.5% !important;
+    }
+    .header-top {
+        .details-body > p > a {
+            margin-right: 0;
+        }
+        .navbar {
+            justify-content: flex-end;
+        }
+    }
+    nav.navbar #navbarNavAltMarkup ul { 
+        li {
+            text-align: center;
+            &>a {
+                border-right: none;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    nav.navbar #navbarNavAltMarkup ul li.current_page_item > a {
+        border: 3px solid #d43434;        
+        //border-right: 3px solid #d43434;    
+    }
+    .valid_goznak-pages p {
+        font-size: 1.4rem;
+        text-align: center;
+        //background: $nav-carousel;
+        //opacity: .5;
+    }
+    .valid_goznak-pages .order_button {
+        display: flex;
+        justify-content: center;
+    }
+    #post-6, // Главная страница
+    #post-328 { // Страница Города
+        .entry-content {
+            .wrap-form-order {
+                background-image: none;                
+                h4 {
+                    margin: 0;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .entry-content {
+             p.p-last {
+                margin-bottom: 0;
+            }           
+            p.p-first {
+                margin-top: 0;
+            }
+        }
+        .wrap-form-order .form-oder {
+            margin-top: -5rem;
+            margin-bottom: -2rem;
+        }
+    
+    }
+    #sidebar-primary .articles-cat-link ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    #sidebar-secondary {
+        #gallery-1,
+        #gallery-2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        } 
+    }
+    #footer .footer-content .details-body-row .details-body-footer > p > a i.fa {
+        display: none;
+    }
+    #footer .footer-content .form-bar .fa {
+        display: none;
+    }
+}
+     
+/* sm-размер (<=768px) */
+@media (max-width: 767px) { 
+  /* CSS для ширины от 576px до 767px */
+    .header-topper {
+        .site-branding {
+            .custom-logo-link > img {
+                height: 74px;
+                width: 49px;
+                position: relative;
+                top: 4rem;
+                right: -50%;
+            }
+        }
+    }
+    .header-top {
+        .details-body > p > a {
+            font-size: .85rem;
+            //margin-right: 0;
+        }
+        .details-tel a {
+            font-size: .9rem;
+        }
+    }
+    .valid_goznak {
+        div.site-title {
+            color: $valid-goznak-color;
+            font-size: 1.7rem;
+            top: 0.5rem;
+            margin-bottom: 1rem;
+          
+        }
+        img {
+            display: none;
+        }
+    }
+    .entry-content h1 {
+        background-image: none !important;
+    }
+    .blank-top-row-content {
+        border-bottom-left-radius: .3125rem;
+        border-bottom-right-radius: .3125rem;
+        height: 40px;
+    }
+    #page-bottom {
+        display: none;
+    }
+    #footer {
+        padding-top: 2rem;
+    }
+    #footer .footer-content .details-body-row .details-body-footer > p > a {
+        font-size: .75rem !important;
+    }
+    #footer .footer-content .form-bar p:last-child .btn.btn-danger {
+        width: 100%;
+    }
+}
+     
+/* xs-размер (<=575px) */
+@media (max-width: 575px) {
+  /* CSS для ширины до 575px (включительно) */
+    .header-top {
+        .details-body > p > a {
+            padding: .5rem .1rem;
+            i.fa {
+                display: none;
+            }
+        }
+    }
+    #post-6, { // Главная страница
+        .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+            width: 80%;
+        }
+    }
+    #footer {
+        form.wpcf7-form {
+            &>.row {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+        }
+        .footer-content .form-bar {
+            .form-control {
+                font-size: .75rem;
+                height: 2.1rem;
+            }
+            p:last-child .btn.btn-danger {
+                font-size: .7rem;
+                letter-spacing: 0;
+                padding-left: 6px;
+                width: 88%;
+            }
+        }
+        .details-body-footer {
+            & > p {
+                & > a {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+    #footer .footer-content .details-body-row p.smallp {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer .footer-content .details-body-row p.makeorgblnk {
+        font-size: .9rem;
+        padding-left: 10px;
+    }
+    #footer .footer-content .site-branding-footer img {
+        display: none;
+    }
+}
+
+/* размер (<=448px) */
+@media (max-width: 448px) {
+  /* CSS для ширины до 448px (включительно) */
+    body.custom-background {
+        background-position: center 2% !important;
+    }
+    .header-top {
+        .details-body > p:last-child > a {
+            display: none;
+        }
+    }
+    #footer .footer-content h4 {
+        font-size: 1rem;
+    }
+    #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
+        display: none;
+    }
+}  

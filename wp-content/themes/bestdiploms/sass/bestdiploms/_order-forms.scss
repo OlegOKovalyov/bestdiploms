@@ -75,7 +75,14 @@
 .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors,
 .wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
     margin-top: 0;
+    font-size: .85rem;
 }
+.wpcf7-form /* invalid */ {
+    .wpcf7-not-valid-tip {
+        font-size: .85rem;
+    }        
+}
+
 
 /* Формы ЗАДАТЬ ВОПРОС, НАПИСАТЬ ОТЗЫВ, на странице Контакты (без имени) */ 
 .wrap-faq-form-order,

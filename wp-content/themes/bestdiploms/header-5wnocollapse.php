@@ -20,7 +20,7 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">-->
 	<!-- <link rel="stylesheet" href="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/assets/owl.theme.default.css" /> -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" />
 		
 	<?php global $mytheme; ?>
@@ -53,19 +53,19 @@
 	                <div class="details-body d-flex justify-content-end">
 	                	<?php /*echo do_shortcode('[details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/detai/*ls]');*/ ?>
 	                	<?php /*echo do_shortcode('[details]');*/ ?>
-                        <p class="details-tel m-0 pt-1"><a href="tel:<?php echo $mytheme['phone']; ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $mytheme['phone']; ?></a></p>
-                        <p class="details-mail m-0 pt-1"><a href="mailto:<?php echo $mytheme['email']; ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $mytheme['email']; ?></a></p>
+                        <p class="details-tel m-0 pt-1"><a href="tel:+79266318176"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $mytheme['phone']; ?></a></p>
+                        <p class="details-mail m-0 pt-1"><a href="mailto:bestdiplomy@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $mytheme['email']; ?></a></p>
                         <p class="details-que m-0 pt-1"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>
 Задать вопрос онлайн</a></p>
                     </div><!-- .details-body -->
-	                <nav class="navbar navbar-light navbar-expand-lg"> <!-- было:  navbar-dark bg-primary -->
+	                <nav class="navbar navbar-expand-lg"> <!-- было:  navbar-dark bg-primary -->
 	
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>		
-<!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->	
+	
 	                <?php 
-		                /*wp_nav_menu([
+		                wp_nav_menu([
 			                'menu'				=> 'primary',
 			                'theme_location'	=> 'primary',
 			                'container'			=> 'div',
@@ -75,21 +75,9 @@
 			                'menu_class'		=> 'navbar-nav ml-auto',
 			                'depth'				=> 2,
 
-		                ]);*/
-	                ?>
-
-	                <?php 
-		                wp_nav_menu([
-		                	'menu'				=> 'primary',
-			                'theme_location'	=> 'primary',
-			                'container_id'		=> 'navbarNavAltMarkup',
-			                'container_class'	=> 'collapse navbar-collapse',
-			                //'menu_id'			=> '',
-			                'menu_class'		=> 'navbar-nav ml-auto'
 		                ]);
 	                ?>
 
-<!-- </div> -->
                 </nav>
             </div><!-- .header-top-bar -->
         </div><!-- .header-top .row -->		        
@@ -101,16 +89,16 @@
 		        <div class="valid_goznak col-lg-9">
 						<div class="site-title"><?php the_title(); ?></div>
 			            <img src="<?php echo get_template_directory_uri() ?>/images/strip_big.png" alt="Strip header">
-		            <div class="order_button d-flex justify-content-center mt-1 mb-3">
+		            <div class="order_button d-lg-flex justify-content-lg-center mt-1 mb-3">
 		                <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>
 		            </div><!-- .order_button -->
 		        </div><!-- .valid_goznak .col-lg-9 --> 
 			<?php else : ?>
 				<!-- <div class="row"> -->
 					<div class="col-md-1"></div>
-					<div class="valid_goznak-pages col-lg-10 col-sm-8 col-xs-12 ml-3">
-						<p class="page-title h1 mt-5 mb-4">Настоящие, подлинные <br /> <span>бланки ГОЗНАК</span></p>
-						<!-- <div>Настоящие, подлинные <br /> <span>бланки ГОЗНАК</span></div> -->
+					<div class="valid_goznak-pages col-lg-8 ml-3">
+						<p class="page-title h1 mt-5 mb-4">Настоящие, подлинные <span>бланки ГОЗНАК</span></p>
+						<!-- <div>Настоящие, подлинные <span>бланки ГОЗНАК</span></div> -->
 						<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 			            <div class="order_button d-lg-flex justify-content-lg-left mt-4">
 			                <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button"><i class="fa fa-angle-right" aria-hidden="true"></i>Купить диплом <i class="fa fa-angle-left" aria-hidden="true"></i></a>

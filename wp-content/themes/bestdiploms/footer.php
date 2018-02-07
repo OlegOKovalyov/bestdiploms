@@ -13,6 +13,8 @@
 
 	</div><!-- #content -->
 
+	<?php global $mytheme; ?>
+
 	<?php if ( 126 != get_the_ID() ) : ?>
 
 		<div class="blank-top-row row">
@@ -115,18 +117,18 @@
 			<!-- </div> -->
 		<!-- </div> --><!-- .row -->
 		<div class="details-body-row row">
-			<div class="col-10">
+			<div class="col-sm-10 col-xs-12">
 				<div class="row">
 				<div class="details-body-footer d-flex justify-content-start">
 					<?php /*echo do_shortcode('[details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/details]');*/ ?>
-					<?php echo do_shortcode('[details]'); ?>
-					<!-- <p class="details-tel m-0 pt-1"><a href="tel:+79266318176"><i class="fa fa-phone" aria-hidden="true"></i>+7 926 631-81-76</a></p>
-					<p class="details-mail m-0 pt-1"><a href="mailto:bestdiplomy@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>bestdiplomy@gmail.com</a></p> -->
+					<?php //echo do_shortcode('[details]'); ?>
+					<p class="details-tel m-0 pt-1"><a href="tel:<?php echo $mytheme['phone']; ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $mytheme['phone']; ?></a></p>
+					<p class="details-mail m-0 pt-1"><a href="mailto:<?php echo $mytheme['email']; ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $mytheme['email']; ?></a></p>
 					<p class="details-que m-0 pt-1"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>
 				Задать вопрос онлайн</a></p>
 				</div><!-- .details-body -->
 				<p class="smallp">За каждым клиентом закрепляется личный менеджер нашей компании, который обеспечивает надлежащее и комфортное сопровождение всей сделки от момента поступления заявки до момента получения документа на руки и оплаты за него.</p>
-				<p>Изготовление документов только на оригинальных бланках ГОЗНАК</p>
+				<p class="makeorgblnk">Изготовление документов только на оригинальных бланках ГОЗНАК</p>
 			</div></div>
 			<div class="site-branding-footer col-2"><a href="<?php echo home_url() ?>">
 				<img src="<?php echo get_template_directory_uri() ?>/images/logosm.png" alt="Small footer logo"></a>
@@ -153,6 +155,9 @@
 
 <!-- <script src="<?php /*echo get_template_directory_uri()*/ ?>/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> -->
 <!-- <script src="<?php /*bloginfo('template_directory');*/ ?>/owlcarousel/dist/owl.carousel.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

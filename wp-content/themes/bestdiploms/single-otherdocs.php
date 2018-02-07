@@ -1,6 +1,6 @@
 <?php
  /**
-  * The template for displaying all CPT study posts
+  * The template for displaying all CPT otherdocs posts
   *
   * @package Best_Diploms  
   */
@@ -11,7 +11,7 @@ get_header(); ?>
         <main id="main" class="site-main">
 
             <?php
-            while ( have_posts() ) : the_post();  /*echo 'single-study.php';*/
+            while ( have_posts() ) : the_post(); echo 'hello';
 
                 get_template_part( 'template-parts/content', get_post_type() );
 

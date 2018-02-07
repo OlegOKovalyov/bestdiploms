@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-lg-9 order-2">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php
@@ -46,10 +46,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-    <div class="col-lg-3 col-sidebar-primary">
-        <?php get_sidebar('minus'); ?>
-    </div>	
-
 <?php
-//get_sidebar();
+get_sidebar();
 get_footer();

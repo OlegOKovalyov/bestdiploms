@@ -1,0 +1,88 @@
+/* xs (<=543px) */
+@media (max-width: 575px) {  }
+     
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+     
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .valid_goznak {
+        img {
+            margin-left: 4%;
+            width: 80%;
+        }
+        div.site-title {
+            font-size: 1.5rem;
+            top: 4.5rem;
+            margin-left: -11%;
+        }
+        .order_button {
+            justify-content: center;
+        }
+    }
+    .why-just-us-content {
+        .card {
+            .card-body {
+                padding: .1rem !important;                
+                p:before {
+                    left: 24% !important;
+                    top: 33% !important;                    
+                }
+                p {
+                    font-size: .7rem !important;
+                }
+            }
+        }
+    }    
+}
+     
+/* lg (>=992 и <=1199) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    // Главная страница
+    .navbar-collapse ul#menu-menu-primary-links li.menu-item a {
+        padding-left: 1rem;
+        padding-right: 1rem;        
+    } 
+    .valid_goznak div.site-title {
+        font-size: 2rem;
+        top: 5.5rem;
+    }
+    .valid_goznak img {
+        width: 98%;
+        margin-left: .7rem;
+    }
+    .entry-content h1 {
+        background-image: none !important;
+    }    
+    .wrap-form-order {
+        width: 134%;
+    }
+    .why-just-us-content {
+        .card {
+            .card-body {
+                p:before {
+                    left: 30% !important;
+                    top: 37% !important;                    
+                }
+            }
+        }
+    }
+    #footer .footer-content .form-bar .fa-angle-left {
+        left: -2.8rem;
+    }
+    // Страница Цены
+    .price-item div.price-props h4.price-item-title{
+        margin-bottom: 0;
+    }
+    .price-item p.page-price-tpgrf {
+        margin-bottom: 0.3rem;
+    }
+    .price-item div.price-props a.video-link {
+        right: -48%;
+    }
+}
+     
+/* xl (>=1200) */
+@media (min-width: 1200px) {  }

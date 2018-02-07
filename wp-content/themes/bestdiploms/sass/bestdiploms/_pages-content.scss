@@ -321,6 +321,15 @@ div.divaccordion  {
 }
 
 /* Стилизуем содержимое страницы Города */
+.single-cities
+    .breadcrumbs {
+        span:nth-child(3) {
+            display: none;
+        }
+        span:nth-child(4).sep {
+            display: none;
+        }       
+    }
 #post-328 {
     h1 {
         background: url(images/strip_cutlglight.png) no-repeat center top;
@@ -397,7 +406,15 @@ div.divaccordion  {
         span:nth-child(4).sep {
             display: none;
         }       
-    }    
+    }
+    h1 {
+        background: none;
+    }
+    .price-props {
+        a, p {
+            align-self: center;
+        }
+    }
     h2 {
         background: url(images/strip_mdlight.png) no-repeat center top;
         color: #364B7F;
@@ -516,5 +533,10 @@ div.divaccordion  {
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin-bottom: 3rem;
+        .all-video {
+            iframe {
+                margin-bottom: .5rem;
+            }
+        }
     }
 }

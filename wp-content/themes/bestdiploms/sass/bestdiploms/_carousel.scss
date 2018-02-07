@@ -30,7 +30,9 @@
     }
 }
 .owl-item {
-    /* margin-right: 15px !important; */
+    img {
+        height: 100%;
+    }
     .doc-item {
         border: 1px solid $doc-item-bc;
         border-radius: .25rem;
