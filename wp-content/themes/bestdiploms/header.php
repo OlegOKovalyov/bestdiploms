@@ -51,12 +51,14 @@
 	        <div class="header-top row">
 	            <div class="header-top-bar w-100">
 	                <div class="details-body d-flex justify-content-end">
+
 	                	<?php /*echo do_shortcode('[details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/detai/*ls]');*/ ?>
 	                	<?php /*echo do_shortcode('[details]');*/ ?>
                         <p class="details-tel m-0 pt-1"><a href="tel:<?php echo $mytheme['phone']; ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $mytheme['phone']; ?></a></p>
                         <p class="details-mail m-0 pt-1"><a href="mailto:<?php echo $mytheme['email']; ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $mytheme['email']; ?></a></p>
-                        <p class="details-que m-0 pt-1"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>
+                        <p class="details-que m-0 pt-1"><a href="#contact_form_pop1"  data-fancybox class="fancybox"><i class="fa fa-pencil" aria-hidden="true"></i>
 Задать вопрос онлайн</a></p>
+
                     </div><!-- .details-body -->
 	                <nav class="navbar navbar-light navbar-expand-lg"> <!-- было:  navbar-dark bg-primary -->
 	

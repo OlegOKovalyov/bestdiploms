@@ -129,6 +129,15 @@
             margin: 0 auto;
         }
     }
+    .study-link-title {
+        a.active {
+            color: $links-active-color;
+            &:hover {
+                cursor: default;
+                text-decoration: none;
+            }            
+        }
+    }
     #menu-menu-primary-links-1 {
         .current-menu-item {
             a {

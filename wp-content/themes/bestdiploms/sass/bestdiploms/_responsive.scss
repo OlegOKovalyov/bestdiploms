@@ -35,6 +35,11 @@
                 }
             }
         }
+    }
+    #footer .footer-content .footer-widget-row {
+        .study-cats {
+            width: 100%;
+        }
     }    
 }
      
@@ -54,7 +59,7 @@
         margin-left: .7rem;
     }
     .entry-content h1 {
-        background-image: none !important;
+        //background-image: none !important;
     }    
     .wrap-form-order {
         width: 134%;
@@ -69,6 +74,13 @@
             }
         }
     }
+    #sidebar-primary .widget p.widget-title, 
+    #sidebar-primary .study-cats p.widget-title {
+        background: url(images/strip_cut2dark.png) no-repeat;
+    }
+    #sidebar-primary .widget.widget_recent_comments p.widget-title {
+        background: url(images/strip_sm2light.png) no-repeat;
+    }    
     #footer .footer-content .form-bar .fa-angle-left {
         left: -2.8rem;
     }

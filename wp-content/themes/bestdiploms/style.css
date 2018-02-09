@@ -5756,6 +5756,10 @@ nav.navbar {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
+#post-376 img.alignnone.wp-image-235 {
+  width: 100%;
+  height: 100%; }
+
 /* Стилизуем содержимое страницы Вопросы и ответы */
 div.divaccordion {
   margin-top: 2rem; }
@@ -6021,10 +6025,10 @@ div.divaccordion {
 .page-id-485 .blank-top-row-content {
   border-bottom-left-radius: .3125rem;
   border-bottom-right-radius: .3125rem;
-  height: 5rem; }
+  height: 4rem; }
 
 .page-id-485 #footer {
-  margin-top: -5rem; }
+  margin-top: -4rem; }
 
 /* Стилизуем содержимое страницы Видео документов */
 #post-487 {
@@ -6299,6 +6303,16 @@ div.divaccordion {
 
 #post-485 .wrap-kntkt-form-order .fa-angle-left {
   right: 42%; }
+
+/** 
+ * Всплывающая форма ЗАДАТЬ ВОПРОС fancybox из шапки сайта
+ * по ссылке Задать вопрос онлай.
+ */
+.fancybox-stage #contact_form_pop1 {
+  background: transparent;
+  width: 40%; }
+  .fancybox-stage #contact_form_pop1 .form-oder p:last-child {
+    text-align: center; }
 
 /* Левый сайдбар */
 .col-sidebar-primary {
@@ -6678,6 +6692,11 @@ div.divaccordion {
   #footer .footer-content .site-branding-footer img {
     display: block;
     margin: 0 auto; }
+  #footer .study-link-title a.active {
+    color: #EE575A; }
+    #footer .study-link-title a.active:hover {
+      cursor: default;
+      text-decoration: none; }
   #footer #menu-menu-primary-links-1 .current-menu-item a {
     color: #EE575A; }
     #footer #menu-menu-primary-links-1 .current-menu-item a:hover {
@@ -6713,7 +6732,11 @@ aside#sidebar-secondary {
 
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
-  /* CSS для: 768px <= ширины <= 991px */ }
+  /* CSS для: 768px <= ширины <= 991px */
+  .page-id-485 #footer {
+    margin-top: -5rem; }
+    .page-id-485 #footer form h4 {
+      margin-top: 0; } }
 
 /* lg-устройства (больше или равно 992px) */
 @media (min-width: 992px) {
@@ -6726,6 +6749,15 @@ aside#sidebar-secondary {
 /* xl-размер (>=1200px) */
 /* CSS для >=1200px */
 /* lg-размер (<=1199px) */
+@media (max-width: 1199px) {
+  .fancybox-stage .wrap-faq-form-order h4 {
+    background: #5684DB;
+    border-radius: .3125rem;
+    line-height: 2;
+    padding: 1rem; }
+  .fancybox-stage .wrap-faq-form-order .form-oder {
+    width: 100%; } }
+
 /* md-размер (<=991px) */
 @media only screen and (max-width: 991px) {
   /* CSS для ширины от 768px до 991px */
@@ -6755,6 +6787,10 @@ aside#sidebar-secondary {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  .breadcrumbs {
+    margin-left: .1rem; }
+  .entry-content {
+    padding-left: 15px; }
   #post-6 .entry-content .wrap-form-order,
   #post-328 .entry-content .wrap-form-order {
     background-image: none; }
@@ -6774,6 +6810,27 @@ aside#sidebar-secondary {
   #post-328 .wrap-form-order .form-oder {
     margin-top: -5rem;
     margin-bottom: -2rem; }
+  #post-6 .carousel-block .owl-carousel,
+  .type-study .carousel-block .owl-carousel {
+    margin: 1rem auto; }
+    #post-6 .carousel-block .owl-carousel .owl-stage-outer,
+    .type-study .carousel-block .owl-carousel .owl-stage-outer {
+      margin-left: -1px; }
+    #post-6 .carousel-block .owl-carousel .owl-next,
+    .type-study .carousel-block .owl-carousel .owl-next {
+      right: -20px; }
+  .type-study h2 {
+    margin-top: 3rem; }
+  #post-369 .price-item section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: .5rem; }
+    #post-369 .price-item section a img {
+      margin-bottom: .5rem; }
+    #post-369 .price-item section div.price-props {
+      margin-left: 0; }
   #sidebar-primary .articles-cat-link ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -6810,7 +6867,10 @@ aside#sidebar-secondary {
     top: 4rem;
     right: -50%; }
   .header-top .details-body > p > a {
-    font-size: .85rem; }
+    padding: .5rem .5rem;
+    font-size: .75rem; }
+  .header-top i.fa {
+    display: none; }
   .header-top .details-tel a {
     font-size: .9rem; }
   .valid_goznak div.site-title {
@@ -6826,24 +6886,79 @@ aside#sidebar-secondary {
     border-bottom-left-radius: .3125rem;
     border-bottom-right-radius: .3125rem;
     height: 40px; }
+  .wrap-form-order .form-oder {
+    width: 90%; }
+  #post-369 .price-item div.price-props a.video-link {
+    margin-top: .5rem;
+    position: initial; }
+  #post-369 .price-item a.btn.btn-danger {
+    width: 50%; }
+  #post-369 section {
+    padding-left: 0; }
+    #post-369 section a, #post-369 section p, #post-369 section h4 {
+      -ms-flex-item-align: center;
+          align-self: center; }
+  #post-485 .wrap-kntkt-form-order .fa {
+    display: none; }
   #page-bottom {
     display: none; }
   #footer {
     padding-top: 2rem; }
+    #footer .widget.widget_nav_menu {
+      display: none; }
   #footer .footer-content .details-body-row .details-body-footer > p > a {
     font-size: .75rem !important; }
   #footer .footer-content .form-bar p:last-child .btn.btn-danger {
-    width: 100%; } }
+    width: 100%; }
+  .fancybox-stage #contact_form_pop1 {
+    width: 80%; } }
 
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
   /* CSS для ширины до 575px (включительно) */
-  .header-top .details-body > p > a {
-    padding: .5rem .1rem; }
-    .header-top .details-body > p > a i.fa {
-      display: none; }
   #post-6 .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
     width: 80%; }
+  .wrap-form-order h4 {
+    color: #364B7F;
+    background: none;
+    margin-bottom: -5rem !important; }
+  .wrap-form-order .form-order {
+    width: 100%; }
+  .wrap-faq-form-order h4,
+  .wrap-rev-form-order h4 {
+    color: #364B7F;
+    background: none;
+    margin-top: 2rem;
+    margin-bottom: -2rem; }
+  .wrap-faq-form-order .form-oder,
+  .wrap-rev-form-order .form-oder {
+    margin-bottom: 2rem; }
+  .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+    width: 60% !important; }
+  #post-369 h2 {
+    background: none; }
+  .type-study section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0; }
+    .type-study section a, .type-study section p, .type-study section h4 {
+      -ms-flex-item-align: center;
+          align-self: center; }
+    .type-study section a.btn.btn-danger {
+      margin-bottom: 1rem;
+      width: 60% !important; }
+    .type-study section .page-price-gznk {
+      text-align: center; }
+  .single-study h2 {
+    color: #364B7F;
+    background: none; }
+  #post-376 #gallery-1 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  #post-328 .cities-links .city-link ul {
+    padding-left: .5rem; }
   #footer form.wpcf7-form > .row {
     margin-left: 10px;
     margin-right: 10px; }
@@ -6857,6 +6972,13 @@ aside#sidebar-secondary {
     width: 88%; }
   #footer .details-body-footer > p > a {
     font-size: .75rem; }
+  #footer .study-cats .study-cats-item p.widget-title {
+    font-size: .8rem;
+    letter-spacing: -.5px; }
+  #footer .study-cats .study-link-title {
+    line-height: 1; }
+    #footer .study-cats .study-link-title .a-study-link {
+      font-size: .7rem; }
   #footer .footer-content .details-body-row p.smallp {
     margin-left: 10px;
     margin-right: 10px; }
@@ -6864,6 +6986,18 @@ aside#sidebar-secondary {
     font-size: .9rem;
     padding-left: 10px; }
   #footer .footer-content .site-branding-footer img {
+    display: none; }
+  #footer .footer-content .form-bar p:last-child .btn.btn-danger {
+    width: 100% !important; }
+  .fancybox-stage #contact_form_pop1 {
+    width: 90%; }
+    .fancybox-stage #contact_form_pop1 h4 {
+      color: #fff;
+      margin-bottom: .1rem; } }
+
+/* размер (<=482px) */
+@media (max-width: 482px) {
+  .header-top .details-body > p:last-child > a {
     display: none; } }
 
 /* размер (<=448px) */
@@ -6873,10 +7007,28 @@ aside#sidebar-secondary {
     background-position: center 2% !important; }
   .header-top .details-body > p:last-child > a {
     display: none; }
+  .wrap-faq-form-order .form-oder,
+  .wrap-kntkt-form-order .form-oder {
+    width: 90%; }
   #footer .footer-content h4 {
     font-size: 1rem; }
   #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
-    display: none; } }
+    display: none; }
+  #footer form {
+    display: none; }
+  #footer .footer-widget-row {
+    display: none; }
+  #footer .details-body-footer {
+    margin-top: 2rem;
+    margin-left: 1rem; } }
+
+/* размер (<=320px) */
+@media (max-width: 320px) {
+  .fancybox-stage .wrap-faq-form-order h4 {
+    font-size: 1.2rem;
+    height: 3rem;
+    line-height: 1;
+    padding-bottom: 0; } }
 
 /* xs (<=543px) */
 /* sm (>=576 и <=767) */
@@ -6899,7 +7051,9 @@ aside#sidebar-secondary {
       left: 24% !important;
       top: 33% !important; }
     .why-just-us-content .card .card-body p {
-      font-size: .7rem !important; } }
+      font-size: .7rem !important; }
+  #footer .footer-content .footer-widget-row .study-cats {
+    width: 100%; } }
 
 /* lg (>=992 и <=1199) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -6912,13 +7066,16 @@ aside#sidebar-secondary {
   .valid_goznak img {
     width: 98%;
     margin-left: .7rem; }
-  .entry-content h1 {
-    background-image: none !important; }
   .wrap-form-order {
     width: 134%; }
   .why-just-us-content .card .card-body p:before {
     left: 30% !important;
     top: 37% !important; }
+  #sidebar-primary .widget p.widget-title,
+  #sidebar-primary .study-cats p.widget-title {
+    background: url(images/strip_cut2dark.png) no-repeat; }
+  #sidebar-primary .widget.widget_recent_comments p.widget-title {
+    background: url(images/strip_sm2light.png) no-repeat; }
   #footer .footer-content .form-bar .fa-angle-left {
     left: -2.8rem; }
   .price-item div.price-props h4.price-item-title {

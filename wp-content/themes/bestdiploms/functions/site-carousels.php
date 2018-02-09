@@ -153,6 +153,8 @@ function other_study_carousel( $cat_arg ) {
 					        <a href="#" target="_blank" rel="noopener">
 					            <?php if ( has_post_thumbnail() ) {
 					                the_post_thumbnail( array( 280, 128 ) );
+					                //the_post_thumbnail( array( 128, 128 ) );
+					                //the_post_thumbnail( 'thumbnail' );
 					            } ?>
 					        </a>
 					        <?php

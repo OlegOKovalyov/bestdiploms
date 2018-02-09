@@ -3,7 +3,19 @@
      
 /* lg-размер (<=1199px) */
 @media (max-width: 1199px) {
-
+ .fancybox-stage {
+    .wrap-faq-form-order {
+        h4 {
+            background: $blue;
+            border-radius: .3125rem;
+            line-height: 2;
+            padding: 1rem;
+        }
+        .form-oder {
+            width: 100%;
+        }        
+    }
+ }
 }
      
 /* md-размер (<=991px) */
@@ -44,6 +56,12 @@
         display: flex;
         justify-content: center;
     }
+    .breadcrumbs {
+        margin-left: .1rem;
+    }
+    .entry-content {
+        padding-left: 15px;
+    }
     #post-6, // Главная страница
     #post-328 { // Страница Города
         .entry-content {
@@ -71,11 +89,40 @@
         }
     
     }
-    #sidebar-primary .articles-cat-link ul {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
+    #post-6, // Главная страница
+    .type-study {
+        .carousel-block .owl-carousel {
+            margin: 1rem auto;
+            .owl-stage-outer {
+                margin-left: -1px;
+            }
+            .owl-next {
+                right: -20px;
+            }
+        }
+    }
+    .type-study h2 {
+        margin-top: 3rem;
+    }
+    #post-369 { // Страница Цены
+        .price-item section {
+            flex-direction: column;
+            padding-left: .5rem;
+            a img {
+                margin-bottom: .5rem;
+            }
+            div.price-props {
+                margin-left: 0;
+            }
+        }
+    }    
+    #sidebar-primary {
+        .articles-cat-link ul {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+        }
     }
     #sidebar-secondary {
         #gallery-1,
@@ -109,9 +156,14 @@
     }
     .header-top {
         .details-body > p > a {
-            font-size: .85rem;
+            padding: .5rem .5rem;            
+            //font-size: .85rem;
+            font-size: .75rem;            
             //margin-right: 0;
         }
+         i.fa {
+             display: none;
+         }        
         .details-tel a {
             font-size: .9rem;
         }
@@ -136,11 +188,35 @@
         border-bottom-right-radius: .3125rem;
         height: 40px;
     }
+    .wrap-form-order .form-oder {
+        width: 90%;
+    }
+    #post-369 { // Страница Цены
+        .price-item div.price-props a.video-link {
+            margin-top: .5rem;
+            position: initial;
+        }
+        .price-item a.btn.btn-danger {
+            width: 50%;
+        }
+        section {
+            padding-left: 0;
+            a, p, h4 {
+                align-self: center;
+            }
+        }        
+    }
+    #post-485 .wrap-kntkt-form-order .fa { // Страница-форма Заказать
+        display: none;
+    }
     #page-bottom {
         display: none;
     }
     #footer {
         padding-top: 2rem;
+        .widget.widget_nav_menu {
+            display: none;
+        }
     }
     #footer .footer-content .details-body-row .details-body-footer > p > a {
         font-size: .75rem !important;
@@ -148,24 +224,81 @@
     #footer .footer-content .form-bar p:last-child .btn.btn-danger {
         width: 100%;
     }
+    .fancybox-stage {
+        #contact_form_pop1 {
+            width: 80%;
+        }
+    }
 }
      
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
   /* CSS для ширины до 575px (включительно) */
-    .header-top {
-        .details-body > p > a {
-            padding: .5rem .1rem;
-            i.fa {
-                display: none;
-            }
-        }
-    }
     #post-6, { // Главная страница
         .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
             width: 80%;
         }
     }
+    .wrap-form-order {
+        h4 {
+            color: $reviews-title-color;
+            background: none;
+            margin-bottom: -5rem !important;
+        }
+        .form-order {
+            width: 100%;
+        }
+    }
+    .wrap-faq-form-order,
+    .wrap-rev-form-order {
+        h4 {
+            color: $reviews-title-color;
+            background: none;
+            margin-top: 2rem;
+            margin-bottom: -2rem;
+        }
+        .form-oder {
+            margin-bottom: 2rem;
+        }        
+    }
+    .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
+        width: 60% !important;
+    }
+    #post-369 { // Страница Цены
+        h2 {
+            background: none;
+        }      
+    }
+    .type-study {
+        section {
+            flex-direction: column;
+            padding-left: 0;
+            a, p, h4 {
+                align-self: center;
+            }
+            a.btn.btn-danger {
+                margin-bottom: 1rem;
+                width: 60% !important;
+            }
+            .page-price-gznk {
+                text-align: center;
+            }
+        }        
+    }
+    .single-study {
+        h2 {
+            color: $reviews-title-color;
+            background: none;
+        }
+    }   
+    #post-376 #gallery-1 { // Страница Оплата и доставка
+        flex-wrap: wrap;
+    } 
+    #post-328 { // Страница Города
+        .cities-links .city-link ul {
+            padding-left: .5rem;
+        }
+    } 
     #footer {
         form.wpcf7-form {
             &>.row {
@@ -194,6 +327,22 @@
             }
         }
     }
+    #footer {
+        .study-cats {
+            .study-cats-item {
+                p.widget-title {
+                    font-size: .8rem;
+                    letter-spacing: -.5px;
+                }
+            }
+            .study-link-title {
+                line-height: 1;
+                .a-study-link {
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
     #footer .footer-content .details-body-row p.smallp {
         margin-left: 10px;
         margin-right: 10px;
@@ -205,7 +354,28 @@
     #footer .footer-content .site-branding-footer img {
         display: none;
     }
+    #footer .footer-content .form-bar p:last-child .btn.btn-danger {
+        width: 100% !important;
+    }
+    .fancybox-stage {
+        #contact_form_pop1 {
+            width: 90%;
+            h4 {
+                color: #fff;
+                margin-bottom: .1rem;
+            }
+        }
+    }    
 }
+
+/* размер (<=482px) */
+@media (max-width: 482px) {
+    .header-top {
+        .details-body > p:last-child > a {
+            display: none;
+        }
+    }
+}    
 
 /* размер (<=448px) */
 @media (max-width: 448px) {
@@ -218,10 +388,42 @@
             display: none;
         }
     }
+    .wrap-faq-form-order,
+    .wrap-kntkt-form-order {
+        .form-oder {
+            width: 90%;
+        }        
+    }    
     #footer .footer-content h4 {
         font-size: 1rem;
     }
     #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
         display: none;
     }
-}  
+    #footer {
+        form {
+            display: none;
+        }
+        .footer-widget-row {
+            display: none;
+        }
+        .details-body-footer {
+            margin-top: 2rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+/* размер (<=320px) */
+@media (max-width: 320px) {
+    .fancybox-stage {
+        .wrap-faq-form-order {
+            h4 {
+                font-size: 1.2rem;
+                height: 3rem;
+                line-height: 1;
+                padding-bottom: 0;
+            }
+        }
+    }
+}    

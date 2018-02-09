@@ -9,7 +9,16 @@
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
   /* CSS для: 768px <= ширины <= 991px */
-
+    .page-id-485 {
+        #footer {
+            margin-top: -5rem;
+            form {
+                h4 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
      
 /* lg-устройства (больше или равно 992px) */

@@ -165,4 +165,20 @@
             //top: 40%;
         }                
     }
-} 
+}
+
+/** 
+ * Всплывающая форма ЗАДАТЬ ВОПРОС fancybox из шапки сайта
+ * по ссылке Задать вопрос онлай.
+ */
+ .fancybox-stage {
+    #contact_form_pop1 {
+        background: transparent;
+        width: 40%;
+        .form-oder {
+            p:last-child {
+                text-align: center;
+            }
+        }
+    }
+ }
