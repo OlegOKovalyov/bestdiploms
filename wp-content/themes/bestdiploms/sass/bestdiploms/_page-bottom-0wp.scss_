@@ -19,23 +19,24 @@
             margin: 1.5rem auto .8rem;
         }
 
-        .card {
-            .card-img-bg {
-                background:transparent url('images/popup.png') left top no-repeat;
-                color: #fff;
-                line-height: 2.5;
-                font-size: 68px;
-                font-weight: 500;
-                height: 150px;
-                padding-left: .9rem;
+        /* p.card-text {
+            font-size: .85rem;
+            &:before {
+                background: url(images/i_starstrips.png) no-repeat;
+                content: "";
+                left: 35%;
+                top: 38%;
+                position: absolute;
+                width: 49px;
+                height: 49px;
             }
-        }
+        } */
 
         .card-body {
             @for $i from 1 through 7 {
                 p.card-text#{$i} {
                     font-size: .85rem;
-                    margin-top: 3rem;
+                    margin-top: 4rem;
                     &:before {
                         background: url(images/icon#{$i}.png) no-repeat;
                         content: "";

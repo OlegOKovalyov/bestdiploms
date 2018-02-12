@@ -6454,16 +6454,10 @@ div.divaccordion {
       height: 5rem;
       margin: 1.5rem auto .8rem; }
     #page-bottom .why-just-us-content .card .card-img-bg {
-      background: transparent url("images/popup.png") left top no-repeat;
-      color: #fff;
-      line-height: 2.5;
-      font-size: 68px;
-      font-weight: 500;
-      height: 150px;
-      padding-left: .9rem; }
+      background: transparent url("images/popup.png") left top no-repeat; }
     #page-bottom .why-just-us-content .card-body p.card-text1 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text1:before {
         background: url(images/icon1.png) no-repeat;
         content: "";
@@ -6474,7 +6468,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text2 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text2:before {
         background: url(images/icon2.png) no-repeat;
         content: "";
@@ -6485,7 +6479,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text3 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text3:before {
         background: url(images/icon3.png) no-repeat;
         content: "";
@@ -6496,7 +6490,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text4 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text4:before {
         background: url(images/icon4.png) no-repeat;
         content: "";
@@ -6507,7 +6501,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text5 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text5:before {
         background: url(images/icon5.png) no-repeat;
         content: "";
@@ -6518,7 +6512,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text6 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text6:before {
         background: url(images/icon6.png) no-repeat;
         content: "";
@@ -6529,7 +6523,7 @@ div.divaccordion {
         height: 49px; }
     #page-bottom .why-just-us-content .card-body p.card-text7 {
       font-size: .85rem;
-      margin-top: 3rem; }
+      margin-top: 4rem; }
       #page-bottom .why-just-us-content .card-body p.card-text7:before {
         background: url(images/icon7.png) no-repeat;
         content: "";
@@ -7050,25 +7044,6 @@ aside#sidebar-secondary {
       top: 33% !important; }
     .why-just-us-content .card .card-body p {
       font-size: .7rem !important; }
-  #page-bottom .why-just-us-content .card .card-img-bg {
-    background-size: 100% 62%;
-    line-height: 2.3;
-    font-size: 45px;
-    padding-left: .5rem; }
-  #page-bottom .card-body p.card-text1 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text2 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text3 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text4 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text5 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text6 {
-    margin-top: 0 !important; }
-  #page-bottom .card-body p.card-text7 {
-    margin-top: 0 !important; }
   #footer .footer-content .footer-widget-row .study-cats {
     width: 100%; } }
 
@@ -7093,11 +7068,6 @@ aside#sidebar-secondary {
     background: url(images/strip_cut2dark.png) no-repeat; }
   #sidebar-primary .widget.widget_recent_comments p.widget-title {
     background: url(images/strip_sm2light.png) no-repeat; }
-  #page-bottom .why-just-us-content .card .card-img-bg {
-    background-size: 100% 86%;
-    line-height: 2.4;
-    font-size: 60px;
-    padding-left: .6rem; }
   #footer .footer-content .form-bar .fa-angle-left {
     left: -2.8rem; }
   .price-item div.price-props h4.price-item-title {

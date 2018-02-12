@@ -36,6 +36,25 @@
             }
         }
     }
+    #page-bottom {
+        .why-just-us-content {
+            .card {
+                .card-img-bg {
+                    background-size: 100% 62%;
+                    line-height: 2.3;
+                    font-size: 45px;
+                    padding-left: .5rem;
+                }
+            }            
+        }
+        .card-body {
+            @for $i from 1 through 7 {
+                p.card-text#{$i} {
+                    margin-top: 0 !important;
+                }
+            }
+        }        
+    }
     #footer .footer-content .footer-widget-row {
         .study-cats {
             width: 100%;
@@ -80,7 +99,19 @@
     }
     #sidebar-primary .widget.widget_recent_comments p.widget-title {
         background: url(images/strip_sm2light.png) no-repeat;
-    }    
+    }
+    #page-bottom {
+        .why-just-us-content {
+            .card {
+                .card-img-bg {
+                    background-size: 100% 86%;
+                    line-height: 2.4;
+                    font-size: 60px;
+                    padding-left: .6rem;
+                }
+            }            
+        }
+    }  
     #footer .footer-content .form-bar .fa-angle-left {
         left: -2.8rem;
     }

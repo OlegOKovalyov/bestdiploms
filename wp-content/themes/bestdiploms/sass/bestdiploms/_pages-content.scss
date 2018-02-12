@@ -181,9 +181,12 @@
 
 /* Стилизуем содержимое страницы Оплата и доставка */
 #post-376 {
-    #gallery-1 {
-        display: flex;
-        justify-content: space-around;
+    .entry-content {
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
     img.alignnone.wp-image-235 {
         width: 100%;

@@ -29,43 +29,50 @@
 						<div class="card-deck">
 
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup01.png" alt="Card image cap">
+								<p class="card-img-bg">01</p>
+								<!-- <img class="card-img-top" src="<?php //echo get_template_directory_uri() ?>/images/popup01.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text1">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup02.png" alt="Card image cap">
+								<p class="card-img-bg">02</p>
+								<!-- <img class="card-img-top" src="<?php //echo get_template_directory_uri() ?>/images/popup02.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text2">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>						
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup03.png" alt="Card image cap">
+								<p class="card-img-bg">03</p>
+								<!-- <img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup03.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text3">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup04.png" alt="Card image cap">
+								<p class="card-img-bg">04</p>
+								<!-- <img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup04.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text4">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup05.png" alt="Card image cap">
+								<p class="card-img-bg">05</p>
+								<!-- <img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup05.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text5">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup06.png" alt="Card image cap">
+								<p class="card-img-bg">06</p>
+								<!-- <img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup06.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text6">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup07.png" alt="Card image cap">
+								<p class="card-img-bg">07</p>
+								<!-- <img class="card-img-top" src="<?php echo get_template_directory_uri() ?>/images/popup07.png" alt="Card image cap"> -->
 								<div class="card-body">
 									<p class="card-text7">Никакой хорошо отпечатанной типографии. Только настоящие оригиналы ГОЗНАК.</p>
 								</div>
@@ -120,12 +127,14 @@
 			<div class="col-sm-10 col-xs-12">
 				<div class="row">
 				<div class="details-body-footer d-flex justify-content-start">
+
 					<?php /*echo do_shortcode('[details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/details]');*/ ?>
 					<?php //echo do_shortcode('[details]'); ?>
 					<p class="details-tel m-0 pt-1"><a href="tel:<?php echo $mytheme['phone']; ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $mytheme['phone']; ?></a></p>
 					<p class="details-mail m-0 pt-1"><a href="mailto:<?php echo $mytheme['email']; ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $mytheme['email']; ?></a></p>
-					<p class="details-que m-0 pt-1"><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>
+					<p class="details-que m-0 pt-1"><a href="#contact_form_pop1" data-fancybox class="fancybox"><i class="fa fa-pencil" aria-hidden="true"></i>
 				Задать вопрос онлайн</a></p>
+
 				</div><!-- .details-body -->
 				<p class="smallp">За каждым клиентом закрепляется личный менеджер нашей компании, который обеспечивает надлежащее и комфортное сопровождение всей сделки от момента поступления заявки до момента получения документа на руки и оплаты за него.</p>
 				<p class="makeorgblnk">Изготовление документов только на оригинальных бланках ГОЗНАК</p>

@@ -497,7 +497,7 @@ function reviews_in_sidebars() {
         'posts_per_page' => 5,
     ); ?>
 	<div class="widget widget_recent_comments">
-		<p class="widget-title">Отзывы<br>наших клиентов</p>
+		<p class="widget-title">Отзывы наших клиентов</p>
 
 	    <?php 
 	    $query = new WP_query ( $args );
@@ -514,9 +514,9 @@ function reviews_in_sidebars() {
 				<section>
 				    <div class="rev-props">
 				    	<div class="rev-props-in">
-					        <h6 class="rev-item-name"><?php echo $value1; ?>
+					        <p class="rev-item-name"><?php echo $value1; ?>
 					        	<!-- <span class="rev-item-date"> <?php /*echo $value;*/ ?></span> -->
-					        </h6>
+					        </p>
 
 					        <?php /*the_excerpt()*/ ?>			            
 
