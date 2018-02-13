@@ -186,7 +186,7 @@
     .blank-top-row-content {
         border-bottom-left-radius: .3125rem;
         border-bottom-right-radius: .3125rem;
-        height: 40px;
+        height: 41px;
     }
     .wrap-form-order .form-oder {
         width: 90%;
@@ -220,6 +220,7 @@
     }
     #footer .footer-content .details-body-row .details-body-footer > p > a {
         font-size: .75rem !important;
+        min-width: 140px;
     }
     #footer .footer-content .form-bar p:last-child .btn.btn-danger {
         width: 100%;
