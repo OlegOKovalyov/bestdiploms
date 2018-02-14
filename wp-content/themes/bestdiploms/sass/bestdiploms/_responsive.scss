@@ -105,10 +105,13 @@
     }
     #sidebar-primary .widget p.widget-title, 
     #sidebar-primary .study-cats p.widget-title {
-        background: url(images/strip_cut2dark.png) no-repeat;
+        width: 153%;
     }
     #sidebar-primary .widget.widget_recent_comments p.widget-title {
-        background: url(images/strip_sm2light.png) no-repeat;
+        width: 153%;
+    }
+    #sidebar-primary .widget.widget_recent_comments a.btn.btn-primary {
+        width: 60%;
     }
     #page-bottom {
         .why-just-us-content {

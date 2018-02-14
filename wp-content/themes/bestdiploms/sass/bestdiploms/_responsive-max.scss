@@ -115,7 +115,7 @@
                 margin-left: 0;
             }
         }
-    }    
+    }
     #sidebar-primary {
         .articles-cat-link ul {
             align-items: center;
@@ -124,6 +124,22 @@
             padding-left: 0;
         }
     }
+    #sidebar-primary .study-cats p.widget-title {
+        background: url(images/strip_cutdark.png) center no-repeat;
+        width: 43%;
+    }
+    #sidebar-primary .widget.widget_recent_comments {
+        margin-left: 0;
+        p.widget-title {
+            background: $doc-item-bc; // #D3DCED;
+            margin-left: 0;
+            padding: 0;
+            width: 100%;
+            .widget-title-span {
+                align-self: center;
+            }
+        }    
+    } 
     #sidebar-secondary {
         #gallery-1,
         #gallery-2 {
@@ -209,6 +225,9 @@
     #post-485 .wrap-kntkt-form-order .fa { // Страница-форма Заказать
         display: none;
     }
+    #sidebar-primary .study-cats p.widget-title {
+        width: 61%;
+    }    
     #page-bottom {
         display: none;
     }
@@ -299,7 +318,12 @@
         .cities-links .city-link ul {
             padding-left: .5rem;
         }
-    } 
+    }
+    #sidebar-primary .study-cats p.widget-title {
+        background: url(images/strip_cutdark.png) no-repeat;
+        //text-align: left;
+        width: 100%;
+    }
     #footer {
         form.wpcf7-form {
             &>.row {
@@ -394,7 +418,10 @@
         .form-oder {
             width: 90%;
         }        
-    }    
+    }
+    #sidebar-primary .study-cats p.widget-title {
+        width: 130%;
+    }   
     #footer .footer-content h4 {
         font-size: 1rem;
     }

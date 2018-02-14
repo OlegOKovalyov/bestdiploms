@@ -6323,6 +6323,11 @@ div.divaccordion {
   padding-right: 1rem; }
 
 #sidebar-primary {
+  /* .widget {
+        p.widget-title {
+            width: 118%;
+        }
+    } */
   /* .widget.widget_custom_html {
         background: $reviews-bg;
         border-bottom-left-radius: 5px;
@@ -6351,17 +6356,19 @@ div.divaccordion {
           -ms-flex-direction: column;
               flex-direction: column;
       font-size: .87rem;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       height: 3rem;
       letter-spacing: .5px;
       margin-bottom: 0;
       margin-left: -1rem;
-      padding: .2rem 0 0 1.5rem;
-      text-align: left;
+      padding: 0 2.5rem .3rem .5rem;
+      text-align: center;
       text-transform: uppercase;
-      width: 123%; }
+      width: 124%; }
+      #sidebar-primary .widget p.widget-title .widget-title-span, #sidebar-primary .study-cats p.widget-title .widget-title-span {
+        width: 246px; }
     #sidebar-primary .widget ul, #sidebar-primary .study-cats ul {
       list-style-type: none;
       padding-left: 0;
@@ -6404,7 +6411,8 @@ div.divaccordion {
     #sidebar-primary .widget.widget_recent_comments p.widget-title {
       background: url(images/strip_smlight.png) no-repeat;
       color: #364B7F;
-      margin-left: 0; }
+      margin-left: 0;
+      width: 118%; }
     #sidebar-primary .widget.widget_recent_comments .rev-props .rev-props-in {
       border-bottom: 1px solid #8c8c8c;
       -webkit-box-orient: vertical;
@@ -6627,6 +6635,10 @@ div.divaccordion {
             opacity: 1;
             -webkit-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in; }
+    #footer .footer-content .form-bar input[type=submit] {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     #footer .footer-content .form-bar .fa {
       color: #BD1818;
       position: relative;
@@ -6847,6 +6859,19 @@ aside#sidebar-secondary {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-left: 0; }
+  #sidebar-primary .study-cats p.widget-title {
+    background: url(images/strip_cutdark.png) center no-repeat;
+    width: 43%; }
+  #sidebar-primary .widget.widget_recent_comments {
+    margin-left: 0; }
+    #sidebar-primary .widget.widget_recent_comments p.widget-title {
+      background: #D9E3ED;
+      margin-left: 0;
+      padding: 0;
+      width: 100%; }
+      #sidebar-primary .widget.widget_recent_comments p.widget-title .widget-title-span {
+        -ms-flex-item-align: center;
+            align-self: center; }
   #sidebar-secondary #gallery-1,
   #sidebar-secondary #gallery-2 {
     display: -webkit-box;
@@ -6904,6 +6929,8 @@ aside#sidebar-secondary {
           align-self: center; }
   #post-485 .wrap-kntkt-form-order .fa {
     display: none; }
+  #sidebar-primary .study-cats p.widget-title {
+    width: 61%; }
   #page-bottom {
     display: none; }
   #footer {
@@ -6964,6 +6991,9 @@ aside#sidebar-secondary {
         flex-wrap: wrap; }
   #post-328 .cities-links .city-link ul {
     padding-left: .5rem; }
+  #sidebar-primary .study-cats p.widget-title {
+    background: url(images/strip_cutdark.png) no-repeat;
+    width: 100%; }
   #footer form.wpcf7-form > .row {
     margin-left: 10px;
     margin-right: 10px; }
@@ -7015,6 +7045,8 @@ aside#sidebar-secondary {
   .wrap-faq-form-order .form-oder,
   .wrap-kntkt-form-order .form-oder {
     width: 90%; }
+  #sidebar-primary .study-cats p.widget-title {
+    width: 130%; }
   #footer .footer-content h4 {
     font-size: 1rem; }
   #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
@@ -7104,9 +7136,11 @@ aside#sidebar-secondary {
     top: 37% !important; }
   #sidebar-primary .widget p.widget-title,
   #sidebar-primary .study-cats p.widget-title {
-    background: url(images/strip_cut2dark.png) no-repeat; }
+    width: 153%; }
   #sidebar-primary .widget.widget_recent_comments p.widget-title {
-    background: url(images/strip_sm2light.png) no-repeat; }
+    width: 153%; }
+  #sidebar-primary .widget.widget_recent_comments a.btn.btn-primary {
+    width: 60%; }
   #page-bottom .why-just-us-content .card .card-img-bg {
     background-size: 100% 86%;
     line-height: 2.4;

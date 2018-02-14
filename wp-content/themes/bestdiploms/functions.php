@@ -348,7 +348,7 @@ function studies_in_sidebars() { ?>
 		    $extra_loop = new WP_query ( $extra_args );
 			if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post(); ?>
 					<div class="study-cats-item col">
-						<p class="widget-title"><?php the_title() ?></p>
+						<p class="widget-title"><span class="widget-title-span"><?php the_title() ?></span></p>
 						<?php $extra_studyid = get_the_ID(); /*echo '$extra_studyid = ' . $extra_studyid;*/ ?>
 
 					    <?php $intro_args = array(
@@ -497,7 +497,7 @@ function reviews_in_sidebars() {
         'posts_per_page' => 5,
     ); ?>
 	<div class="widget widget_recent_comments">
-		<p class="widget-title">Отзывы<br>наших клиентов</p>
+		<p class="widget-title"><span class="widget-title-span">Отзывы наших клиентов</span></p>
 
 	    <?php 
 	    $query = new WP_query ( $args );
