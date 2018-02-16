@@ -33,8 +33,28 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<!-- 376: Оплата и доставка; 212: Вопросы и ответы; 259: Статьи  -->
+	<?php //if ( 376 == get_the_ID() || 212 == get_the_ID() || 259 == get_the_ID() ) : ?>
+	<?php if ( is_page( array(376, 212, 259 ) ) ) : ?>
+
+	    <div class="col-lg-3 col-sidebar-primary">
+	        <?php get_sidebar( 'minus' ); ?>
+	    </div>
+
+	<!-- 282: Отзывы; 328: Города; 357: Контакты; 485: Заказать диплом; 487: Видео документов -->
+	<?php //elseif ( 282 == get_the_ID() || 328 == get_the_ID() || 357 == get_the_ID() || 485 == get_the_ID() || 487 == get_the_ID() ) : ?>
+	<?php elseif ( is_page( array(282, 382, 357, 485, 487 ) ) ) : ?>
+
+	    <div class="col-lg-3 col-sidebar-primary">
+	        <?php get_sidebar( 'minmin' ); ?>
+	    </div>		
+
+	<?php else : ?>
+
 	    <div class="col-lg-3 col-sidebar-primary">
 	        <?php get_sidebar(); ?>
 	    </div>		    
+
+	<?php endif; ?>
   
 <?php get_footer();

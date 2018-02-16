@@ -1,8 +1,15 @@
 /* Right Sidebar secondary */
-aside#sidebar-secondary {
-	margin-top: 1rem;
+div#sidebar-secondary {
+	margin-top: 2.5rem;
 	div#media_gallery-2 {
 		text-align: center;
+		.gallery {
+			display: flex;
+			justify-content: space-around;
+			figure.gallery-item {
+				margin-right: 1%;
+			}			
+		}
 	}
     .articles-cat-link {
         ul { 

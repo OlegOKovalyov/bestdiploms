@@ -5400,8 +5400,8 @@ nav.navbar {
     width: 100%; }
   .valid_goznak .order_button > a.btn {
     color: #eee;
-    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-    background: linear-gradient(to right, #FF1B30, #FF4C62);
+    background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
     opacity: 8;
     font-size: .9rem;
@@ -5499,8 +5499,8 @@ nav.navbar {
     font-weight: 500; }
   .owl-item .doc-item a.btn.btn-danger {
     color: #eee;
-    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-    background: linear-gradient(to right, #FF1B30, #FF4C62);
+    background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
     opacity: 8;
     font-size: .9rem;
@@ -5540,7 +5540,8 @@ nav.navbar {
     color: #88a9e6; }
 
 .entry-content {
-  padding-left: 2.5rem; }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
   .entry-content h1 {
     background: url(images/strip_mdlight.png) no-repeat center top;
     color: #364B7F;
@@ -5572,7 +5573,7 @@ nav.navbar {
   .entry-content p.p-last {
     margin-bottom: 3rem; }
   .entry-content p.p-first {
-    margin-top: 3rem; }
+    margin-top: 4rem; }
 
 #content {
   background: #fff;
@@ -5582,7 +5583,8 @@ nav.navbar {
           box-shadow: 0 0 20px #bbb; }
 
 #main article.page .sb-secondry {
-  text-align: center; }
+  text-align: center;
+  margin-top: 2rem; }
 
 #post-369 h2 {
   background: url(images/strip_mdlight.png) no-repeat center top;
@@ -5674,8 +5676,8 @@ nav.navbar {
 
 .price-item a.btn.btn-danger {
   color: #eee;
-  background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-  background: linear-gradient(to right, #FF1B30, #FF4C62);
+  background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+  background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
   border-radius: 0.3125rem;
   opacity: 8;
   font-size: .9rem;
@@ -5720,8 +5722,8 @@ nav.navbar {
   margin-bottom: 2rem; }
   .valid_goznak-pages .order_button a.btn.btn-danger {
     color: #eee;
-    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-    background: linear-gradient(to right, #FF1B30, #FF4C62);
+    background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
     opacity: 8;
     font-size: .9rem;
@@ -5870,6 +5872,8 @@ div.divaccordion {
             justify-content: space-between;
     padding-bottom: .5rem; }
     .rev-props .rev-item-name span.rev-item-date {
+      -ms-flex-item-align: center;
+          align-self: center;
       background-color: #364B7F;
       border-radius: .25rem;
       color: #b3b3b3;
@@ -5902,7 +5906,7 @@ div.divaccordion {
         font-size: .88rem; }
 
 .cities-ordeform {
-  margin: 5rem auto; }
+  margin: 3rem auto; }
 
 /* Стилизуем содержимое страницы Контакты */
 .page-id-357 {
@@ -6051,10 +6055,17 @@ div.divaccordion {
       margin-bottom: .5rem; }
 
 /* Форма ЗАКАЗАТЬ ДИПЛОМ */
+.page-id-328 div.wpcf7,
+.page-id-487 div.wpcf7 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 83.33333%;
+          flex: 0 0 83.33333%;
+  max-width: 83.33333%; }
+
 .wrap-form-order {
   background-image: url(images/frame.png);
   background-position: center top;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: scroll;
   height: 30rem;
@@ -6088,8 +6099,8 @@ div.divaccordion {
       margin: 0.7rem !important; }
     .wrap-form-order .form-oder .btn.btn-danger {
       color: #eee;
-      background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-      background: linear-gradient(to right, #FF1B30, #FF4C62);
+      background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+      background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
       border-radius: 0.3125rem;
       opacity: 8;
       font-size: .9rem;
@@ -6190,8 +6201,8 @@ div.divaccordion {
     .wrap-rev-form-order .form-oder a.btn.btn-danger,
     .wrap-kntkt-form-order .form-oder a.btn.btn-danger {
       color: #eee;
-      background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-      background: linear-gradient(to right, #FF1B30, #FF4C62);
+      background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+      background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
       border-radius: 0.3125rem;
       opacity: 8;
       font-size: .9rem;
@@ -6243,8 +6254,8 @@ div.divaccordion {
   .wrap-rev-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger,
   .wrap-kntkt-form-order .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
     color: #eee;
-    background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-    background: linear-gradient(to right, #FF1B30, #FF4C62);
+    background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+    background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
     border-radius: 0.3125rem;
     opacity: 8;
     font-size: .9rem;
@@ -6604,8 +6615,8 @@ div.divaccordion {
                 justify-content: flex-end; }
         #footer .footer-content .form-bar p:last-child .btn.btn-danger {
           color: #eee;
-          background: -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
-          background: linear-gradient(to right, #FF1B30, #FF4C62);
+          background: #FA6060 -webkit-gradient(linear, left top, right top, from(#FF1B30), to(#FF4C62));
+          background: #FA6060 linear-gradient(to right, #FF1B30, #FF4C62);
           border-radius: 0.3125rem;
           opacity: 8;
           font-size: .9rem;
@@ -6646,7 +6657,7 @@ div.divaccordion {
     #footer .footer-content .form-bar .fa-angle-right {
       right: -2rem; }
     #footer .footer-content .form-bar .fa-angle-left {
-      left: -3.5rem; }
+      left: -3rem; }
     #footer .footer-content .form-bar .form-control {
       background-color: #EEF4F9;
       border: 2px solid #C4D7F5; }
@@ -6717,21 +6728,29 @@ div.divaccordion {
   background-color: #4668BB; }
 
 /* Right Sidebar secondary */
-aside#sidebar-secondary {
-  margin-top: 1rem; }
-  aside#sidebar-secondary div#media_gallery-2 {
+div#sidebar-secondary {
+  margin-top: 2.5rem; }
+  div#sidebar-secondary div#media_gallery-2 {
     text-align: center; }
-  aside#sidebar-secondary .articles-cat-link ul {
+    div#sidebar-secondary div#media_gallery-2 .gallery {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+      div#sidebar-secondary div#media_gallery-2 .gallery figure.gallery-item {
+        margin-right: 1%; }
+  div#sidebar-secondary .articles-cat-link ul {
     padding-left: 0;
     text-align: center; }
-    aside#sidebar-secondary .articles-cat-link ul li {
+    div#sidebar-secondary .articles-cat-link ul li {
       list-style-type: none;
       margin: .65rem 0; }
-      aside#sidebar-secondary .articles-cat-link ul li a {
+      div#sidebar-secondary .articles-cat-link ul li a {
         border: none;
         color: #B3B7C3;
         font-size: .8rem; }
-        aside#sidebar-secondary .articles-cat-link ul li a:hover {
+        div#sidebar-secondary .articles-cat-link ul li a:hover {
           color: #5684DB; }
 
 /* xs - устройства (до 576px) */
@@ -6755,12 +6774,20 @@ aside#sidebar-secondary {
   /* CSS для: 992px <= ширины <= 1119px */
   .details-body > p > a {
     min-width: 220px; }
+  #post-369 .price-item section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #post-369 .price-item section div.price-props {
+      margin-left: 3rem; }
   #footer .footer-content .details-body-row .details-body-footer > p > a {
     min-width: 220px; } }
 
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
-  /* CSS для: ширины >= 1200px */ }
+  /* CSS для: ширины >= 1200px */
+  .cities-links .city-link ul li.city-link-title a {
+    font-size: 1rem; } }
 
 /* xl-размер (>=1200px) */
 /* CSS для >=1200px */
@@ -6806,7 +6833,11 @@ aside#sidebar-secondary {
   .breadcrumbs {
     margin-left: .1rem; }
   .entry-content {
-    padding-left: 15px; }
+    padding-left: 15px;
+    padding-right: 15px; }
+  #post-6 .entry-content div.wpcf7,
+  #post-328 .entry-content div.wpcf7 {
+    display: inline; }
   #post-6 .entry-content .wrap-form-order,
   #post-328 .entry-content .wrap-form-order {
     background-image: none; }
@@ -6847,6 +6878,23 @@ aside#sidebar-secondary {
       margin-bottom: .5rem; }
     #post-369 .price-item section div.price-props {
       margin-left: 0; }
+  #post-328 h4 {
+    line-height: 3;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #post-328 .cities-links {
+    margin-bottom: 0; }
+    #post-328 .cities-links .city-link ul {
+      margin-bottom: 0; }
+      #post-328 .cities-links .city-link ul li:first-child {
+        margin-top: 0; }
+  #post-328 .cities-ordeform {
+    margin-top: -2rem;
+    margin-bottom: 0; }
+    #post-328 .cities-ordeform h4 {
+      padding-top: 0; }
+  .single-study .entry-content p.p-last {
+    margin-bottom: 0; }
   #sidebar-primary .articles-cat-link ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -6927,8 +6975,20 @@ aside#sidebar-secondary {
     #post-369 section a, #post-369 section p, #post-369 section h4 {
       -ms-flex-item-align: center;
           align-self: center; }
+  #post-357 .entry-content h1 {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #post-357 .entry-content p.margin-y {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; }
+  #post-485 .wrap-kntkt-form-order .type-of-doc {
+    margin-bottom: 1.4rem; }
+  #post-485 .wrap-kntkt-form-order .date-your-birth {
+    width: 100%; }
   #post-485 .wrap-kntkt-form-order .fa {
     display: none; }
+  #post-485 .wrap-kntkt-form-order .form-control {
+    width: 100%; }
   #sidebar-primary .study-cats p.widget-title {
     width: 61%; }
   #page-bottom {
@@ -6991,6 +7051,12 @@ aside#sidebar-secondary {
         flex-wrap: wrap; }
   #post-328 .cities-links .city-link ul {
     padding-left: .5rem; }
+  .article-links .media-img-article {
+    margin-right: 3rem;
+    width: 40%; }
+  .article-links .attachment-post-thumbnail {
+    width: 100%;
+    height: auto; }
   #sidebar-primary .study-cats p.widget-title {
     background: url(images/strip_cutdark.png) no-repeat;
     width: 100%; }
@@ -7040,11 +7106,52 @@ aside#sidebar-secondary {
   /* CSS для ширины до 448px (включительно) */
   body.custom-background {
     background-position: center 2% !important; }
+  body.page-id-369.custom-background {
+    background-position: center 1% !important; }
   .header-top .details-body > p:last-child > a {
     display: none; }
   .wrap-faq-form-order .form-oder,
-  .wrap-kntkt-form-order .form-oder {
+  .wrap-kntkt-form-order .form-oder,
+  .wrap-rev-form-order .form-oder {
     width: 90%; }
+  #post-328 h4 {
+    line-height: 3;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #post-328 .cities-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0; }
+    #post-328 .cities-links .city-link {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%; }
+      #post-328 .cities-links .city-link ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-bottom: 0;
+        padding-left: 0; }
+        #post-328 .cities-links .city-link ul li {
+          -ms-flex-item-align: center;
+              align-self: center;
+          margin-top: .5rem; }
+          #post-328 .cities-links .city-link ul li:first-child {
+            margin-top: 0; }
+          #post-328 .cities-links .city-link ul li a {
+            font-size: 1rem; }
+  #post-328 .cities-ordeform {
+    margin-top: -2rem;
+    margin-bottom: 0; }
+    #post-328 .cities-ordeform h4 {
+      padding-top: 0; }
   #sidebar-primary .study-cats p.widget-title {
     width: 130%; }
   #footer .footer-content h4 {
@@ -7087,6 +7194,12 @@ aside#sidebar-secondary {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  #post-369 .price-item section a {
+    text-align: center; }
+  #post-369 .price-item div.price-props a.video-link {
+    text-align: left; }
+  #post-369 .price-item section div.price-props {
+    padding-left: 3rem; }
   .why-just-us-content .card .card-body {
     padding: .1rem !important; }
     .why-just-us-content .card .card-body p:before {
@@ -7129,8 +7242,12 @@ aside#sidebar-secondary {
   .valid_goznak img {
     width: 98%;
     margin-left: .7rem; }
+  .entry-content {
+    padding-left: 3rem; }
+  .page-id-6 .entry-content {
+    padding-right: 0; }
   .wrap-form-order {
-    width: 134%; }
+    width: 120%; }
   .why-just-us-content .card .card-body p:before {
     left: 30% !important;
     top: 37% !important; }

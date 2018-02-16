@@ -4,7 +4,7 @@
 // .btn-danger mixin
 @mixin button_theme($mrgl, $mrgr) {
         color: #eee;
-        background: linear-gradient(to right, #FF1B30, #FF4C62);        
+        background: $red-nav-border linear-gradient(to right, #FF1B30, #FF4C62);        
         border-radius: 0.3125rem;
         opacity: 8;
         font-size: .9rem;

@@ -34,6 +34,12 @@
             min-width: 220px;
         }
     }
+    #post-369 .price-item section {
+        justify-content: center;
+        div.price-props {
+            margin-left: 3rem;
+        }
+    }
     #footer .footer-content .details-body-row .details-body-footer > p > a {
         min-width: 220px;
     }
@@ -42,4 +48,7 @@
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
   /* CSS для: ширины >= 1200px */
+  .cities-links .city-link ul li.city-link-title a {
+    font-size: 1rem;
+  }
 }

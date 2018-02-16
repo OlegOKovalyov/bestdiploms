@@ -29,6 +29,15 @@
             justify-content: center;
         }
     }
+    #post-369 .price-item section a {
+        text-align: center;
+    }
+    #post-369 .price-item div.price-props a.video-link {
+        text-align: left;
+    }
+    #post-369 .price-item section div.price-props {
+        padding-left: 3rem;
+    }
     .why-just-us-content {
         .card {
             .card-body {
@@ -87,11 +96,16 @@
         width: 98%;
         margin-left: .7rem;
     }
-    .entry-content h1 {
-        //background-image: none !important;
+    .entry-content {
+        padding-left: 3rem;
+    }
+    .page-id-6 { // Главная страница
+        .entry-content {
+            padding-right: 0;
+        }
     }    
     .wrap-form-order {
-        width: 134%;
+        width: 120%;
     }
     .why-just-us-content {
         .card {
@@ -112,6 +126,9 @@
     }
     #sidebar-primary .widget.widget_recent_comments a.btn.btn-primary {
         width: 60%;
+    }
+    aside#sidebar-secondary {
+        //margin: 2rem 0 1rem 3rem;
     }
     #page-bottom {
         .why-just-us-content {

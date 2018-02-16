@@ -516,7 +516,7 @@
 		<?php global $mytheme; ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-12 pl-3">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		

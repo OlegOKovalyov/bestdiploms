@@ -46,9 +46,31 @@
 		<!-- Вывод CPT study (Документы) на странице Цены -->
 		<div class="row">
 			<!-- <div class="entry-content col-lg-9"> Перенос галереи из правого сайдбара сверху контента: -->
-			<!-- <div class="entry-content col-lg-12 order-2"> -->
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-12 order-2">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
+
+
+
+<!-- <aside id="sidebar-secondary" class="widget-area">
+	<div id="media_gallery-2" class="widget widget_media_gallery"><div id='gallery-1' class='gallery galleryid-369 gallery-columns-1 gallery-size-thumbnail'><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='http://wpbestdiploms.loc/i_guardoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='http://wpbestdiploms.loc/i_videodoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='http://wpbestdiploms.loc/i_useflartcl/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='http://wpbestdiploms.loc/i_salesgeo/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+			</div></figure>
+		</div>
+</div></aside> --><!-- #sidebar-secondary -->
+
+
+
+
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>
 
@@ -136,16 +158,16 @@
 			</div><!-- .entry-content -->
 
 			<!-- <div class="col-lg-3 sb-secondry"> Перенос галереи из правого сайдбара сверху контента: -->
-			<!-- <div class="col-lg-12 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
+			<div class="col-lg-12 sb-secondry">
+		        <?php get_sidebar( 'right' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  
+	    </div><!-- .row -->  
 
 	<!-- 376: Оплата и доставка -->
 	<?php elseif ( 376 == get_the_ID() ) : ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -160,17 +182,17 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right-plus' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  
+	    </div><!-- .row -->  
 
 	<!-- 212: Вопросы и ответы -->
 	<?php elseif ( 212 == get_the_ID() ) : ?>
 
 		<!-- Вывод вопросов и ответов (CPT 'faqposts') на странице Вопросы и ответы -->
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -264,16 +286,16 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right-plus' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  	    
+	    </div><!-- .row -->  	    
 
 	<!-- 259: Статьи -->
 	<?php elseif ( 259 == get_the_ID() ) : ?>
 		<!-- Вывод статей (CPT 'article') на странице Статьи -->
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -298,11 +320,11 @@
 				    ?>
 
 					<div class="media article-links">
-						<div class="media-img-article">
-							<?php if ( has_post_thumbnail() ) {
-				                the_post_thumbnail();
-				            } ?>
-						</div>
+
+						<?php if ( has_post_thumbnail() ) {
+			                the_post_thumbnail();
+			            } ?>
+
 						<div class="media-body">
 							<h4><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h4>
 							<p>
@@ -340,16 +362,16 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right-plus' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  		
+	    </div><!-- .row -->  		
 
 	<!-- 282: Отзывы -->
 	<?php elseif ( 282 == get_the_ID() ) : ?>
 		<!-- Вывод комментариев (CPT reviews) на странице Отзывы -->
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
@@ -420,16 +442,16 @@
 				</div><!-- #reviews .divreviews -->
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right-plus' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  
+	    </div><!-- .row -->  
 
 	<!-- 328: Города -->
 	<?php elseif ( 328 == get_the_ID() ) : ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -475,17 +497,17 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  
+	    </div><!-- .row -->  
 
 	<!-- 357: Контакты -->
 	<?php elseif ( 357 == get_the_ID() ) : ?>
 		<?php global $mytheme; ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -506,17 +528,17 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right' ); ?>
 		    </div>
-	    </div> --><!-- .row -->  	 
+	    </div><!-- .row -->  	 
 
 	<!-- 485: Заказать диплом -->
 	<?php elseif ( 485 == get_the_ID() ) : ?>
 		<?php global $mytheme; ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-12 pl-3">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
@@ -559,7 +581,7 @@
 		<?php global $mytheme; ?>
 
 		<div class="row">
-			<div class="entry-content col-lg-12">
+			<div class="entry-content col-lg-9">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>
@@ -629,10 +651,10 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
+			<div class="col-lg-3 sb-secondry">
+		        <?php get_sidebar( 'right' ); ?>
 		    </div>
-	    </div> --><!-- .row -->	    
+	    </div><!-- .row -->	    
 
     <?php 
 	endif; ?>

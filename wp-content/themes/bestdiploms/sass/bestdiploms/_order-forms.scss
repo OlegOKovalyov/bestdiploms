@@ -1,8 +1,17 @@
 /* Форма ЗАКАЗАТЬ ДИПЛОМ */
+//.page-id-6, // Главная страница
+.page-id-328, // Страница Города
+.page-id-487 {  // Страница Заказать диплом
+    div.wpcf7 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+}
 .wrap-form-order {
     background-image: url(images/frame.png);
     background-position: center top;
-    background-size: cover;
+    //background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     height: 30rem;
@@ -84,7 +93,7 @@
 }
 
 
-/* Формы ЗАДАТЬ ВОПРОС, НАПИСАТЬ ОТЗЫВ, на странице Контакты (без имени) */ 
+/* Формы ЗАДАТЬ ВОПРОС, НАПИСАТЬ ОТЗЫВ, на странице Контакты (без имени) */
 .wrap-faq-form-order,
 .wrap-rev-form-order,
 .wrap-kntkt-form-order {

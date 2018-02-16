@@ -18,10 +18,11 @@
 
 	<!-- Вывод документов (CPT 'study') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">
-		<div class="entry-content col-lg-9">
+		<div class="entry-content col-lg-12">
+			<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			<h1><?php the_title() ?></h1>
-
+																																																																																																																																																																																																											
 			<?php // Display CPT study content
 				 $post_id = $post->ID; /*echo 'content-study.php';*/
 				 $curstudycntnt = get_the_content();
@@ -107,9 +108,9 @@
 
 		</div><!-- .entry-content . col-lg-9 -->
 
-		<div class="col-lg-3 sb-secondry">
-	        <?php get_sidebar( 'right' ); ?>
-	    </div>
+		<!-- <div class="col-lg-3 sb-secondry">
+	        <?php //get_sidebar( 'right' ); ?>
+	    </div> -->
     </div><!-- .row -->  
 		
 	<h2>Другие дипломы</h2>

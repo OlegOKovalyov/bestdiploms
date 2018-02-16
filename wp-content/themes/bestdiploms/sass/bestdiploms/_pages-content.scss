@@ -9,6 +9,7 @@
 }
 .entry-content {
     padding-left: 2.5rem;
+    padding-right: 2.5rem;
     h1 {
         background: url(images/strip_mdlight.png) no-repeat center top;
         color: $reviews-title-color;
@@ -45,7 +46,7 @@
         margin-bottom: 3rem;
     }
     p.p-first {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }
 
@@ -58,6 +59,7 @@
 
 #main article.page .sb-secondry {
     text-align: center;
+    margin-top: 2rem;
 }
 
 // Стилизуем содержимое страницы Цены на документы
@@ -318,6 +320,7 @@ div.divaccordion  {
         justify-content: space-between;
         padding-bottom: .5rem;
         span.rev-item-date {
+            align-self: center;
             background-color: $reviews-title-color;
             border-radius: .25rem;
             color: darken($white, 30%);
@@ -363,7 +366,7 @@ div.divaccordion  {
     }
 }
 .cities-ordeform {
-    margin: 5rem auto;
+    margin: 3rem auto;
 }
 
 /* Стилизуем содержимое страницы Контакты */

@@ -542,28 +542,6 @@ function reviews_in_sidebars() {
 <?php }
 
 
-// Creating a Function to Display Four Image Links on top of the page content 
-function four_essences() { ?>
-<div id="sidebar-secondary" class="widget-area">
-	<div id="media_gallery-2" class="widget widget_media_gallery">
-		<div id='gallery-1' class='gallery galleryid-369 gallery-columns-1 gallery-size-thumbnail'><figure class='gallery-item'>
-			<div class='gallery-icon landscape'>
-				<a href='http://wpbestdiploms.loc/i_guardoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-			</div></figure><figure class='gallery-item'>
-			<div class='gallery-icon landscape'>
-				<a href='http://wpbestdiploms.loc/i_videodoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-			</div></figure><figure class='gallery-item'>
-			<div class='gallery-icon landscape'>
-				<a href='http://wpbestdiploms.loc/i_useflartcl/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-			</div></figure><figure class='gallery-item'>
-			<div class='gallery-icon landscape'>
-				<a href='http://wpbestdiploms.loc/i_salesgeo/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
-			</div></figure>
-		</div>
-	</div>
-</div><!-- #sidebar-secondary -->
-<?php }	
-
 
 // This custom function should help removing all links in the header and footer.
 function remove_json_api () {

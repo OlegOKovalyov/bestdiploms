@@ -13,6 +13,6 @@ if ( ! is_active_sidebar( 'right-sidebar-plus' ) ) {
 ?>
 
 <aside id="sidebar-secondary" class="widget-area">
-	<?php dynamic_sidebar( 'right-sidebar' ); ?>	
-	<?php articles_in_sidebars(); ?>
+	<?php //dynamic_sidebar( 'right-sidebar' ); ?>	
+	<?php //articles_in_sidebars(); ?>
 </aside><!-- #sidebar-secondary -->

@@ -19,7 +19,7 @@
 }
      
 /* md-размер (<=991px) */
-@media only screen and  (max-width: 991px) {
+@media only screen and  (max-width: 991px) { // не выделяяется
   /* CSS для ширины от 768px до 991px */
     body.custom-background {
         background-position: center 1.5% !important;
@@ -190,8 +190,8 @@
     #footer .footer-content .form-bar .fa {
         display: none;
     }
-}
-
+}  // не выделяется
+     
 /* sm-размер (<=768px) */
 @media (max-width: 767px) { // не выделяется
   /* CSS для ширины от 576px до 767px */
@@ -226,6 +226,7 @@
             font-size: 1.7rem;
             top: 0.5rem;
             margin-bottom: 1rem;
+          
         }
         img {
             display: none;
@@ -270,15 +271,11 @@
         } 
     }
     #post-485 .wrap-kntkt-form-order { // Страница-форма Заказать диплом (полная)
-        .type-of-doc {
-            margin-bottom: 1.4rem;
-        }
         .date-your-birth {
             width: 100%;
         }
         .fa {        
-            display: none;
-        }
+        display: none;
     }
     #post-485 .wrap-kntkt-form-order .form-control {
         width: 100%;
@@ -308,7 +305,7 @@
         }
     }
 }
-
+     
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
   /* CSS для ширины до 575px (включительно) */
@@ -468,7 +465,7 @@
             display: none;
         }
     }
-}
+}    
 
 /* размер (<=448px) */
 @media (max-width: 448px) {
@@ -564,4 +561,5 @@
             }
         }
     }
-}        
+}    
+//} // лишняя, устраняет ошибку
