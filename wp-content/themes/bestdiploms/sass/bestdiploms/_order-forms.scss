@@ -2,9 +2,13 @@
 //.page-id-6, // Главная страница
 .page-id-328, // Страница Города
 .page-id-487 {  // Страница Заказать диплом
+    .cities-ordeform {
+        //margin: 3rem auto;
+    }    
     div.wpcf7 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
+        margin-top: 1rem;
     }
 }
 .wrap-form-order {

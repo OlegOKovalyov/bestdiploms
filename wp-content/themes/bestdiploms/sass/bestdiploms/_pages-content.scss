@@ -365,9 +365,6 @@ div.divaccordion  {
         }
     }
 }
-.cities-ordeform {
-    margin: 3rem auto;
-}
 
 /* Стилизуем содержимое страницы Контакты */
 .page-id-357 {
@@ -539,16 +536,25 @@ div.divaccordion  {
     margin-bottom: 4rem;
     .entry-content h1 {
         margin-bottom: 1.5rem;
-    }   
+    }                                           
     .price-item {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin-bottom: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
         .all-video {
             iframe {
                 margin-bottom: .5rem;
             }
         }
+    }
+}
+
+/* Стилизуем содержимое страницы Степени защиты документов */
+#post-586 {
+    .entry-content h1 {
+        background: url(images/strip_cutlglight.png) no-repeat center top;
+        letter-spacing: 1px;
     }
 }

@@ -5905,9 +5905,6 @@ div.divaccordion {
       .cities-links .city-link ul li.city-link-title a {
         font-size: .88rem; }
 
-.cities-ordeform {
-  margin: 3rem auto; }
-
 /* Стилизуем содержимое страницы Контакты */
 .page-id-357 {
   /* .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
@@ -6050,9 +6047,15 @@ div.divaccordion {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-bottom: 3rem; }
+    margin-top: 2rem;
+    margin-bottom: 2.5rem; }
     #post-487 .price-item .all-video iframe {
       margin-bottom: .5rem; }
+
+/* Стилизуем содержимое страницы Степени защиты документов */
+#post-586 .entry-content h1 {
+  background: url(images/strip_cutlglight.png) no-repeat center top;
+  letter-spacing: 1px; }
 
 /* Форма ЗАКАЗАТЬ ДИПЛОМ */
 .page-id-328 div.wpcf7,
@@ -6060,7 +6063,8 @@ div.divaccordion {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 83.33333%;
           flex: 0 0 83.33333%;
-  max-width: 83.33333%; }
+  max-width: 83.33333%;
+  margin-top: 1rem; }
 
 .wrap-form-order {
   background-image: url(images/frame.png);
@@ -6338,21 +6342,6 @@ div.divaccordion {
         p.widget-title {
             width: 118%;
         }
-    } */
-  /* .widget.widget_custom_html {
-        background: $reviews-bg;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        margin-left: -15px;
-        padding: 1.5rem 0;
-        .custom-html-widget {
-            display: flex;
-            justify-content: center;
-            a {
-                border-radius: 0.3125rem;
-                text-transform: uppercase;
-            }
-        }
     } */ }
   #sidebar-primary .widget, #sidebar-primary .study-cats {
     margin-left: -16px; }
@@ -6394,18 +6383,6 @@ div.divaccordion {
         text-decoration: none; }
         #sidebar-primary .widget ul li.current-menu-item a, #sidebar-primary .study-cats ul li.current-menu-item a {
           color: #EE575A; }
-  #sidebar-primary .articles-cat-link {
-    margin-top: 2rem; }
-    #sidebar-primary .articles-cat-link ul {
-      list-style-type: none; }
-      #sidebar-primary .articles-cat-link ul li a {
-        border: none;
-        color: #B3B7C3;
-        display: block;
-        font-size: .85rem;
-        margin: 0.8rem auto; }
-        #sidebar-primary .articles-cat-link ul li a:hover {
-          color: #5684DB; }
   #sidebar-primary .widget.widget_recent_comments {
     background: #4668BB;
     border-bottom-left-radius: 5px;
@@ -6451,6 +6428,38 @@ div.divaccordion {
       margin: .5rem auto 1rem;
       text-transform: uppercase;
       width: 50%; }
+  #sidebar-primary .widget.article-cats-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: -15px;
+    margin-top: 3rem; }
+    #sidebar-primary .widget.article-cats-item p.widget-title {
+      background: url(images/strip_smlight.png) no-repeat;
+      color: #364B7F;
+      margin-left: 0;
+      width: 142%; }
+    #sidebar-primary .widget.article-cats-item .articles-cat-link ul {
+      list-style-type: none; }
+      #sidebar-primary .widget.article-cats-item .articles-cat-link ul li a {
+        border: none;
+        color: #B3B7C3;
+        display: block;
+        font-size: .85rem;
+        margin: 0.8rem auto; }
+        #sidebar-primary .widget.article-cats-item .articles-cat-link ul li a:hover {
+          color: #5684DB; }
+    #sidebar-primary .widget.article-cats-item a.btn.btn-light {
+      -ms-flex-item-align: center;
+          align-self: center;
+      color: #364B7F;
+      margin: .5rem auto 1rem;
+      text-transform: uppercase;
+      width: 55%; }
 
 /* Page Bottom */
 /* Why Just Us Advantages */
@@ -6725,33 +6734,42 @@ div.divaccordion {
       text-decoration: none; }
 
 #colophon {
-  background-color: #4668BB; }
+  background-color: #4668BB;
+  color: #98B5E9; }
+  #colophon small {
+    padding: .5rem; }
 
 /* Right Sidebar secondary */
-div#sidebar-secondary {
+#sidebar-secondary {
   margin-top: 2.5rem; }
-  div#sidebar-secondary div#media_gallery-2 {
+  #sidebar-secondary div#media_gallery-2 {
     text-align: center; }
-    div#sidebar-secondary div#media_gallery-2 .gallery {
+    #sidebar-secondary div#media_gallery-2 .gallery {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
-      div#sidebar-secondary div#media_gallery-2 .gallery figure.gallery-item {
+      #sidebar-secondary div#media_gallery-2 .gallery figure.gallery-item {
         margin-right: 1%; }
-  div#sidebar-secondary .articles-cat-link ul {
+  #sidebar-secondary .articles-cat-link ul {
     padding-left: 0;
     text-align: center; }
-    div#sidebar-secondary .articles-cat-link ul li {
+    #sidebar-secondary .articles-cat-link ul li {
       list-style-type: none;
       margin: .65rem 0; }
-      div#sidebar-secondary .articles-cat-link ul li a {
+      #sidebar-secondary .articles-cat-link ul li a {
         border: none;
         color: #B3B7C3;
         font-size: .8rem; }
-        div#sidebar-secondary .articles-cat-link ul li a:hover {
+        #sidebar-secondary .articles-cat-link ul li a:hover {
           color: #5684DB; }
+
+.sb-secondry #sidebar-secondary div#media_gallery-2 .gallery {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /* xs - устройства (до 576px) */
 /* CSS для ширины, которая меньше 575px (включительно) */
@@ -6835,28 +6853,50 @@ div#sidebar-secondary {
   .entry-content {
     padding-left: 15px;
     padding-right: 15px; }
-  #post-6 .entry-content div.wpcf7,
-  #post-328 .entry-content div.wpcf7 {
-    display: inline; }
-  #post-6 .entry-content .wrap-form-order,
-  #post-328 .entry-content .wrap-form-order {
-    background-image: none; }
-    #post-6 .entry-content .wrap-form-order h4,
-    #post-328 .entry-content .wrap-form-order h4 {
-      margin: 0; }
-    #post-6 .entry-content .wrap-form-order:after,
-    #post-328 .entry-content .wrap-form-order:after {
-      display: none; }
-  #post-6 .entry-content p.p-last,
-  #post-328 .entry-content p.p-last {
-    margin-bottom: 0; }
-  #post-6 .entry-content p.p-first,
-  #post-328 .entry-content p.p-first {
-    margin-top: 0; }
-  #post-6 .wrap-form-order .form-oder,
-  #post-328 .wrap-form-order .form-oder {
-    margin-top: -5rem;
-    margin-bottom: -2rem; }
+  #post-6,
+  #post-328,
+  #post-487 {
+    /* .entry-content {
+             p.p-last {
+                margin-bottom: 0;
+            }           
+            p.p-first {
+                margin-top: 0;
+            }
+        } */ }
+    #post-6 .price-item,
+    #post-328 .price-item,
+    #post-487 .price-item {
+      margin-bottom: 1rem; }
+    #post-6 .entry-content p.p-last,
+    #post-328 .entry-content p.p-last,
+    #post-487 .entry-content p.p-last {
+      margin-bottom: 0; }
+    #post-6 .entry-content p.p-first,
+    #post-328 .entry-content p.p-first,
+    #post-487 .entry-content p.p-first {
+      margin-top: 0; }
+    #post-6 .entry-content div.wpcf7,
+    #post-328 .entry-content div.wpcf7,
+    #post-487 .entry-content div.wpcf7 {
+      display: inline; }
+    #post-6 .entry-content .wrap-form-order,
+    #post-328 .entry-content .wrap-form-order,
+    #post-487 .entry-content .wrap-form-order {
+      background-image: none; }
+      #post-6 .entry-content .wrap-form-order h4,
+      #post-328 .entry-content .wrap-form-order h4,
+      #post-487 .entry-content .wrap-form-order h4 {
+        margin: 0; }
+      #post-6 .entry-content .wrap-form-order:after,
+      #post-328 .entry-content .wrap-form-order:after,
+      #post-487 .entry-content .wrap-form-order:after {
+        display: none; }
+    #post-6 .wrap-form-order .form-oder,
+    #post-328 .wrap-form-order .form-oder,
+    #post-487 .wrap-form-order .form-oder {
+      margin-top: -5rem;
+      margin-bottom: -2rem; }
   #post-6 .carousel-block .owl-carousel,
   .type-study .carousel-block .owl-carousel {
     margin: 1rem auto; }
@@ -6920,6 +6960,10 @@ div#sidebar-secondary {
       #sidebar-primary .widget.widget_recent_comments p.widget-title .widget-title-span {
         -ms-flex-item-align: center;
             align-self: center; }
+  #sidebar-primary .widget.article-cats-item p.widget-title {
+    width: 100%; }
+  .articles-cat-link {
+    margin-left: 15px; }
   #sidebar-secondary #gallery-1,
   #sidebar-secondary #gallery-2 {
     display: -webkit-box;
@@ -7258,6 +7302,10 @@ div#sidebar-secondary {
     width: 153%; }
   #sidebar-primary .widget.widget_recent_comments a.btn.btn-primary {
     width: 60%; }
+  #sidebar-primary .widget.article-cats-item p.widget-title {
+    width: 141%; }
+  #sidebar-primary .widget.article-cats-item a.btn.btn-light {
+    width: 53%; }
   #page-bottom .why-just-us-content .card .card-img-bg {
     background-size: 100% 86%;
     line-height: 2.4;

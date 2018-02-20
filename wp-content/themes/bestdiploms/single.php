@@ -6,7 +6,7 @@
  *
  * @package Best_Diploms
  *
- * Output CPT Article (Статьи). Template sigle-article.php adn single-articles are not working.
+ * Output CPT Article (Статьи). Template sigle-article.php and single-articles are not working.
  */
 
 get_header(); ?>
@@ -31,7 +31,8 @@ get_header(); ?>
     </div><!-- #primary -->
 
     <div class="col-lg-3 col-sidebar-primary">
-        <?php get_sidebar('minus'); ?>
+        <!-- <?php //get_sidebar('minus'); ?> -->
+        <?php get_sidebar(); ?>
     </div>
 
 <?php get_footer();

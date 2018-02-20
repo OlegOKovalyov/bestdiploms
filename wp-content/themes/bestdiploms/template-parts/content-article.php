@@ -18,7 +18,7 @@
 
 	<!-- Вывод документов (CPT 'article') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">
-		<div class="entry-content col-lg-9">
+		<div class="entry-content col-lg-12">
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			<h1><?php the_title() ?></h1>
 
@@ -33,11 +33,11 @@
 				) );
 			?>
 
-		</div><!-- .entry-content . col-lg-9 -->
+		</div><!-- .entry-content . col-lg-12 -->
 
-		<div class="col-lg-3 sb-secondry">
-			<?php get_sidebar( 'right-plus' ); ?>
-	    </div>
+		<!-- <div class="col-lg-3 sb-secondry">
+			<?php //get_sidebar( 'right-plus' ); ?>
+	    </div> -->
     </div><!-- .row -->  
 		
 	<?php if ( get_edit_post_link() ) : ?>

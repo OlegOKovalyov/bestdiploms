@@ -147,15 +147,17 @@
 	</div><!-- .footer-content container -->
 </div><!-- #footer .row -->
 <footer id="colophon" class="site-footer row">
-	<div class="site-info row d-flex justify-content-center container">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bestdiploms' ) ); ?>"><?php
+	<div class="site-info col d-flex justify-content-center container">
+		<!-- <span>&copy; 2006-2018 Любое использование материалов сайта допустимо только с письменного разрешения авторов.</span> -->
+		<small>&copy; 2006-<?php echo date('Y') ?> Любое использование материалов сайта допустимо только с письменного разрешения авторов.</small>
+		<!-- <a href="<?php //echo esc_url( __( 'https://wordpress.org/', 'bestdiploms' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'bestdiploms' ), 'WordPress' );
-		?></a>
-		<span class="sep"> | </span>
+			//printf( esc_html__( 'Proudly powered by %s', 'bestdiploms' ), 'WordPress' );
+		?></a> -->
+		<!-- <span class="sep"> | </span> -->
 		<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'bestdiploms' ), 'bestdiploms', '<a href="https://github.com/OlegOKovalyov/">Oleg Kovalyov</a>' );
+			//printf( esc_html__( 'Theme: %1$s by %2$s.', 'bestdiploms' ), 'bestdiploms', '<a href="https://github.com/OlegOKovalyov/">Oleg Kovalyov</a>' );
 		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->	

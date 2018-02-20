@@ -309,25 +309,22 @@ function articles_in_sidebars() { ?>
 		        //'orderby'		 => 'parent',		    	
 		        'post_type' => 'article',
 		        'posts_per_page' => -1,
-		        'category_name' => 'useful-articles',
-		    ); 
-		    ?>
+		        //'category_name' => 'education-all'
+		    ); ?>
 
-			<div class="widget article-cats-item">
-				<p class="widget-title"><span class="widget-title-span"><?php echo get_cat_name(22) // Категория Полезные статьи ?></span></p>   
-				<div class="articles-cat-link">
-					<ul>
-					    <?php $articles_loop = new WP_query ( $articles_args );
-						if ( $articles_loop->have_posts() ) : while ( $articles_loop->have_posts() ) : $articles_loop->the_post(); ?>					
-						        <li class="articles-link-title">
-						        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
-						    	</li>
+			<div class="articles-cat-link">
+				<ul>
+				    <?php $articles_loop = new WP_query ( $articles_args );
+					if ( $articles_loop->have_posts() ) : while ( $articles_loop->have_posts() ) : $articles_loop->the_post(); ?>					
+					        <li class="articles-link-title">
+					        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title() ?></a>
+					    	</li>
 
-						<?php endwhile; endif; wp_reset_postdata(); ?>
-					</ul>
-				</div><!-- .articles-cat-link -->
-				<a class="btn btn-light" href="/stati/" role="button">Все статьи</a>
-			</div><!-- .widget .article-cats-item .col -->			
+					<?php endwhile; endif; wp_reset_postdata(); ?>
+				</ul>
+			</div><!-- .articles-cat-link -->
+
+			<?php /*wp_reset_postdata();*/ ?>
 
 		</div><!-- .articles-cats -->
 
@@ -551,16 +548,16 @@ function four_essences() { ?>
 	<div id="media_gallery-2" class="widget widget_media_gallery">
 		<div id='gallery-1' class='gallery galleryid-369 gallery-columns-1 gallery-size-thumbnail'><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/stepeni-zashhity-dokumentov/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href='http://wpbestdiploms.loc/i_guardoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/video-dokumentov/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href='http://wpbestdiploms.loc/i_videodoc/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/stati/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href='http://wpbestdiploms.loc/i_useflartcl/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/kupit-diplom-v-gorodah/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href='http://wpbestdiploms.loc/i_salesgeo/'><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure>
 		</div>
 	</div>
@@ -609,3 +606,5 @@ function disable_json_api () {
 
 }
 add_action( 'after_setup_theme', 'disable_json_api' );
+
+

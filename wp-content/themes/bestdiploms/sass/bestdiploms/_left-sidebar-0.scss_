@@ -54,6 +54,22 @@
             width: 118%;
         }
     } */
+    .articles-cat-link {
+        margin-top: 2rem;
+        ul { 
+            list-style-type: none;
+            li a {
+                border: none;
+                color: $links-gray-color;
+                display: block;
+                font-size: .85rem;
+                margin: 0.8rem auto;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }          
     .widget.widget_recent_comments {
         background: $reviews-bg;
         border-bottom-left-radius: 5px;
@@ -98,39 +114,19 @@
             width: 50%;
         }
     }
-    .widget.article-cats-item {
-        display: flex;
-        flex-direction: column;        
+    /* .widget.widget_custom_html {
+        background: $reviews-bg;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         margin-left: -15px;
-        margin-top: 3rem;
-
-        p.widget-title {
-            background: url(images/strip_smlight.png) no-repeat;
-            color: $reviews-title-color;
-            margin-left: 0;
-            width: 142%;
-        }
-        .articles-cat-link {
-            ul { 
-                list-style-type: none;
-                li a {
-                    border: none;
-                    color: $links-gray-color;
-                    display: block;
-                    font-size: .85rem;
-                    margin: 0.8rem auto;
-                    &:hover {
-                        color: $blue;
-                    }
-                }
+        padding: 1.5rem 0;
+        .custom-html-widget {
+            display: flex;
+            justify-content: center;
+            a {
+                border-radius: 0.3125rem;
+                text-transform: uppercase;
             }
-        }         
-        a.btn.btn-light {
-            align-self: center;
-            color: $reviews-title-color;
-            margin: .5rem auto 1rem;
-            text-transform: uppercase;
-            width: 55%;
         }
-    }
+    } */
 }

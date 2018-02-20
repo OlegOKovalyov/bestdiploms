@@ -157,4 +157,8 @@
 
 #colophon {
     background-color: $reviews-bg;
+    color: $link-reviews-hover;
+    small {
+        padding: .5rem;
+    }
 }

@@ -1,5 +1,6 @@
 /* Right Sidebar secondary */
-div#sidebar-secondary {
+// Галерея, перенесенная в верхнюю часть контента (горизонтально)
+#sidebar-secondary {
 	margin-top: 2.5rem;
 	div#media_gallery-2 {
 		text-align: center;
@@ -30,4 +31,15 @@ div#sidebar-secondary {
 		    }
         }
     }   	
+}
+
+// Галерея в правом сайдбаре Главной страницы сайта
+.sb-secondry {
+	#sidebar-secondary {
+		div#media_gallery-2 {
+			.gallery {
+				flex-direction: column;
+			}	
+		} 	
+	} 
 }

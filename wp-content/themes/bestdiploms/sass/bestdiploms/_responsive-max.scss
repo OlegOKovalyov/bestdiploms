@@ -64,8 +64,18 @@
         padding-right: 15px;
     }
     #post-6, // Главная страница
-    #post-328 { // Страница Города
+    #post-328, // Страница Города
+    #post-487 { // Страница Видео Документов
+        .price-item {
+            margin-bottom: 1rem;
+        }        
         .entry-content {
+             p.p-last {
+                margin-bottom: 0;
+            }           
+            p.p-first {
+                margin-top: 0;
+            }            
             div.wpcf7 {
                 display: inline;
             }
@@ -79,14 +89,14 @@
                 }
             }
         }
-        .entry-content {
+        /* .entry-content {
              p.p-last {
                 margin-bottom: 0;
             }           
             p.p-first {
                 margin-top: 0;
             }
-        }
+        } */
         .wrap-form-order .form-oder {
             margin-top: -5rem;
             margin-bottom: -2rem;
@@ -175,7 +185,13 @@
                 align-self: center;
             }
         }    
-    } 
+    }
+    #sidebar-primary .widget.article-cats-item p.widget-title {
+        width: 100%;
+    }
+    .articles-cat-link {
+        margin-left: 15px;
+    }
     #sidebar-secondary {
         #gallery-1,
         #gallery-2 {

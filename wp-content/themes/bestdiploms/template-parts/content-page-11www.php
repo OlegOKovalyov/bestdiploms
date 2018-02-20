@@ -35,8 +35,7 @@
 			</div><!-- .entry-content -->
 
 			<div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
-		        <?php four_essences() ?>
+		        <?php get_sidebar( 'right' ); ?>
 		    </div>
 	    </div><!-- .row -->  
 
@@ -139,11 +138,11 @@
 			<!-- <div class="col-lg-3 sb-secondry"> Перенос галереи из правого сайдбара сверху контента: -->
 			<!-- <div class="col-lg-12 sb-secondry">
 		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  
+		    </div>
+	    </div> --><!-- .row -->  
 
-	<!-- 376: Оплата и доставка, Степени защиты документов -->
-	<?php elseif ( 376 == get_the_ID() || 586 == get_the_ID()  ) : ?>
+	<!-- 376: Оплата и доставка -->
+	<?php elseif ( 376 == get_the_ID() ) : ?>
 
 		<div class="row">
 			<div class="entry-content col-lg-12">
@@ -267,8 +266,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  	    
+		    </div>
+	    </div> --><!-- .row -->  	    
 
 	<!-- 259: Статьи -->
 	<?php elseif ( 259 == get_the_ID() ) : ?>
@@ -343,8 +342,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  		
+		    </div>
+	    </div> --><!-- .row -->  		
 
 	<!-- 282: Отзывы -->
 	<?php elseif ( 282 == get_the_ID() ) : ?>
@@ -423,8 +422,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  
+		    </div>
+	    </div> --><!-- .row -->  
 
 	<!-- 328: Города -->
 	<?php elseif ( 328 == get_the_ID() ) : ?>
@@ -478,8 +477,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  
+		    </div>
+	    </div> --><!-- .row -->  
 
 	<!-- 357: Контакты -->
 	<?php elseif ( 357 == get_the_ID() ) : ?>
@@ -509,8 +508,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
-	    </div><!-- .row -->  	 
+		    </div>
+	    </div> --><!-- .row -->  	 
 
 	<!-- 485: Заказать диплом -->
 	<?php elseif ( 485 == get_the_ID() ) : ?>
@@ -565,29 +564,22 @@
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>
 
-			    <!-- Displaying the Custom Post 'study' on Docs Video Page (can display anywhere). --> 
+			    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
 			    <?php $args = array(
-			        	'order'			 => 'ASC',
-			        	'post_parent__in' => array( 429, 454, 554, 565 ), // Высшее образование, Аттестаты школы, Диплом техникума, колледжа, Свидетельства и другие документы
+			        	'order'			 => 'DESC',
+			        	'post_parent__in' => array( 429, 454 ), // Высшее образование, Аттестаты школы
 			        	'orderby'		 => 'parent',
 			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,
 			            'category_name'  => 'education-kind', // Все виды образования
 		        	);  
-				$extra_loop = new WP_Query( $args );
-		        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
-			        $post_id = $post->ID; // Current CPT  ?>
-
-			                <h3 class="doc-item-title"><?php the_title(); ?></h3>			        
+				?>
 
 				<div class="price-item">
-
-					<?php while(  $post->ID == $post_id ) { ?>
 				
 					<?php $in_args = array(
 				        	'order'			 => 'ASC',
 				            'post_type' 	 => 'study',
-				            'post_parent'	 => $post_id,
 				            'posts_per_page' => -1,
 				            'category_name'  => 'education-doc',
 					    ); 		
@@ -616,14 +608,11 @@
 
 								<?php  } else {
 									echo '<p>empty</p>';
-								} ?>	
-
-								<?php endwhile; 
-						endif; } ?>				    	
+								} ?>						    	
+		        
+						<?php endwhile; endif; wp_reset_postdata(); ?>
 
 				</div><!-- .price-item -->
-
-				<?php endwhile; endif; wp_reset_postdata(); ?>
 
 				<?php the_content();
 			
@@ -642,8 +631,8 @@
 
 			<!-- <div class="col-lg-3 sb-secondry">
 		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
-	    </div><!-- .row -->	    
+		    </div>
+	    </div> --><!-- .row -->	    
 
     <?php 
 	endif; ?>
