@@ -10,44 +10,29 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header><!-- .entry-header -->
 
 	<?php
 	if ( is_front_page() /*&& is_home()*/ ) : ?>
 	<!-- Вывод карусель Эталажей (CPT 'etalage') на Главной странице -->
 	<?php if( function_exists( 'fp_carousel' ) ) echo fp_carousel(); ?>
-	<?php /*echo do_shortcode('[fpcarousel]');*/ ?><!-- Шорткод тоже рабочий -->
 
 		<?php bestdiploms_post_thumbnail(); ?>
 
 		<div class="row">
 			<div class="entry-content col-lg-9">
-				<?php echo 
-					the_content();
-
-					/*wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
-						'after'  => '</div>',
-					) );*/
-				?>
+				<?php the_content() ?>
 			</div><!-- .entry-content -->
 
 			<div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
 		        <?php four_essences() ?>
 		    </div>
 	    </div><!-- .row -->  
 
 	<!-- 369: Цены -->
 	<?php elseif ( 369 == get_the_ID() ) : ?>
-		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
 		<!-- Вывод CPT study (Документы) на странице Цены -->
 		<div class="row">
-			<!-- <div class="entry-content col-lg-9"> Перенос галереи из правого сайдбара сверху контента: -->
-			<!-- <div class="entry-content col-lg-12 order-2"> -->
 			<div class="entry-content col-lg-12">
 				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
@@ -135,11 +120,6 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry"> Перенос галереи из правого сайдбара сверху контента: -->
-			<!-- <div class="col-lg-12 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  
 
 	<!-- 376: Оплата и доставка, Степени защиты документов -->
@@ -160,11 +140,7 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div>
-	    </div> --><!-- .row -->  
+	    </div><!-- .row -->  
 
 	<!-- 212: Вопросы и ответы -->
 	<?php elseif ( 212 == get_the_ID() ) : ?>
@@ -186,12 +162,10 @@
 				            'post_type' 		=> 'faqposts',
 				            'posts_per_page' => 3, // Вывод кол-ва постов на страницу (меняем)
             				'paged' => $ourCurrentPage,
-				            //'category_name' 	=> 'faq', 
 				        );  
 				        $your_loop = new WP_Query( $args ); 
 				        $i_loop = 0;
 				        if ( $your_loop->have_posts() ) : while ( $your_loop->have_posts() ) : $your_loop->the_post(); 
-				        /*$meta = get_post_meta( $post->ID, '', true );*/ 
 				        $i_loop = $i_loop + 1; 
 				    ?>
 
@@ -205,7 +179,7 @@
 								  <?php else : ?>	
 								  	<i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
 								  <?php endif; ?>
-								</a><!-- <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+								</a>
 							</h5>
 						</div><!-- .card-header -->
 						<div id="collapse-<?php echo $i_loop; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $i_loop; ?>" data-parent="#accordion">
@@ -221,9 +195,6 @@
 					 		echo paginate_links( $page_args ); ?> 
 
 				    <?php endwhile; 
-				    	/*echo "hello2 - Здесь будет пагинация!"; echo paginate_links(array(
-                'total' => $your_loop->max_num_pages,
-            ));*/
 
 				    	endif; wp_reset_postdata(); 
 
@@ -264,10 +235,6 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  	    
 
 	<!-- 259: Статьи -->
@@ -289,12 +256,10 @@
 				            'post_type' 		=> 'article',
 				            'posts_per_page' => 2, // Вывод кол-ва постов на страницу (меняем)
             				'paged' => $ourCurrentPage,
-				            //'category_name' 	=> 'faq', 
 				        );  
 				        $your_loop = new WP_Query( $args ); 
 				        $i_loop = 0;
 				        if ( $your_loop->have_posts() ) : while ( $your_loop->have_posts() ) : $your_loop->the_post(); 
-				        /*$meta = get_post_meta( $post->ID, '', true );*/ 
 				        $i_loop = $i_loop + 1; 
 				    ?>
 
@@ -329,7 +294,6 @@
 		            )) . '</div>';
             	?>
 				<!-- Выводим форму Задать вопрос  -->
-            	<?php //echo do_shortcode('[faqorderform]'); ?>
             	<?php echo do_shortcode('[contact-form-7 id="500" title="Задать вопрос"]'); ?>
 
 				<?php
@@ -340,10 +304,6 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  		
 
 	<!-- 282: Отзывы -->
@@ -388,8 +348,6 @@
 
 					        <?php the_content() ?>			            
 
-
-					        <!-- <a class="btn btn-danger" href="#" role="button">Заказать</a> -->
 					        <?php  }  ?>
 							
 
@@ -406,7 +364,6 @@
 			            )) . '</div>';
 	            	?>
 					<!-- Выводим форму Задать вопрос  -->
-	            	<?php //echo do_shortcode('[revorderform]'); ?>
 	            	<?php echo do_shortcode('[contact-form-7 id="502" title="Написать отзыв"]'); ?>
 	            	<!-- Выводим произовольное мета поле внизу страницы Отзывы (согласно PSD-макету) -->
 	            	<?php echo '<p>' . $value3 . '</p>'; ?>
@@ -420,10 +377,6 @@
 
 				</div><!-- #reviews .divreviews -->
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right-plus' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  
 
 	<!-- 328: Города -->
@@ -441,11 +394,8 @@
 			     
 				    <?php $cities_args = array(
 				    	'order'			 => 'ASC',
-				        //'post_parent'	 => $extra_studyid,
-				        //'orderby'		 => 'parent',		    	
 				        'post_type' => 'cities',
 				        'posts_per_page' => -1,
-				        //'category_name' => 'education-all'
 				    ); ?>
 
 					<div class="city-link">
@@ -464,7 +414,6 @@
 
 				</div><!-- .cities-links -->
 				<div class="cities-ordeform">
-					<?php //echo do_shortcode('[orderform]'); ?>
 					<?php echo do_shortcode('[contact-form-7 id="496" title="Заказать диплом"]'); ?>
 				</div>
 
@@ -475,10 +424,6 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  
 
 	<!-- 357: Контакты -->
@@ -493,8 +438,6 @@
 
 				<?php the_content(); ?>
 
-				<?php //echo do_shortcode('[kontaktorderform]'); ?>
-
 				<p class="sm-text">Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
 
 				<p class="sm-text">Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php echo $mytheme['phone']; ?>.</a></span></p>
@@ -506,10 +449,6 @@
 				?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
 	    </div><!-- .row -->  	 
 
 	<!-- 485: Заказать диплом -->
@@ -524,14 +463,11 @@
 
 				<?php the_content(); ?>
 
-				<?php //echo do_shortcode('[orderdiplform]'); ?>
-				<?php //echo do_shortcode('[contact-form-7 id="505" title="Заказать диплом 2"]'); ?>
 				<?php echo do_shortcode('[contact-form-7 id="504" title="Заказать диплом (полная форма)"]'); ?>
 
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
 				<script src="<?php bloginfo('template_url'); ?>/bootstrap-datepicker.ru.min.js" charset="UTF-8"></script>	
 				<script>
-			        /*jQuery('#datepicker').datepicker();*/
 			        jQuery('#datepicker').datepicker({
 					    format: 'dd/mm/yyyy',
 					    startDate: '-3d',
@@ -541,7 +477,7 @@
 					    startDate: '01/01/1900',
 					    endDate: '01/01/2010',
 					    startView: 2,
-					    title: 'Выберите декаду',
+					    title: 'Выберите дату',
 					    uiLibrary: 'bootstrap4'
 					});
 			    </script>
@@ -572,7 +508,7 @@
 			        	'orderby'		 => 'parent',
 			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,
-			            'category_name'  => 'education-kind', // Все виды образования
+			            'category_name'  => 'education-kind', // Все виды документов
 		        	);  
 				$extra_loop = new WP_Query( $args );
 		        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
@@ -635,14 +571,9 @@
 
 				<?php the_content(); ?>
 
-				<?php //echo do_shortcode('[orderform]'); ?>
 				<?php echo do_shortcode('[contact-form-7 id="496" title="Заказать диплом"]'); ?>
 
 			</div><!-- .entry-content -->
-
-			<!-- <div class="col-lg-3 sb-secondry">
-		        <?php //get_sidebar( 'right' ); ?>
-		    </div> -->
 	    </div><!-- .row -->	    
 
     <?php 

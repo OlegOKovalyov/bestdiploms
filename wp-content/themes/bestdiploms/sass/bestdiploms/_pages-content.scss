@@ -301,6 +301,45 @@ div.divaccordion  {
         }
     }
 }
+.type-article {
+    .breadcrumbs {
+        span:nth-child(3) {
+            display: none;
+        }
+        span:nth-child(4).sep {
+            display: none;
+        }       
+    }
+    h1 {
+        background: url(images/strip_cutlglight.png) no-repeat center top;      
+    }
+}
+
+/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+// Шаблон сontent-article.php.
+// Шаблоны single-article.php и single-articles.php не работают.
+// Нижнние ссылки правого secondary сайдбара.
+/* .type-article {
+    .breadcrumbs {
+        span:nth-child(3) {
+            display: none;
+        }
+        span:nth-child(4).sep {
+            display: none;
+        }       
+    }
+    h1 {
+        background: url(images/strip_cutlglight.png) no-repeat center top;      
+    }
+}
+.sb-secondry {
+    .articles-link-title {
+        a.active {
+            color: $blue !important;
+            text-decoration: underline;
+        }
+    }
+} */
 
 /* Стилизуем содержимое страницы Отзывы */
 #reviews {

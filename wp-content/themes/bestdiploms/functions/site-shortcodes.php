@@ -1,30 +1,4 @@
 <?php
-// Дополнительные функции (нужно будет перенести в отдельный файл плагина)
-
-/****** Не используется *******
- * Шорткод. Координаты фирмы, представленной на сайте (телефон и e-mail). Использование:
- * - в админке WordPress (или/или):
- * [details]
- * [details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/details]
- * - в шаблоне WordPress (или/или):
- * <?php echo do_shortcode('[details tel="+7-926-631-81-76" email="bestdiplomy@gmail.com"][/details]'); ?>
- * <?php echo do_shortcode('[details]'); ?>
- */
-add_shortcode( 'details', 'show_details');
-function show_details( $atts, $content, $tag ) {
-	$d_tel = empty( $atts['tel'] ) ? '+7-926-631-81-76' : esc_html( $atts['tel'] );
-	$d_email = empty( $atts['email'] ) ? 'bestdiplomy@gmail.com' : esc_html( $atts['email'] );	
-
-	ob_start();
-	?>
-
-		<p class="details-tel m-0 pt-1"><a href="tel:<?php echo $d_tel; ?>"><i class="fa fa-phone" aria-hidden="true"></i><?php echo $d_tel; ?></a></p>
-        <p class="details-mail m-0 pt-1"><a href="mailto:<?php echo $d_email; ?>"><i class="fa fa-envelope" aria-hidden="true"></i><?php echo $d_email; ?></a></p>
-
-	<?php 
-	return ob_get_clean();
-}
-
 
 /**
  * Шорткод. Форма обратной связи Заказать диплом (Главная страница и Города). Использование:
@@ -154,7 +128,7 @@ function show_kontaktorderform( $atts, $content, $tag ) {
 }
 
 /**
- * Шорткод. Форма обратной связи Заказать диплом на странице Заказать диплом. Использование:
+ * Шорткод. Форма обратной связи Заказать диплом (полная форма) на странице Заказать диплом. Использование:
  * - в админке WordPress:
  * [orderdiplform]
  * <?php echo do_shortcode('[orderdiplform]'); ?>
@@ -165,7 +139,6 @@ function show_orderdiplform( $atts, $content, $tag ) {
 	ob_start();
 	?>
 
-		<!-- <div class="wrap-order-dipl-form row flex-column px-4"> -->
 		<div class="wrap-kntkt-form-order row flex-column px-4">
 			<div class="form-oder d-flex flex-column">
 
@@ -283,7 +256,6 @@ function show_orderdiplform( $atts, $content, $tag ) {
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
 		<script src="<?php bloginfo('template_url'); ?>/bootstrap-datepicker.ru.min.js" charset="UTF-8"></script>	
 		<script>
-	        /*jQuery('#datepicker').datepicker();*/
 	        jQuery('#datepicker').datepicker({
 			    format: 'dd/mm/yyyy',
 			    startDate: '-3d',
@@ -298,83 +270,6 @@ function show_orderdiplform( $atts, $content, $tag ) {
 			});
 	    </script>
 
-	<?php 
-	return ob_get_clean();
-}
-
-
-
-/****** Не используется (рабочий код ) *******
- * Шорткод. Вывод карусели Owl Carousel на главной странице сайта WordPress
- * (Front Page Carousel). На данный момент используется функция fp-carousel();
- * Использование:
- * - в админке WordPress:
- * [fpcarousel]
- * - в шаблоне WordPress:
- * <?php echo do_shortcode('[fpcarousel]'); ?>
- */
-add_shortcode( 'fpcarousel', 'show_fpcarousel');
-function show_fpcarousel( $atts, $content, $tag ) {
-	ob_start(); ?>	
-		<div class="row">
-			<div class="carousel-block col-lg-12"><!-- Здесь будет карусель -->
-
-				<!-- Owl-Carousel -->
-				<div class="owl-carousel owl-theme">
-
-				    <?php 
-				    // Displaying the Custom Post 'study' in Owl Carousel (can display anywhere). 
-				        $args = array(
-				        	'order'			 	=> 'ASC',
-				            'post_type' 		=> 'study',
-				            //'category_name' 	=> 'education-all', // Все виды образования
-				            //'category_name' 	=> 'education1',
-				            //'category_name' 	=> 'education2',
-				            'category_name' 	=> 'documents-pop', // Самые популярные документы
-				        );  
-				        $your_loop = new WP_Query( $args ); 
-
-				        if ( $your_loop->have_posts() ) : while ( $your_loop->have_posts() ) : $your_loop->the_post(); 
-				        $meta = get_post_meta( $post->ID, '', true ); ?>
-
-				        <?php $value1 = get_post_field( "make" );
-				        	  $value2 = get_post_field( "gznk-price" );
-				        	  $value = get_post_field( "price" );
-				        ?>
-
-				        <?php
-							// если мы на странице категории
-							if( is_category() )
-								echo get_queried_object()->name;
-				        ?>
-
-						<div class="doc-item">
-					    	<!-- contents of Your Post -->
-					        <h4 class="doc-item-title"><?php the_title(); ?></h4>
-					        <p class="doc-item-year"><?php echo $value1; ?></p>
-					        <a href="#" target="_blank" rel="noopener">
-					            <?php if ( has_post_thumbnail() ) {
-					                the_post_thumbnail();
-					            } ?>
-					        </a>
-					        <?php
-					            if( $value || $value2 ) {
-					                echo '<p class="doc-price-gznk">' . $value2 . '</p>';
-					                echo '<p class="doc-price-tpgrf">' . $value . '</p>';
-					            } else {
-					                echo '<p>empty</p>';
-					        } ?>
-					        <span class="doc-item-content"><?php the_content(); ?></span>
-					        <a class="btn btn-danger" href="#" role="button">Заказать</a>
-						</div><!-- .doc-item -->
-
-				    <?php endwhile; endif; wp_reset_postdata(); ?>  
-
-				</div><!-- .owl-carousel .owl-theme -->
-				<!-- /Owl-Carousel -->
-
-			</div><!-- .carousel-block -->
-		</div><!-- .row -->
 	<?php 
 	return ob_get_clean();
 }

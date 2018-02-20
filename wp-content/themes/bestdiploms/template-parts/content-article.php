@@ -10,11 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header><!-- .entry-header -->
-
-		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
 	<!-- Вывод документов (CPT 'article') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">
@@ -35,9 +30,6 @@
 
 		</div><!-- .entry-content . col-lg-12 -->
 
-		<!-- <div class="col-lg-3 sb-secondry">
-			<?php //get_sidebar( 'right-plus' ); ?>
-	    </div> -->
     </div><!-- .row -->  
 		
 	<?php if ( get_edit_post_link() ) : ?>

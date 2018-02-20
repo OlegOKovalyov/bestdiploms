@@ -5296,17 +5296,6 @@ tbody.collapse.show {
       background: #869791; }
 
 /*--------------------------------------------------------------
-# Best Diploms FancyBox 3 - через Bower
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Best Diploms OwlCarousel 2-2.2.1  - через скачанный комплект
---------------------------------------------------------------*/
-/* @import "../owlcarousel/src/scss/core";
-@import "../owlcarousel/src/scss/theme.default"; */
-/*--------------------------------------------------------------
-# Best Diploms Bootstrap 4 DatePicker from Gijgo.com - через Bower - не работает
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Best Diploms Theme 1.0.0 
 --------------------------------------------------------------*/
 /* Mixins */
@@ -5850,6 +5839,37 @@ div.divaccordion {
     margin-right: .5rem;
     text-align: left; }
 
+.type-article .breadcrumbs span:nth-child(3) {
+  display: none; }
+
+.type-article .breadcrumbs span:nth-child(4).sep {
+  display: none; }
+
+.type-article h1 {
+  background: url(images/strip_cutlglight.png) no-repeat center top; }
+
+/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
+/* .type-article {
+    .breadcrumbs {
+        span:nth-child(3) {
+            display: none;
+        }
+        span:nth-child(4).sep {
+            display: none;
+        }       
+    }
+    h1 {
+        background: url(images/strip_cutlglight.png) no-repeat center top;      
+    }
+}
+.sb-secondry {
+    .articles-link-title {
+        a.active {
+            color: $blue !important;
+            text-decoration: underline;
+        }
+    }
+} */
 /* Стилизуем содержимое страницы Отзывы */
 #reviews {
   margin-top: 2rem; }
@@ -6739,7 +6759,7 @@ div.divaccordion {
   #colophon small {
     padding: .5rem; }
 
-/* Right Sidebar secondary */
+/* Right Sidebar secondary - not used */
 #sidebar-secondary {
   margin-top: 2.5rem; }
   #sidebar-secondary div#media_gallery-2 {
@@ -7321,89 +7341,3 @@ div.divaccordion {
     right: -48%; } }
 
 /* xl (>=1200) */
-/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
-.type-article .breadcrumbs span:nth-child(3) {
-  display: none; }
-
-.type-article .breadcrumbs span:nth-child(4).sep {
-  display: none; }
-
-.type-article h1 {
-  background: url(images/strip_cutlglight.png) no-repeat center top; }
-
-.sb-secondry .articles-link-title a.active {
-  color: #5684DB !important;
-  text-decoration: underline; }
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-    ## Links
-    ## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-    ## Comments
-# Infinite scroll
-# Media
-    ## Captions
-    ## Galleries
---------------------------------------------------------------*/
-/*@import "variables-site/variables-site";
-@import "mixins/mixins-master";*/
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-/*@import "normalize";*/
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-/*@import "typography/typography";*/
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-/*@import "elements/elements";*/
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/*@import "forms/forms";*/
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*@import "navigation/navigation";*/
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/*@import "modules/accessibility";*/
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-/*@import "modules/alignments";*/
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-/*@import "modules/clearings";*/
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-/*@import "site/secondary/widgets";*/
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*@import "site/site";*/
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/*@import "modules/infinite-scroll";*/
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-/*@import "media/media";*/

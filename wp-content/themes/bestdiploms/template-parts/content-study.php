@@ -10,11 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header><!-- .entry-header -->
-
-		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
 	<!-- Вывод документов (CPT 'study') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">
@@ -24,7 +19,7 @@
 			<h1><?php the_title() ?></h1>
 																																																																																																																																																																																																											
 			<?php // Display CPT study content
-				 $post_id = $post->ID; /*echo 'content-study.php';*/
+				 $post_id = $post->ID;
 				 $curstudycntnt = get_the_content();
 			?>
 
@@ -108,9 +103,6 @@
 
 		</div><!-- .entry-content . col-lg-9 -->
 
-		<!-- <div class="col-lg-3 sb-secondry">
-	        <?php //get_sidebar( 'right' ); ?>
-	    </div> -->
     </div><!-- .row -->  
 		
 	<h2>Другие дипломы</h2>

@@ -35,32 +35,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/mixins";
 // Optional
 @import "../bower_components/bootstrap/scss/reboot";
-//@import "../bower_components/bootstrap/scss/type";
-//@import "../bower_components/bootstrap/scss/images";
 @import "../bower_components/bootstrap/scss/code";
 @import "../bower_components/bootstrap/scss/grid";
 // Мои добавления
 @import "../bower_components/bootstrap/scss/utilities";
-//@import "../bower_components/bootstrap/scss/tables";
 @import "../bower_components/bootstrap/scss/forms";
-//@import "../bower_components/bootstrap/scss/custom-forms";
 @import "../bower_components/bootstrap/scss/buttons";
-//@import "../bower_components/bootstrap/scss/button-group";
-//@import "../bower_components/bootstrap/scss/dropdown";
 @import "../bower_components/bootstrap/scss/input-group";
-//@import "../bower_components/bootstrap/scss/list-group";
 @import "../bower_components/bootstrap/scss/nav";
 @import "../bower_components/bootstrap/scss/navbar";
 @import "../bower_components/bootstrap/scss/card";
 @import "../bower_components/bootstrap/scss/transitions";
-//@import "../bower_components/bootstrap/scss/breadcrumb";
-//@import "../bower_components/bootstrap/scss/pagination";
-//@import "../bower_components/bootstrap/scss/badge";
-//@import "../bower_components/bootstrap/scss/alert";
-//@import "../bower_components/bootstrap/scss/close";
-//@import "../bower_components/bootstrap/scss/media";
-//@import "../bower_components/bootstrap/scss/popover";
-//@import "../bower_components/bootstrap/scss/progress";
 @import "../bower_components/bootstrap/scss/badge";
 
 /*--------------------------------------------------------------
@@ -68,23 +53,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "../bower_components/owl.carousel/src/scss/core";
 @import "../bower_components/owl.carousel/src/scss/theme.default";
-
-/*--------------------------------------------------------------
-# Best Diploms FancyBox 3 - через Bower
---------------------------------------------------------------*/
-//@import "../bower_components/fancybox/dist/jquery.fancybox.min.css";
-
-/*--------------------------------------------------------------
-# Best Diploms OwlCarousel 2-2.2.1  - через скачанный комплект
---------------------------------------------------------------*/
-/* @import "../owlcarousel/src/scss/core";
-@import "../owlcarousel/src/scss/theme.default"; */
-
-/*--------------------------------------------------------------
-# Best Diploms Bootstrap 4 DatePicker from Gijgo.com - через Bower - не работает
---------------------------------------------------------------*/
-//@import "../bower_components/gijgo/dist/combined/css/gijgo.min.css";
-//@import "../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css";
 
 /*--------------------------------------------------------------
 # Best Diploms Theme 1.0.0 
@@ -101,139 +69,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "bestdiploms/responsive-min";
 @import "bestdiploms/responsive-max";
 @import "bestdiploms/responsive";
-
-
-//@import "templates/header";
-//@import "templates/jumbotron";
-//@import "templates/gallery";
-//@import "templates/maincontent";
-//@import "templates/videoblock";
-//@import "templates/page-delivery";
-//@import "templates/page-catalogue";
-//@import "templates/page-cat-diplprofmsk";
-//@import "templates/page-contacts";
-//@import "templates/page-reviews";
-//@import "templates/footertop";
-//@import "templates/footerbtm";
-//@import "templates/search";
-//@import "templates/categorymenu";
-//@import "templates/lastreviews";
-//@import "templates/warranties";
-//@import "layout/responsive-min";
-//@import "layout/responsive-max";
-//@import "layout/responsive";
-
-
-/* Стилизуем содержимое страницы вывода CPT artcle (Статьи) */
-// Шаблон сontent-article.php.
-// Шаблоны single-article.php и single-articles.php не работают.
-// Нижнние ссылки правого secondary сайдбара.
-.type-article {
-	.breadcrumbs {
-		span:nth-child(3) {
-			display: none;
-		}
-		span:nth-child(4).sep {
-			display: none;
-		}		
-	}
-	h1 {
-    	background: url(images/strip_cutlglight.png) no-repeat center top;		
-	}
-}
-.sb-secondry {
-    .articles-link-title {
-        a.active {
-            color: $blue !important;
-            text-decoration: underline;
-        }
-    }
-}
-
-
-
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-    ## Links
-    ## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-    ## Comments
-# Infinite scroll
-# Media
-    ## Captions
-    ## Galleries
---------------------------------------------------------------*/
-/*@import "variables-site/variables-site";
-@import "mixins/mixins-master";*/
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-/*@import "normalize";*/
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-/*@import "typography/typography";*/
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-/*@import "elements/elements";*/
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/*@import "forms/forms";*/
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*@import "navigation/navigation";*/
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/*@import "modules/accessibility";*/
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-/*@import "modules/alignments";*/
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-/*@import "modules/clearings";*/
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-/*@import "site/secondary/widgets";*/
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*@import "site/site";*/
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/*@import "modules/infinite-scroll";*/
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-/*@import "media/media";*/

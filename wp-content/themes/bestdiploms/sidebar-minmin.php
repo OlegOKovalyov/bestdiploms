@@ -1,6 +1,6 @@
 <?php
 /**
- * The sidebar containing the main widget area minus articles-links and recent reviews widget
+ * The sidebar containing the main widget area minus articles-links and recent reviews widget - not used.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

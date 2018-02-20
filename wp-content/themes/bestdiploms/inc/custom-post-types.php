@@ -3,36 +3,11 @@
 /**
  * Таксономия и пользовательский тип записи Документы (study).
  */
-// 1. Регистрация новой таксономии (присутствует).
-/*function register_taxstudy_taxonomy() {
-  register_taxonomy( 'taxstudy', 'study',
-    array(
-      'labels' => array(
-        'name'              => 'Study Categories',
-        'singular_name'     => 'Study Category',
-        'search_items'      => 'Search Study Categories',
-        'all_items'         => 'All Study Categories',
-        'edit_item'         => 'Edit Study Categories',
-        'update_item'       => 'Update Study Category',
-        'add_new_item'      => 'Add New Study Category',
-        'new_item_name'     => 'New Study Category Name',
-        'menu_name'         => 'Study Category',
-        ),
-      'hierarchical' => true,
-      'sort' => true,
-      'args' => array( 'orderby' => 'term_order' ),
-      'rewrite' => array( 'slug' => 'taxstudy' ),
-      'show_admin_column' => true
-      )
-    );
-}
-add_action( 'init', 'register_taxstudy_taxonomy' );*/
-
+// 1. Регистрация новой таксономии (отсутствует).
 // 2. Регистрация пользовательского типа записи Документы (study).
 // At the top of functions.php you need to register your post type first.
 add_action( 'init', function() {
     $type = 'study';
-    //$labels = xcompile_post_type_labels('Study', 'Studies');
     $labels = xcompile_post_type_labels('Документ', 'Документы');
     
     // Declare what the post type supports
@@ -228,7 +203,6 @@ function include_template_function( $template_path ) {
     return $template_path;
 }
 
-
 /**
  * Таксономия и пользовательский тип записи Статьи (article).
  */
@@ -290,7 +264,6 @@ function xcompile_articles_post_type_labels($singular = 'Post', $plural = 'Posts
     ];
 }
 
-
 /**
  * Таксономия и пользовательский тип записи ЧаВо (faqposts).
  */
@@ -351,7 +324,6 @@ function xcompile_faq_post_type_labels($singular = 'Post', $plural = 'Posts') {
         'uploaded_to_this_item' => "Загружено",
     ];
 }
-
 
 /**
  * Таксономия и пользовательский тип записи Отзывы (reviews). - Можно удалить (будем использовать Комментарии)
@@ -464,7 +436,6 @@ function reviews_meta_box(WP_Post $post) {
     });
 }
 
-
 // Check for empty string allowing for a value of `0` -> Working!
 function empty_str_reviews( $str ) {
     return ! isset( $str ) || $str === "";
@@ -519,8 +490,6 @@ add_action('save_post', function($post_id){
         delete_post_meta($post_id, $field_name);
     }    
 } , 10, 3);
-
-
 
 /**
  * Таксономия и пользовательский тип записи Города (cities).

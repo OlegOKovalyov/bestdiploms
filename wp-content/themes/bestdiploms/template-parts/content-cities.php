@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying CPT cities content in single-cities.php
+ * Template part for displaying CPT cities content in single-cities.php - not working for CPT cities
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,11 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php /*the_title( '<h1 class="entry-title">', '</h1>' );*/ ?>
-	</header><!-- .entry-header -->
-
-		<!--<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) );*/ ?>" rel="home"><?php /*bloginfo( 'name' );*/ ?></a></p>-->
 
 	<!-- Вывод документов (CPT 'article') на странице одного документа (по ссылке из левого primary сайдбара) -->
 	<div class="row">

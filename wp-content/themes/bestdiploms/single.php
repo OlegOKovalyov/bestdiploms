@@ -6,7 +6,7 @@
  *
  * @package Best_Diploms
  *
- * Output CPT Article (Статьи). Template sigle-article.php and single-articles are not working.
+ * Output CPT Article (Статьи). Template sigle-article.php and single-articles.php are not working.
  */
 
 get_header(); ?>

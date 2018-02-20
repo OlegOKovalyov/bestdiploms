@@ -1,6 +1,6 @@
 <?php
 /**
- * The right sidebar containing gallery widget area plus menu-lsb-bottom-links
+ * The right sidebar containing gallery widget area plus menu-lsb-bottom-links - not used.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

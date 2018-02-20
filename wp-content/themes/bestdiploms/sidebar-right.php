@@ -1,6 +1,6 @@
 <?php
 /**
- * The right sidebar containing gallery widget area
+ * The right sidebar containing gallery widget area - not used.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *

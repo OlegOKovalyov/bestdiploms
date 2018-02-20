@@ -49,11 +49,6 @@ if ( ! function_exists( 'bestdiploms_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location. I added more menus.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'bestdiploms' ),
-			/*'lsb-1'	  => esc_html__( 'Первое меню левого сайдбара', 'bestdiploms' ),
-			'lsb-2'	  => esc_html__( 'Второе меню левого сайдбара', 'bestdiploms' ),
-			'lsb-3'	  => esc_html__( 'Третье меню левого сайдбара', 'bestdiploms' ),
-			'lsb-4'	  => esc_html__( 'Четвертое меню левого сайдбара', 'bestdiploms' ),
-			'lsb-bottom'	  => esc_html__( 'Нижнее меню левого сайдбара', 'bestdiploms' ),*/
 		) );
 
 		/*
@@ -71,12 +66,10 @@ if ( ! function_exists( 'bestdiploms_setup' ) ) :
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'bestdiploms_custom_background_args', array(
 			'default-color' => 'ffffff',
-			/*'default-image' => get_template_directory_uri() . '/images/bg_site.png',*/
 			'default-image' => '%s/images/bg_site.png',
 			'default-position-x' => 'center',
 			'default-size' => 'contain',
             'default-repeat' => 'no-repeat',
-            /*'flex-width' => true,*/
             'width' => 1352
 		) ) );
 
@@ -125,6 +118,8 @@ function bestdiploms_scripts() {
 	wp_enqueue_style( 'bestdiploms-fancybox3', get_template_directory_uri() . '/bower_components/fancybox/dist/jquery.fancybox.min.css' );	
 	
 	wp_enqueue_script( 'jquery' );
+
+	wp_enqueue_style( 'bestdiploms-bs-datepicker', get_template_directory_uri() . '/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css' );	
 
 	wp_enqueue_script( 'bestdiploms-fancybox3', get_template_directory_uri() . '/bower_components/fancybox/dist/jquery.fancybox.min.js', array(), '20151215', true );	
 
@@ -251,54 +246,6 @@ function my_extra_fields_update( $post_id ){
  *
  */
 
-// Creating a Function to Display otherdoc (Другие документы) in Sidebars
-function otherdoc_in_sidebars() { ?>
-	    <div class="study-cats">	    
-	     
-		    <?php $extra_args = array(
-		    	'order'			 => 'ASC',
-		        'post_parent'	 => 524,
-		        'post_type' => 'otherdoc',
-		        'posts_per_page' => -1,
-		        //'category_name' => 'education-cat', // Если убрать выводятся все дочерние категории к категории 141:Все документы об образовании 
-		    ); ?>
-
-		    <?php 
-		    $extra_loop = new WP_query ( $extra_args );
-			if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post(); ?>
-					<div class="study-cats-item col">
-						<p class="widget-title"><?php the_title() ?></p>
-						<?php $extra_studyid = get_the_ID(); /*echo '$extra_studyid = ' . $extra_studyid;*/ ?>
-
-					    <?php $intro_args = array(
-					    	'order'			 => 'ASC',
-					        'post_parent'	 => $extra_studyid,
-					        //'orderby'		 => 'parent',		    	
-					        'post_type' => 'otherdoc',
-					        'posts_per_page' => -1,
-					        //'category_name' => 'education-all',
-					        //'category_name' => 'education-kind',
-					    ); ?>
-
-						<div class="study-cat-link">
-							<ul class="study-ul-menu">
-							    <?php $in_loop = new WP_query ( $intro_args );
-								if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); ?>					
-								        <li class="study-link-title">
-								        	<a class="a-study-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-								    	</li>
-
-								<?php endwhile; endif; ?>
-							</ul>
-						</div><!-- .study-cat-link -->
-					</div><!-- .study-cats-item -->
-
-			<?php endwhile; endif; wp_reset_postdata(); ?>
-
-		</div><!-- .study-cats -->
-
-<?php }
-
 // Creating a Function to Display Articles (Статьи) in Sidebars (Окончательный рабочий код!)
 function articles_in_sidebars() { ?>
 	    <div class="articles-cats">	    
@@ -382,115 +329,6 @@ function studies_in_sidebars() { ?>
 		</div><!-- .study-cats -->
 
 <?php }
-
-// Creating a Function to Display Studies (Документы) in Sidebars - Можно удалить (не работает)
-function study_in_sidebars() {
-
-	// Displaying the Custom Post 'study' on Front Page (can display anywhere). 
-    $study_args = array(
-    	'order'			 => 'DESC',
-    	'post_parent'	 => 143, // ID документа Образование (дочерняя документ документа Документы)
-    	'orderby'		 => 'parent',
-        'post_type' 	 => 'study',
-        'posts_per_page' => -1,
-        'category_name'  => 'education-all', // Все виды образования
-        //'category_name' => 'education1',
-        //'category_name' => 'education2',
-        //'category_name' => 'documents-pop', // Самые популярные документы
-    );  
-    $extra_loop = new WP_Query( $study_args ); ?> <pre><?php /*print_r ($extra_loop);*/ ?></pre>  <?php
-    if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
-
-	    $study_id = $post->ID;  // Current CPT
-	    $wp_study_parent_id = wp_get_post_parent_id( $study_id ); // Parent CPT 
-	    echo $study_id; echo $wp_study_parent_id; ?>
-<pre><?php print_r($study_args) ?></pre>
-		<!-- <aside> -->
-	    <div class="study-item">	    
-<?php if ( $post->ID == wp_get_post_parent_id($study_id) ) : ?>
-		<?php /*while(  $post->ID  == $study_id ) {*/ ?>
-			<h3 class="doc-item-title"><?php the_title(); ?></h3>
-	     
-		    <?php $intro_args = array(
-		    	'order'			 => 'ASC',
-		        'post_parent'	 => $study_id,
-		        'orderby'		 => 'parent',		    	
-		        'post_type' => 'study',
-		        'posts_per_page' => -1,
-		        'category_name' => 'education-all'
-		    ); ?>
-<pre><?php print_r($intro_args) ?></pre>
-			<p class="widget-title"><?php the_title() ?></p>
-
-		    <?php 
-		    $in_loop = new WP_query ( $intro_args );
-			if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); /* start the loop */ ?>
-
-
-			        <h5 class="study-item-title">
-			        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			        	<!-- <span class="rev-item-date"> <?php /*echo $value;*/ ?></span> -->
-			    	</h5>
-		    	
-			<?php endwhile; endif;  wp_reset_postdata(); /*rewind_posts();*/ ?>
-		<?php 	/*}*/ ?>
-<?php endif; ?>			
-
-		</div><!-- .study-item -->
-		<!-- </aside> -->
-	<?php  endwhile; endif;  wp_reset_postdata(); 
-}
-
-// Creating a Function to Display Studies (Документы) in Sidebars - Можно удалить (не работает)
-function study1_in_sidebars() {
-     
-    $study1_args = array(
-        'post_type' => 'study',
-        'post_parent'	 => 149, // $post_id,
-        'posts_per_page' => -1,
-        'category_name' => 'education1'
-    ); ?>
-     
-	<p class="widget-title">Документы Обр1</p>
-
-    <?php 
-    $query1 = new WP_query ( $study1_args );
-
-    if ( $query1->have_posts() ) { ?>
- 
-        <?php while ( $query1->have_posts() ) : $query1->the_post(); /* start the loop */ ?>
-
-					<?php	$value1 = get_post_field( "rev-name" ); // Meta-box for Review Author Name
-						$value2 = get_post_field( "rev-email" ); // Meta-box for Review Author Email
-						$value = get_post_field( "rev-date" );	// Meta-box for Review Date
-					    if( 1 ) { 
-					?>
-
-					<!-- <aside> -->
-					    <div class="study-item">
-					        <h5 class="study-item-title">
-					        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-					        	<!-- <span class="rev-item-date"> <?php /*echo $value;*/ ?></span> -->
-					        </h5>
-
-					        <?php /*the_excerpt()*/ ?>			            
-
-							<p>
-								<?php $content = get_the_content();
-									$trimmed_content = wp_trim_words( $content, 7, '...' );
-									echo '<a href="'. get_permalink() .'">' . $trimmed_content . '</a>'; 
-								?>
-							</p>
-
-					        <!-- <a class="btn btn-danger" href="#" role="button">Заказать</a> -->
-					        <?php  }  ?>
-
-					    </div><!-- .study-item -->
-					<!-- </aside> -->
-
-					    <?php endwhile; /*endif;*/   
-    } wp_reset_postdata();
-}
 
 // Creating a Function to Display Reviews (Отзывы) in Sidebars
 function reviews_in_sidebars() {

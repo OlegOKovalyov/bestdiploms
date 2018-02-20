@@ -1,4 +1,4 @@
-/* Right Sidebar secondary */
+/* Right Sidebar secondary - not used */
 // Галерея, перенесенная в верхнюю часть контента (горизонтально)
 #sidebar-secondary {
 	margin-top: 2.5rem;

@@ -46,8 +46,6 @@ jQuery(document).ready(function(){
 
 
   }); /* Завершение начальной функции $(document).ready(function(); *** Не удалять! *** */
-/*! add jquery.js */
-/*//= ../../bower_components/jquery/dist/jquery.js*/
 /*! add popper.js */
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
@@ -7732,12 +7730,6 @@ var Modal = function ($) {
 	}
 
 })(window.Zepto || window.jQuery, window, document);
-
-/*! add owl.carousel.js через скачанный комплект */
-/*//= ../../owlcarousel/dist/owl.carousel.js*/
-
-/*! add Bootstrap 4 DatePicker from Gijgo.com через Bower */
-/*//= ../../bower_components/gijgo/dist/combined/js/gijgo.js*/
 
 /*! add Bootstrap 4 DatePicker через NPM */
 !function(a){a.fn.datepicker.dates.ru={days:["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],daysShort:["Вск","Пнд","Втр","Срд","Чтв","Птн","Суб"],daysMin:["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],months:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],monthsShort:["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],today:"Сегодня",clear:"Очистить",format:"dd.mm.yyyy",weekStart:1,monthsTitle:"Месяцы"}}(jQuery);
