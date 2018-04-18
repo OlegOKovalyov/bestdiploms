@@ -83,7 +83,7 @@ function fp_carousel() {
 /**
  * Карусель Другие дипломы ( CPT study (Документы) )
  */
-function other_study_carousel( $cat_arg ) {
+function other_study_carousel( $cat_not_in_arg, $cat_id_arg ) {
 	ob_start(); ?>	
 		<div class="row">
 			<div class="carousel-block col-lg-12"><!-- Здесь будет карусель -->
@@ -97,45 +97,61 @@ function other_study_carousel( $cat_arg ) {
 				        	'order'			 	=> 'ASC',
 				            'post_type' 		=> 'study',
 				            'category_name'		=> 'education-doc',
-				            'category__and' 	=> array(24), // Логическое 'AND' 'category_name' => 'other-dipl', - Другие дипломы
-				            'post__not_in'  	=>  $cat_arg,
+				            //'post_in'		=> array(668),
+				            'post__not_in'  	=>  $cat_not_in_arg,
 				            'post_status'		=> 'publish',
+				            'tag_slug__in' 		=> 'other-dipl',
+				            //'post_parent'	=> array(473,456,640,606,608,621,651,806,557),
+				            //'post_parent__in'	=> array(473, 456, 640, 606, 608, 806, 557),
+				            //'post_parent__in'	=> array(473, 456, 557, 595, 598, 600, 606, 608, 614/*, 640, 606, 608, 806, 557*/),
+				            //'post_parent__in'	=> array( 431,437,456,473,557,567,593,595,598,600,606,608,614, 617,621,640,651,806,899,901,903,906,916,929 ),
+				            'post_parent__in'	=> $cat_id_arg,
+				            //'post_parent'		=> array('473', '456', '640', '606', '608', '621', '651', '806', '557'),
 				        );  
 				        $your_loop = new WP_Query( $args_carousel ); 
 
 				        if ( $your_loop->have_posts() ) : while ( $your_loop->have_posts() ) : $your_loop->the_post(); 
-					?>
+				        //$meta = get_post_meta( $post->ID, '', true );
+				        //$cur_post = $post->ID; ?>
 
-			        <?php 
-			        	$value1 = get_post_field( "make" );
-			        	$value2 = get_post_field( "gznk-price" );
-			        	$value = get_post_field( "price" );
+				        <?php $value1 = get_post_field( "make" );
+				        	  $value2 = get_post_field( "gznk-price" );
+				        	  $value = get_post_field( "price" );
 
-						$card_title = get_the_title();
-						$array_title = explode(" ", $card_title); // Переводим строку в массив
-						$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
-						$newtext = implode(" ", $array_title); // Массив снова переводим в строку
-					?>
+							$card_title = get_the_title();
+							$array_title = explode(" ", $card_title); // Переводим строку в массив
+							$array_title = array_slice($array_title, 0, 2); // Выбираем первые два слова-элемента массива
+							$newtext = implode(" ", $array_title); // Массив снова переводим в строку
+						 ?>
 
-					<div class="doc-item">
-				    	<!-- content of the Post -->
-				        <h4 class="doc-item-title"><?php echo $newtext ?></h4>
-				        <p class="doc-item-year"><?php echo $value1; ?></p>
-				        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>">
-				            <?php if ( has_post_thumbnail() ) {
-				                the_post_thumbnail( array( 280, 128 ) );
-				            } ?>
-				        </a>
-				        <?php
-				            if( $value || $value2 ) {
-				                echo '<p class="doc-price-gznk">' . $value2 . '</p>';
-				                echo '<p class="doc-price-tpgrf">' . $value . '</p>';
-				            } else {
-				                echo '<p>empty</p>';
-				        } ?>
+						<div class="doc-item">
+					    	<!-- content of the Post -->
+					        <h4 class="doc-item-title"><?php echo $newtext ?></h4>
+					        <p class="doc-item-year"><?php echo $value1; ?></p>
+					        <div class="img-wrapper">
+						        <a href="#" target="_blank" rel="noopener">
+						            <?php if ( has_post_thumbnail() ) {
+						                the_post_thumbnail( array( 280, 128 ) );
+						            } ?>
+						        </a>
+								<a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>">
+						            <?php if ( has_post_thumbnail() ) {
+						                //the_post_thumbnail( array( 280, 128 ) );
+						                the_post_thumbnail( array( 215, 128 ) );
+						            } ?>
+						        </a>
+<?php //study_attachments_show() ?>
+					        </div>
+					        <?php
+					            if( $value || $value2 ) {
+					                echo '<p class="doc-price-gznk">' . $value2 . '</p>';
+					                echo '<p class="doc-price-tpgrf">' . $value . '</p>';
+					            } else {
+					                echo '<p>empty</p>';
+					        } ?>
 
-				        <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button">Заказать</a>
-					</div><!-- .doc-item -->
+					        <a class="btn btn-danger" href="<?php echo home_url() . '/zakazat-diplom/' ?>" role="button">Заказать</a>
+						</div><!-- .doc-item -->
 
 				    <?php endwhile; endif; wp_reset_postdata(); ?>  
 

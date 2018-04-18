@@ -26,16 +26,17 @@
 			<div class="price-block">
 
 				<?php 
+					$i_loop = 0;				
 					$in_args = array(
 			        	'order'			 => 'ASC',
 			        	'post_parent'	 => $post_id,
 			        	'orderby'		 => 'parent',
 			            'post_type' 	 => 'study',
 			            'posts_per_page' => -1,
-			            //'category_name'  => 'education-cat',
-			            'category_name'  => 'education-kind',
+			            'category_name'  => 'education-cat',
+			            //'category_name'  => 'education-kind', // рабочий вариант
+			            //'category_name'  => 'education-doc',
 				        ); 		
-					$i_loop = 0;
 					$in_loop = new WP_Query( $in_args );
 	        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post(); 		
 
@@ -82,6 +83,8 @@
 								if ( $attachments ) { ?>
 								<?php 	$cnt = 1; $echo_html = '';
 								    foreach ( $attachments as $attachment ) {
+								    	//$echo_html = '<a data-fancybox="images" data-caption="' . get_the_title() . '-' . $cnt . '"';
+								    	//$echo_html = '<a data-fancybox="images" data-caption="' . wp_get_attachment_caption( $attachment->ID ) . '-' . $cnt . '"';
 										if ( $cnt > 1) {    	
 									    	$echo_html = '<a data-fancybox="images" data-caption="' . wp_get_attachment_caption( $attachment->ID ) . '" ';
 									    	$echo_html .= 'href="';
@@ -136,7 +139,25 @@
 	<h2>Другие дипломы</h2>
 
 	<?php
-		if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id);
+		// Вывод карусели с другими дипломами.
+		/*$categories = get_categories(array(
+			'order'			 	=> 'ASC',
+			'post_type' 		=> 'study',
+			'category_name'		=> 'education-doc',
+			'post_status'		=> 'publish',
+		));*/
+		//$cat_id = get_cat_ID( 'education-cat' ); print_r($cat_id);
+		//$cat_post_id = get_ancestors( $post_id, 'education-kind' ); print_r($cat_post_id);
+		//$cat_name = 'education-cat'; echo "$post_doc_id[0]";
+		//$cat_post_id = get_ancestors( $post_doc_id[0], $cat_name ); echo '$cat_post_id= '; print_r($cat_post_id);
+
+		$cat_post_id = truemisha_post_id_by_cat_tag( 19 ); echo '$cat_post_id= '; print_r($cat_post_id);
+		if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id, $cat_post_id); echo '$post_doc_id= '; print_r($post_doc_id);
+
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id, ''); echo '$post_doc_id= '; print_r($post_doc_id);
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id, $categories); print_r($post_doc_id);
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($categories); print_r($categories);
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel( array('473', '456', '640', '606', '608', '621', '651', '806', '557') ); 
 	?>	    
 
 	<?php if ( get_edit_post_link() ) : ?>

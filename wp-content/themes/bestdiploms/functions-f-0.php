@@ -302,9 +302,9 @@ function studies_in_sidebars() { ?>
 						<?php $extra_studyid = get_the_ID(); /*echo '$extra_studyid = ' . $extra_studyid;*/ ?>
 
 					    <?php $intro_args = array(
-					    	'order'			 => 'DESC',
+					    	'order'			 => 'ASC',
 					        'post_parent'	 => $extra_studyid,
-					        //'orderby'		 => 'parent',		    	
+					        'orderby'		 => 'parent',		    	
 					        'post_type' => 'study',
 					        'posts_per_page' => -1,
 					        //'category_name' => 'education-all',
@@ -389,16 +389,16 @@ function four_essences() { ?>
 	<div id="media_gallery-2" class="widget widget_media_gallery">
 		<div id='gallery-1' class='gallery galleryid-369 gallery-columns-1 gallery-size-thumbnail'><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/stepeni-zashhity-dokumentov/' ?>"><img width="150" height="150" src="/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, /wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href="<?php echo home_url() . '/stepeni-zashhity-dokumentov/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_guardoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/video-dokumentov/' ?>"><img width="150" height="150" src="/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, /wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href="<?php echo home_url() . '/video-dokumentov/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_videodoc.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/stati/' ?>"><img width="150" height="150" src="/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, /wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href="<?php echo home_url() . '/stati/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_useflartcl.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure><figure class='gallery-item'>
 			<div class='gallery-icon landscape'>
-				<a href="<?php echo home_url() . '/kupit-diplom-v-gorodah/' ?>"><img width="150" height="150" src="/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, /wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+				<a href="<?php echo home_url() . '/kupit-diplom-v-gorodah/' ?>"><img width="150" height="150" src="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo-150x150.png 150w, http://wpbestdiploms.loc/wp-content/uploads/2017/12/i_salesgeo.png 206w" sizes="(max-width: 150px) 100vw, 150px" /></a>
 			</div></figure>
 		</div>
 	</div>
@@ -447,113 +447,3 @@ function disable_json_api () {
 
 }
 add_action( 'after_setup_theme', 'disable_json_api' );
-
-/********************************************** Удалить, если на заработает */
-// фотогалерея-слайдер Документов (study)
-function gallery_slider($output, $attr) {
-  $ids = explode(',', $attr['ids']);
-  $images = get_posts(array(
-    'include' => $ids,
-    'post_status' => 'inherit',
-    'post_type' => 'attachment',
-    'post_mime_type' => 'image',
-    //'orderby' => 'post__in',    
-    'post_type'   => array('post','page', 'study'),
-  ));
-  if ($images) {
-    $output = gallery_slider_template($images);
-    return $output;
-  }
-}
-add_filter('post_gallery', 'gallery_slider', 10, 2);
-
-function gallery_slider_template($images) {
-  ob_start();
-  include 'gallery-slider.php';
-  $output = ob_get_clean();
-  return $output;
-}
-
-/* Для вывода слайдера attachments */
-function diplom($id, $type)
-{
-    $output .= '<div>';
-	extract(shortcode_atts(array(
-    'id' => 'id',
-    'type' => 'type'
-	), $id));
-	$thumb = '<a href="' . wp_get_attachment_url(get_post_thumbnail_id($id)) . '" rel="group' . $id . '">' . get_the_post_thumbnail($id, 'medium') . "</a>";
-	
-	$attachments = get_children(array('post_parent' => $id, 'post_type' => 'attachment', 'post_mime_type' => 'image'));
-	foreach ($attachments as $attachment_id => $attachment) {
-		if (get_post_thumbnail_id($id) != $attachment_id) {
-			$imgurl = wp_get_attachment_image_src($attachment_id, 'large');
-			$thumbs .= '<a href="' . $imgurl[0] . '" rel="group' . $id . '"></a>';
-		}
-		
-	}
-	$url = get_the_permalink('43');
-	if ($type == "diplom") {
-		$url = get_the_permalink('43');
-	}
-	$output = "<div class='col-md-6 col-xs-12 slide'><div class='slide_title' style='min-height: 0;'>" . get_the_title($id) . " </div><div class='slide_date'>" . do_shortcode('');
-	if (do_shortcode('[acf field="new" post_id="' . $id . '"]') == "yes") {
-		$output .= '<span class="new">НОВОГО ОБРАЗЦА</span>';
-	}
-	
-	$output .= "</div>";
-	$output .= $thumb;
-	$output .= $thumbs;
-	$znak1 = do_shortcode('[acf field="znak2" post_id="' . $id . '"]');
-	if ($znak1) {
-		$output .= '<div class="typography"><p class="price">Типографский бланк цена ';
-		$output .= $znak1 . ' y.e.</p>';
-		
-	}
-	$znak2 = do_shortcode('[acf field="znak1" post_id="' . $id . '"]');
-	if ($znak2) {
-		$output .= '<div class="original"><p class="slide_price">Настоящий, полный ГОЗНАК цена ';
-		$output .= $znak2 . ' y.e.</p>';
-	}
-	
-	
-	$output .= '<a href="' . $url . '" class="slide_order_diploma 123">Заказать</a></div></div>';
-	return $output;
-	
-}
-
-add_shortcode("diplom", "diplom");
-/********************************************** /Удалить, если на заработает */
-
-
-/**
- * Get the Attachment ID from an Image URL in WordPress
- */
-function pn_get_attachment_id_from_url( $attachment_url = '' ) {
- 
-	global $wpdb;
-	$attachment_id = false;
- 
-	// If there is no url, return.
-	if ( '' == $attachment_url )
-		return;
- 
-	// Get the upload directory paths
-	$upload_dir_paths = wp_upload_dir();
- 
-	// Make sure the upload path base directory exists in the attachment URL, to verify that we're working with a media library image
-	if ( false !== strpos( $attachment_url, $upload_dir_paths['baseurl'] ) ) {
- 
-		// If this is the URL of an auto-generated thumbnail, get the URL of the original image
-		$attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i', '', $attachment_url );
- 
-		// Remove the upload path base directory from the attachment URL
-		$attachment_url = str_replace( $upload_dir_paths['baseurl'] . '/', '', $attachment_url );
- 
-		// Finally, run a custom database query to get the attachment ID from the modified attachment URL
-		$attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT wposts.ID FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta WHERE wposts.ID = wpostmeta.post_id AND wpostmeta.meta_key = '_wp_attached_file' AND wpostmeta.meta_value = '%s' AND wposts.post_type = 'attachment'", $attachment_url ) );
- 
-	}
- 
-	return $attachment_id;
-}

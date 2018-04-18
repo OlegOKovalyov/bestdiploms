@@ -13,7 +13,7 @@
 
 	<?php
 	if ( is_front_page() /*&& is_home()*/ ) : ?>
-	<!-- Вывод карусель Эталажей (CPT 'etalage') на Главной странице -->
+	<!-- Вывод карусель (CPT 'study') на Главной странице -->
 	<?php if( function_exists( 'fp_carousel' ) ) echo fp_carousel(); ?>
 
 		<?php bestdiploms_post_thumbnail(); ?>

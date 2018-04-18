@@ -557,3 +557,46 @@ function pn_get_attachment_id_from_url( $attachment_url = '' ) {
  
 	return $attachment_id;
 }
+
+/**
+ * Получение всех ID постов, содержащихся в определенной рубрике или отмеченные определенным тегом 
+ */
+function truemisha_post_id_by_cat_tag( $cat_or_tag_id ) {
+	global $wpdb;
+ 
+	$all_posts = $wpdb->get_col( $wpdb->prepare( "SELECT object_id FROM $wpdb->term_relationships WHERE term_taxonomy_id = %d", $cat_or_tag_id ) );
+ 
+	return $all_posts;
+}
+
+/**
+ * Показывает в слайдере fancybox 3 все прикрепленные к thumbnail поста 
+ * дополнительные картинки для CPT study (Документы)
+ */
+function study_attachments_show() {
+	// Высвечиваем image-вложения - study-галереи с помощью fancybox 3 (слайдер)
+	$args = array(
+	'post_type' => 'attachment',
+	'post_mime_type' => 'image',
+	'numberposts' => -1,
+	'post_status' => 'inherit',
+	'post_parent' => $post->ID,
+	'order'       => 'ASC',
+	);
+
+	$attachments = get_posts( $args );
+	if ( $attachments ) {
+	$cnt = 1; $echo_html = '';
+	    foreach ( $attachments as $attachment ) {
+			if ( $cnt > 1) {    	
+		    	$echo_html = '<a data-fancybox="images" data-caption="' . wp_get_attachment_caption( $attachment->ID ) . '" ';
+		    	$echo_html .= 'href="';
+		        $echo_html .=  wp_get_attachment_image_url( $attachment->ID, 'full' ) . '">';
+		        $echo_html .= '</a>';
+		        $echo_html .= '</a>';
+		        echo $echo_html; 
+	    	}
+	        $cnt++; 
+	      }
+	 }
+}

@@ -47,6 +47,11 @@
                     color: $links-active-color;
                 }
             }
+            li.study-link-title {
+                a.active {
+                    color: $links-active-color;
+                }
+            }
         }
     }
     /* .widget {

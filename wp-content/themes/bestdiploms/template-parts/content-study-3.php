@@ -82,6 +82,8 @@
 								if ( $attachments ) { ?>
 								<?php 	$cnt = 1; $echo_html = '';
 								    foreach ( $attachments as $attachment ) {
+								    	//$echo_html = '<a data-fancybox="images" data-caption="' . get_the_title() . '-' . $cnt . '"';
+								    	//$echo_html = '<a data-fancybox="images" data-caption="' . wp_get_attachment_caption( $attachment->ID ) . '-' . $cnt . '"';
 										if ( $cnt > 1) {    	
 									    	$echo_html = '<a data-fancybox="images" data-caption="' . wp_get_attachment_caption( $attachment->ID ) . '" ';
 									    	$echo_html .= 'href="';
@@ -136,7 +138,16 @@
 	<h2>Другие дипломы</h2>
 
 	<?php
-		if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id);
+		// Вывод карусели с другими дипломами.
+		$categories = get_categories(array(
+			'order'			 	=> 'ASC',
+			'post_type' 		=> 'study',
+			'category_name'		=> 'education-doc',
+			'post_status'		=> 'publish',
+		));
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($post_doc_id); print_r($post_doc_id);
+		if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel($categories); print_r($categories);
+		//if( function_exists( 'other_study_carousel' ) ) echo other_study_carousel( array('473', '456', '640', '606', '608', '621', '651', '806', '557') ); 
 	?>	    
 
 	<?php if ( get_edit_post_link() ) : ?>
