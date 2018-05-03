@@ -111,7 +111,7 @@
 			    		</section>
 
 					<?php  } else {
-						echo '<p>empty</p>';
+						//echo '<p>empty</p>';
 					} ?>							    	
 
 				</div><!-- .price-item -->            	

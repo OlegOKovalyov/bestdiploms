@@ -2,16 +2,20 @@
 #footer {
     background: url(images/bg_footer.png) no-repeat left top $reviews-bg; // #5079CE; // $reviews-bg;
     color: #fff;
-    margin-top: -4rem;
+    margin-top: -3rem;
     //padding-top: 5rem;
     .footer-content {
         h4 {
             font-size: 1.35rem;
             font-weight: 400;
             margin-bottom: 0;
-            margin-top: 1rem;
+            margin-top: 2rem;
+            padding-top: 3rem;
             text-transform: uppercase;
             width: 100%;
+            & + p {
+                margin-bottom: 0;
+            }
         }
         .form-bar {
             display: flex;

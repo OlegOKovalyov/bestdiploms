@@ -22,10 +22,18 @@
         text-transform: uppercase;
     }
     h2 {
-        color: $blue;
-        font-weight: 400;
+        //color: $blue;
+        //color: #364B7F;
+        //font-weight: 400;
         margin-top: 2rem;
+        color: $reviews-title-color;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+        padding: .8rem 1.1rem 1.1rem;
         text-align: center;
+        text-transform: uppercase;        
     }    
     h3 {
         background: $title-prices-bg;
@@ -38,7 +46,7 @@
         text-transform: uppercase;
     }
     p {
-        font-size: .85rem;
+        //font-size: .85rem;
         margin: 1rem 0;
         text-align: center;
     }
@@ -65,12 +73,14 @@
 // Стилизуем содержимое страницы Цены на документы
 // Стили тега h2 см. в блоке entry-content
 #post-369 h2 {
-    background: url(images/strip_mdlight.png) no-repeat center top;
+    //background: url(images/strip_mdlight.png) no-repeat center top;
     color: #364B7F;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 500;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
+    margin-bottom: .3rem;
+    margin-top: 0;
     padding: .8rem 1.1rem 1.1rem;
     text-align: center;
     text-transform: uppercase;
@@ -92,6 +102,11 @@
         justify-content: flex-start;
         margin-bottom: 2px;
         padding: 1.5rem 0 .8rem 1.5rem;
+        .price-img {
+            a {
+                align-self: center;
+            }
+        }
         a {
             display: block;
         }

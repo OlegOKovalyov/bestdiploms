@@ -32,51 +32,30 @@
 	<?php elseif ( 369 == get_the_ID() ) : ?>
 
 		<!-- Вывод CPT study (Документы) на странице Цены -->
-	    <div class="entry-content col-lg-12">
+		<div class="row">
+			<div class="entry-content col-lg-12">
+				<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
+				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+				<h1><?php the_title() ?></h1>
 
-			<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
-			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-
-			<h1><?php the_title() ?></h1>
-	     
-		    <?php $study_args = array(
-		    	'order'			 => 'ASC',
-		        'post_parent'	 => 141,
-		        //'orderby'		 => 'parent',		    	
-		        'post_type' => 'study',
-		        'posts_per_page' => -1,
-		    ); ?>
-
-		    <?php 
-		    $price_text = get_the_content();
-		    $study_loop = new WP_query ( $study_args );
-			if ( $study_loop->have_posts() ) : while ( $study_loop->have_posts() ) : $study_loop->the_post(); ?>
-
-			<div class="row">
-				<h2><?php the_title() ?></h2>
-				<div class="study-cats-item col">
-
-					<?php $extra_studyid = get_the_ID(); ?>
-
-				    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
-				    <?php $args = array(
-				        	'order'			 => 'DESC',
-				        	//'post_parent__in' => array( 429, 454, 554, 565 ),
-				        	'post_parent'	 => $extra_studyid,
-				        	//'orderby'		 => 'parent',
-				        	'orderby'		 => 'date',
-				            'post_type' 	 => 'study',
-				            'posts_per_page' => -1,
-				            'category_name'  => 'education-kind', // Все виды образования
-			        		);  
-			        $extra_loop = new WP_Query( $args );
-			        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
-				        $post_id = $post->ID; // Current CPT 
-				    ?>
+			    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
+			    <?php $args = array(
+			        	'order'			 => 'ASC',
+			        	'post_parent__in' => array( 429, 454, 554, 565 ),
+			        	'orderby'		 => 'parent',
+			            'post_type' 	 => 'study',
+			            'posts_per_page' => -1,
+			            'category_name'  => 'education-kind', // Все виды образования
+		        	);  
+		        $extra_loop = new WP_Query( $args );
+		        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
+			        $post_id = $post->ID; // Current CPT ?>
 
 					<div class="price-item">
 
 				    	<?php while(  $post->ID  == $post_id ) { ?>
+
+			                <!-- <h3 class="doc-item-title"><?php //the_title(); ?></h3> -->
 					
 							<?php $in_args = array(
 						        	'order'			 => 'ASC',
@@ -102,7 +81,7 @@
 								$newtext = implode(" ", $array_title); // Массив снова переводим в строку								
 					            if( $value || $value2 ) { ?>
 
-									<h3 class="doc-item-title"><?php the_title(); ?></h3>
+								<h3 class="doc-item-title"><?php the_title(); ?></h3>
 									<section>
 										<div class="price-img col-4 d-flex justify-content-center">
 									        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
@@ -124,16 +103,18 @@
 									    </div><!-- .price-props -->
 							    	</section>
 
-								<?php  } else { /*echo '<p>empty</p>'; */ } ?>						    	
+								<?php  } else {
+									//echo '<p>empty</p>';
+								} ?>						    	
 			        
-						<?php endwhile; endif; } ?>
+						<?php endwhile; 
+						endif; } ?>
 
 					</div><!-- .price-item -->
 
-				<?php endwhile; endif; //wp_reset_postdata(); ?>  
-
-				<?php //the_content();
-				      //echo $price_text;
+				<?php endwhile; endif; wp_reset_postdata(); ?>  
+	
+				<?php the_content();
 			
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
@@ -141,14 +122,8 @@
 				) ); 
 				?>
 
-				</div><!-- .study-cats-item -->
-
-			</div><!-- .row -->
-
-			<?php endwhile; endif; wp_reset_postdata(); echo $price_text; ?>
-
-		</div><!-- .entry-content -->
-
+			</div><!-- .entry-content -->
+	    </div><!-- .row -->  
 
 	<!-- 376: Оплата и доставка, Степени защиты документов -->
 	<?php elseif ( 376 == get_the_ID() || 586 == get_the_ID()  ) : ?>

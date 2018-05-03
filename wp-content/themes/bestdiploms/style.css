@@ -29,6 +29,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 a {
   outline: none; }
 
+body {
+  overflow-x: hidden; }
+
 /* Fonts */
 /*--------------------------------------------------------------
 # Bootstrap 4 Beta 2.0.0
@@ -5543,10 +5546,15 @@ nav.navbar {
     text-align: center;
     text-transform: uppercase; }
   .entry-content h2 {
-    color: #5684DB;
-    font-weight: 400;
     margin-top: 2rem;
-    text-align: center; }
+    color: #364B7F;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    padding: .8rem 1.1rem 1.1rem;
+    text-align: center;
+    text-transform: uppercase; }
   .entry-content h3 {
     background: #DBE3F4;
     color: #4668BB;
@@ -5557,7 +5565,6 @@ nav.navbar {
     padding: .5rem 1rem;
     text-transform: uppercase; }
   .entry-content p {
-    font-size: .85rem;
     margin: 1rem 0;
     text-align: center; }
   .entry-content p.p-last {
@@ -5577,12 +5584,12 @@ nav.navbar {
   margin-top: 2rem; }
 
 #post-369 h2 {
-  background: url(images/strip_mdlight.png) no-repeat center top;
   color: #364B7F;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: .3rem;
+  margin-top: 0;
   padding: .8rem 1.1rem 1.1rem;
   text-align: center;
   text-transform: uppercase; }
@@ -5605,6 +5612,9 @@ nav.navbar {
           justify-content: flex-start;
   margin-bottom: 2px;
   padding: 1.5rem 0 .8rem 1.5rem; }
+  .price-item section .price-img a {
+    -ms-flex-item-align: center;
+        align-self: center; }
   .price-item section a {
     display: block; }
   .price-item section:last-child {
@@ -6087,8 +6097,7 @@ div.divaccordion {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 83.33333%;
           flex: 0 0 83.33333%;
-  max-width: 83.33333%;
-  margin-top: 1rem; }
+  max-width: 83.33333%; }
 
 .wrap-form-order {
   background-image: url(images/frame.png);
@@ -6619,14 +6628,17 @@ div.divaccordion {
 #footer {
   background: url(images/bg_footer.png) no-repeat left top #4668BB;
   color: #fff;
-  margin-top: -4rem; }
+  margin-top: -3rem; }
   #footer .footer-content h4 {
     font-size: 1.35rem;
     font-weight: 400;
     margin-bottom: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    padding-top: 3rem;
     text-transform: uppercase;
     width: 100%; }
+    #footer .footer-content h4 + p {
+      margin-bottom: 0; }
   #footer .footer-content .form-bar {
     display: -webkit-box;
     display: -ms-flexbox;
