@@ -5849,6 +5849,8 @@ div.divaccordion {
   .article-links .media-body p {
     margin-right: .5rem;
     text-align: left; }
+    .article-links .media-body p > a {
+      font-size: smaller; }
 
 .type-article .breadcrumbs span:nth-child(3) {
   display: none; }

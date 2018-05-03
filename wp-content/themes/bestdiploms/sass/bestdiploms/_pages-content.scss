@@ -313,6 +313,9 @@ div.divaccordion  {
         p {
             margin-right: .5rem;
             text-align: left;
+            & > a {
+                font-size: smaller;
+            }
         }
     }
 }

@@ -302,7 +302,7 @@
 							<p>
 
 								<?php $content = get_the_content();
-									$trimmed_content = wp_trim_words( $content, 18, '<a href="'. get_permalink() .'"> далее></a>' );
+									$trimmed_content = wp_trim_words( $content, 25, '<a href="'. get_permalink() .'"> ... далее >></a>' );
 									echo $trimmed_content; 
 								?>
 
@@ -467,14 +467,22 @@
 				<?php the_content(); ?>
 
 				<p class="sm-text">Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
-
-				<p class="sm-text">Также звоните нам по телефонному номеру <span class="tel-num"><a href="tel:+79266318176"> <?php echo $mytheme['phone']; ?>.</a></span></p>
+				<p class="sm-text">Также звоните нам по телефонным номерам:<br>
+					<span class="tel-num"><a href="<?php echo 'tel:' . $mytheme['phone-1']; ?>"> <?php echo $mytheme['phone1']; ?></a></span><br>
+					<span>(бесплатно со всех номеров)</span><br>
+					<span class="tel-num"><a href="<?php echo 'tel:' . $mytheme['phone-2']; ?>"> <?php echo $mytheme['phone2']; ?>.</a></span>
+				</p>
 
 				<?php wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
 						'after'  => '</div>',
 					) );
 				?>
+
+				<p class="sm-text">Наш офис:</p>
+				<div class="our-office d-flex justify-content-center">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=glJbquSLwU6Mz4u0kAMxhG9P_XuELL_y&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+				</div>
 
 			</div><!-- .entry-content -->
 	    </div><!-- .row -->  	 

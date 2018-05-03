@@ -12,7 +12,10 @@
 class ControlPanel {
 // Устанавливаем значения по умолчанию
 var $default_settings = array(
- 'phone' => '+7-926-631-81-76',
+ 'phone1' => ' 8-800 511-71-60',
+ 'phone-1' => '88005117160',
+ 'phone2' => '+7-926-631-81-76',
+ 'phone-2' => '+79266318176',
  'email' => 'bestdiplomy@gmail.com'
  );
  var $options;
@@ -31,7 +34,10 @@ var $default_settings = array(
  // Сохраняем значения формы с настройками 
  function optionsmenu() {
  if ($_POST['ss_action'] == 'save') {
- $this->options["phone"] = $_POST['cp_phone'];
+ $this->options["phone1"] = $_POST['cp_phone1'];
+ $this->options["phone-1"] = $_POST['cp_phone-1'];
+ $this->options["phone2"] = $_POST['cp_phone2'];
+ $this->options["phone-2"] = $_POST['cp_phone-2'];
  $this->options["email"] = $_POST['cp_email'];
  $this->options["facebook"] = $_POST['cp_facebook'];
  $this->options["vkontakte"] = $_POST['cp_vkontakte'];
@@ -48,7 +54,10 @@ var $default_settings = array(
  <b>Настройки темы</b>
  <br />
  <h3>Контакты</h3>
- <p><input placeholder="Телефон" style="width:300px;" name="cp_phone" id="cp_phone" value="'.$this->options["phone"].'"><label> - телефон</label></p>
+ <p><input placeholder="Телефон" style="width:300px;" name="cp_phone1" id="cp_phone1" value="'.$this->options["phone1"].'"><label> - телефон на странице сайта</label></p>
+ <p><input placeholder="Телефон для дозвона" style="width:300px;" name="cp_phone-1" id="cp_phone-1" value="'.$this->options["phone-1"].'"><label> - телефон для дозвона</label></p>
+ <p><input placeholder="Телефон" style="width:300px;" name="cp_phone2" id="cp_phone2" value="'.$this->options["phone2"].'"><label> - телефон на странице сайта</label></p>
+ <p><input placeholder="Телефон для дозвона" style="width:300px;" name="cp_phone-2" id="cp_phone-2" value="'.$this->options["phone-2"].'"><label> - телефон для дозвона</label></p>
  <p><input placeholder="Email" style="width:300px;" name="cp_email" id="cp_email" value="'.$this->options["email"].'"><label> - email</label></p>
  <h3>Социальные сети</h3>
  <p><input placeholder="Ссылка на страницу facebook" style="width:300px;" name="cp_facebook" id="cp_facebook" value="'.$this->options["facebook"].'"><label> - facebook</label></p>
