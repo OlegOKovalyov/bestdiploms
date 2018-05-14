@@ -79,8 +79,8 @@
     font-weight: 500;
     letter-spacing: 2px;
     //margin-bottom: 1rem;
-    margin-bottom: .3rem;
-    margin-top: 0;
+    margin-bottom: 0;
+    margin-top: .7rem;
     padding: .8rem 1.1rem 1.1rem;
     text-align: center;
     text-transform: uppercase;
@@ -100,7 +100,7 @@
         border: 1px solid $title-prices-bg;
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         padding: 1.5rem 0 .8rem 1.5rem;
         .price-img {
             a {
@@ -111,7 +111,7 @@
             display: block;
         }
         &:last-child {
-            margin-bottom: 2rem !important;
+            //margin-bottom: 2rem !important;
         }
     }
     div.price-props {
@@ -213,6 +213,12 @@
 
 /* Стилизуем содержимое страницы Вопросы и ответы */
 // Accordion
+.tel-num a {
+    color: $dark-grey-text;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: .2rem;
+}
 div.divaccordion  {
     margin-top: 2rem;
     .card {
@@ -250,8 +256,8 @@ div.divaccordion  {
                 }
                 a i {
                     position: absolute;
-                    right: 5%;
-                    top: 1rem;
+                    right: 2%;
+                    top: 13%;
                 }               
             }
         }
@@ -315,6 +321,7 @@ div.divaccordion  {
             text-align: left;
             & > a {
                 font-size: smaller;
+                font-style: italic;
             }
         }
     }
@@ -602,7 +609,7 @@ div.divaccordion  {
     .price-item {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-top: 2rem;
         margin-bottom: 2.5rem;
         .all-video {

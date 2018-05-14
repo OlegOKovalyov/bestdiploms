@@ -11,12 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<!-- Вывод карусель (CPT 'study') на Главной странице -->
-	<?php if( function_exists( 'fp_carousel' ) ) echo fp_carousel(); ?>
 	<!-- Вывод документов (CPT 'article') на странице одного документа (по ссылке из левого primary сайдбара) -->
-
 	<div class="row">
-		<div class="entry-content col-lg-12">
+		<div class="entry-content col-lg-9">
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			<h1><?php the_title() ?></h1>
 
@@ -33,9 +30,9 @@
 
 		</div><!-- .entry-content . col-lg-9 -->
 
-		<!-- <div class="col-lg-3 sb-secondry">
-			<?php //get_sidebar( 'right-plus' ); ?>
-	    </div> -->
+		<div class="col-lg-3 sb-secondry">
+			<?php get_sidebar( 'right-plus' ); ?>
+	    </div>
     </div><!-- .row -->  
 		
 	<?php if ( get_edit_post_link() ) : ?>

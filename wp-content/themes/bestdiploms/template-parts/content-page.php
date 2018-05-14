@@ -32,6 +32,7 @@
 	<?php elseif ( 369 == get_the_ID() ) : ?>
 
 		<!-- Вывод CPT study (Документы) на странице Цены -->
+		<div class="row">
 	    <div class="entry-content col-lg-12">
 
 			<?php if ( function_exists( 'four_essences' ) ) four_essences(); ?>
@@ -54,39 +55,39 @@
 
 			<div class="row">
 				<h2><?php the_title() ?></h2>
-				<div class="study-cats-item col">
+					<div class="study-cats-item col-12">
 
-					<?php $extra_studyid = get_the_ID(); ?>
+						<?php $extra_studyid = get_the_ID(); ?>
 
-				    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
-				    <?php $args = array(
-				        	'order'			 => 'DESC',
-				        	//'post_parent__in' => array( 429, 454, 554, 565 ),
-				        	'post_parent'	 => $extra_studyid,
-				        	//'orderby'		 => 'parent',
-				        	'orderby'		 => 'date',
-				            'post_type' 	 => 'study',
-				            'posts_per_page' => -1,
-				            'category_name'  => 'education-kind', // Все виды образования
-			        		);  
-			        $extra_loop = new WP_Query( $args );
-			        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
-				        $post_id = $post->ID; // Current CPT 
-				    ?>
+					    <!-- Displaying the Custom Post 'study' on Price Page (can display anywhere). --> 
+					    <?php $args = array(
+					        	'order'			 => 'DESC',
+					        	//'post_parent__in' => array( 429, 454, 554, 565 ),
+					        	'post_parent'	 => $extra_studyid,
+					        	//'orderby'		 => 'parent',
+					        	'orderby'		 => 'date',
+					            'post_type' 	 => 'study',
+					            'posts_per_page' => -1,
+					            'category_name'  => 'education-kind', // Все виды образования
+				        		);  
+				        $extra_loop = new WP_Query( $args );
+				        if ( $extra_loop->have_posts() ) : while ( $extra_loop->have_posts() ) : $extra_loop->the_post();
+					        $post_id = $post->ID; // Current CPT 
+					    ?>
 
-					<div class="price-item">
+						<div class="price-item">
 
-				    	<?php while(  $post->ID  == $post_id ) { ?>
-					
-							<?php $in_args = array(
-						        	'order'			 => 'ASC',
-						        	'post_parent'	 => $post_id,
-									'orderby'		 => 'menu_order',						        
-						        	'orderby'		 => 'parent',
-						            'post_type' 	 => 'study',
-						            'posts_per_page' => -1,
-						            'category_name'  => 'education-kind', // Вид категории Образование (например, Диплом бакалавра, Диплом магистра)
-							    ); 		
+					    	<?php while(  $post->ID  == $post_id ) { ?>
+						
+								<?php $in_args = array(
+							        	'order'			 => 'ASC',
+							        	'post_parent'	 => $post_id,
+										'orderby'		 => 'menu_order',						        
+							        	'orderby'		 => 'parent',
+							            'post_type' 	 => 'study',
+							            'posts_per_page' => -1,
+							            'category_name'  => 'education-kind', // Вид категории Образование (например, Диплом бакалавра, Диплом магистра)
+								); 		
 
 								$in_loop = new WP_Query( $in_args );
 				        		if ( $in_loop->have_posts() ) : while ( $in_loop->have_posts() ) : $in_loop->the_post();
@@ -124,30 +125,28 @@
 									    </div><!-- .price-props -->
 							    	</section>
 
-								<?php  } else { /*echo '<p>empty</p>'; */ } ?>						    	
-			        
-						<?php endwhile; endif; } ?>
+								<?php  } else { /*echo '<p>empty</p>'; */ } ?>	
+							<?php endwhile; endif; } ?>
 
-					</div><!-- .price-item -->
+						</div><!-- .price-item -->
 
-				<?php endwhile; endif; //wp_reset_postdata(); ?>  
+					<?php endwhile; endif; //wp_reset_postdata(); ?>  
+					<?php //the_content();
+					      //echo $price_text;
+				
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
+						'after'  => '</div>',
+					) ); 
+					?>
 
-				<?php //the_content();
-				      //echo $price_text;
-			
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bestdiploms' ),
-					'after'  => '</div>',
-				) ); 
-				?>
+					</div><!-- .study-cats-item -->
 
-				</div><!-- .study-cats-item -->
+				</div><!-- .row -->
 
-			</div><!-- .row -->
-
-			<?php endwhile; endif; wp_reset_postdata(); echo $price_text; ?>
-
-		</div><!-- .entry-content -->
+				<?php endwhile; endif; wp_reset_postdata(); echo $price_text; ?>
+			</div><!-- .entry-content -->
+		</div><!-- .row -->
 
 
 	<!-- 376: Оплата и доставка, Степени защиты документов -->
@@ -172,6 +171,7 @@
 
 	<!-- 212: Вопросы и ответы -->
 	<?php elseif ( 212 == get_the_ID() ) : ?>
+		<?php global $mytheme; ?>
 
 		<!-- Вывод вопросов и ответов (CPT 'faqposts') на странице Вопросы и ответы -->
 		<div class="row">
@@ -180,6 +180,15 @@
 				<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 				<h1><?php the_title() ?></h1>		
 				<?php the_content(); ?>
+
+				<p class="sm-text">Вы можете написать нам на адрес электронной почты <span class="addr-email"><a href="mailto:bestdiplomy@gmail.com"><?php echo $mytheme['email']; ?></a></span></p>
+				<p class="sm-text">Также задать любой вопрос можно по указанным телефонным номерам:<br>
+					<span class="tel-num"><a href="<?php echo 'tel:' . $mytheme['phone-1']; ?>"> <?php echo $mytheme['phone1']; ?></a></span><br>
+					<span>(бесплатно со всех номеров)</span><br>
+					<span class="tel-num"><a href="<?php echo 'tel:' . $mytheme['phone-2']; ?>"> <?php echo $mytheme['phone2']; ?>.</a></span>
+				</p>
+
+
 				<div id="accordion" class="divaccordion" role="tablist">
 
 				    <?php 
@@ -188,7 +197,7 @@
 				        $args = array(
 				        	'order'			 	=> 'DESC',
 				            'post_type' 		=> 'faqposts',
-				            'posts_per_page' => 3, // Вывод кол-ва постов на страницу (меняем)
+				            'posts_per_page' => 10, // Вывод кол-ва постов на страницу (меняем)
             				'paged' => $ourCurrentPage,
 				        );  
 				        $your_loop = new WP_Query( $args ); 
@@ -282,7 +291,7 @@
 				        $args = array(
 				        	'order'			 	=> 'DESC',
 				            'post_type' 		=> 'article',
-				            'posts_per_page' => 2, // Вывод кол-ва постов на страницу (меняем)
+				            'posts_per_page' => 10, // Вывод кол-ва постов на страницу (меняем)
             				'paged' => $ourCurrentPage,
 				        );  
 				        $your_loop = new WP_Query( $args ); 
@@ -353,7 +362,7 @@
 				        $args = array(
 				        	'order'			 	=> 'DESC',
 				            'post_type' 		=> 'reviews',
-				            'posts_per_page' => 3, // Вывод кол-ва постов на страницу (меняем)
+				            'posts_per_page' => 10, // Вывод кол-ва постов на страницу (меняем)
             				'paged' => $ourCurrentPage,
 				            //'category_name' 	=> 'faq', 
 				        );  
@@ -421,7 +430,8 @@
 			    <div class="cities-links">	    
 			     
 				    <?php $cities_args = array(
-				    	'order'			 => 'ASC',
+				    	'order'		=> 'ASC',
+				    	'orderby'	=> 'title',
 				        'post_type' => 'cities',
 				        'posts_per_page' => -1,
 				    ); ?>

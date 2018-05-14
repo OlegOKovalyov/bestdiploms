@@ -291,7 +291,7 @@ function studies_in_sidebars() { ?>
 		        //'orderby'		 => 'parent',		    	
 		        'post_type' => 'study',
 		        'posts_per_page' => -1,
-		        //'category_name' => 'education-cat', // Если убрать выводятся все дочерние категории к категории 141:Все документы об образовании 
+		        'category_name' => 'education-cat', // Если убрать выводятся все дочерние категории к категории 141:Все документы об образовании 
 		    ); ?>
 
 		    <?php 
@@ -364,7 +364,8 @@ function reviews_in_sidebars() {
 							<p class="rev-item-text">
 								<?php $content = get_the_content();
 									$trimmed_content = wp_trim_words( $content, 7, ' ...' );
-									echo '<a href="'. get_permalink() .'">' . $trimmed_content . '</a>'; 
+									//echo '<a href="'. get_permalink() .'">' . $trimmed_content . '</a>'; 
+									echo '<a href="'. home_url() . '/otzyvy/' .'">' . $trimmed_content . '</a>'; 
 								?>
 							</p>
 						</div><!-- .rev-props-in -->
