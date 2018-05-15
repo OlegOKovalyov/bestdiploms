@@ -106,7 +106,7 @@
 									<h3 class="doc-item-title"><?php the_title(); ?></h3>
 									<section>
 										<div class="price-img col-4 d-flex justify-content-center">
-									        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
+									        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>">
 											            <?php if ( has_post_thumbnail() ) {
 											                the_post_thumbnail( array( 215, 128 ) );
 											            } ?>

@@ -50,10 +50,10 @@ function fp_carousel() {
 				        ?>
 
 						<div class="doc-item">
-					    	<!-- contents of Your Post -->
+					    	<!-- content of the Post -->
 					        <h4 class="doc-item-title"><?php echo $newtext ?></h4>
 					        <p class="doc-item-year"><?php echo $value1; ?></p>
-					        <a href="#" target="_blank" rel="noopener">
+					        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
 					            <?php if ( has_post_thumbnail() ) {
 					                the_post_thumbnail( array( 280, 128 ) );
 					            } ?>
@@ -121,7 +121,7 @@ function other_study_carousel( $cat_arg ) {
 				    	<!-- content of the Post -->
 				        <h4 class="doc-item-title"><?php echo $newtext ?></h4>
 				        <p class="doc-item-year"><?php echo $value1; ?></p>
-				        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>">
+				        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox data-caption="<?php the_title() ?>">
 				            <?php if ( has_post_thumbnail() ) {
 				                the_post_thumbnail( array( 280, 128 ) );
 				            } ?>
