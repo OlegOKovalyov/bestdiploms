@@ -5488,16 +5488,6 @@ nav.navbar {
     font-weight: 500;
     margin-top: .3rem;
     margin-bottom: 0; }
-  .owl-item .doc-item a.fbic {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .owl-item .doc-item a.fbic img {
-      width: unset;
-      max-width: 100%; }
   .owl-item .doc-item p.doc-price-tpgrf {
     font-weight: 500; }
   .owl-item .doc-item a.btn.btn-danger {
@@ -5514,7 +5504,7 @@ nav.navbar {
     padding: 0.3rem 0;
     margin: 0 auto;
     margin-bottom: -1.5rem;
-    width: 65%; }
+    width: 80%; }
     .owl-item .doc-item a.btn.btn-danger i.fa {
       color: #BD1818;
       margin: .5rem 0; }
@@ -6380,10 +6370,6 @@ div.divaccordion {
   width: 40%; }
   .fancybox-stage #contact_form_pop1 .form-oder p:last-child {
     text-align: center; }
-  .fancybox-stage #contact_form_pop1 .wpcf7-response-output {
-    color: #398f14; }
-  .fancybox-stage #contact_form_pop1 .wpcf7-validation-errors {
-    color: yellow; }
 
 /* Левый сайдбар */
 .col-sidebar-primary {
@@ -6650,7 +6636,7 @@ div.divaccordion {
   background: url(images/bg_footer.png) no-repeat left top #4668BB;
   color: #fff;
   margin-top: -3rem; }
-  #footer .footer-content p.h4 {
+  #footer .footer-content h4 {
     font-size: 1.35rem;
     font-weight: 400;
     margin-bottom: 0;
@@ -6658,7 +6644,7 @@ div.divaccordion {
     padding-top: 3rem;
     text-transform: uppercase;
     width: 100%; }
-    #footer .footer-content p.h4 + p {
+    #footer .footer-content h4 + p {
       margin-bottom: 0; }
   #footer .footer-content .form-bar {
     display: -webkit-box;
@@ -6841,7 +6827,9 @@ div.divaccordion {
   .details-body > p > a {
     min-width: 180px; }
   .page-id-485 #footer {
-    margin-top: -5rem; } }
+    margin-top: -5rem; }
+    .page-id-485 #footer form h4 {
+      margin-top: 0; } }
 
 /* lg-устройства (больше или равно 992px) */
 @media (min-width: 992px) {
@@ -7041,7 +7029,7 @@ div.divaccordion {
     height: 74px;
     width: 49px;
     position: relative;
-    top: 3rem;
+    top: 4rem;
     right: -50%; }
   .header-top .details-body > p > a {
     padding: .5rem .5rem;

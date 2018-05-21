@@ -60,7 +60,7 @@
 						<h4 class="price-item-title"><?php echo $newtext ?> <span class="price-item-year"> <?php echo ' ' . $value1; ?></span></h4>
 						<section>
 							<div class="price-props">
-						        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>">
+						        <a href="<?php echo get_the_post_thumbnail_url( $post->ID, array(580,408) ); ?>"  data-fancybox="images" data-caption="<?php the_title() ?>" title="<?php the_title() ?>">
 						            <?php if ( has_post_thumbnail() ) {
 						                //the_post_thumbnail( array( 280, 128 ) );
 						                the_post_thumbnail( array( 215, 128 ) );
