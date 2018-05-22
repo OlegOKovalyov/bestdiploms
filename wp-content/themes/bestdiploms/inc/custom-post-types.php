@@ -221,7 +221,7 @@ add_action( 'init', function() {
         'taxonomies' => ['post_tag', 'category', 'article'], // Add post tags and post categories
         //'register_meta_box_cb' => 'article_meta_box', // Register a meta box
         //'register_meta_box_cb' => 'custom_meta_box_markup', // Register a meta box        
-        'rewrite' => [ 'slug' => 'articles' ], // Change the archive page URL
+        'rewrite' => [ 'slug' => 'article' ], // Change the archive page URL
         'has_archive' => true, // Enable archive page
         'rest_base' => 'article',
         'show_in_rest' => true,

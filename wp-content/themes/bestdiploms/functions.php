@@ -558,3 +558,166 @@ function pn_get_attachment_id_from_url( $attachment_url = '' ) {
  
 	return $attachment_id;
 }
+
+// Изменяем URL страницы "ВУЗы Москвы"
+function true_301_redirect1() {
+    /* в массиве указываем все старые=>новые ссылки  */
+    $rules = array(
+        // страницы
+        array('old'=>'/ceny/vuzy-moskvy/','new'=>'/vuzy-moskvy/')
+    );
+    foreach( $rules as $rule ) :
+        // если URL совпадает с одним из указанных в массиве, то редиректим
+        if( urldecode($_SERVER['REQUEST_URI']) == $rule['old'] ) :
+            wp_redirect( site_url( $rule['new'] ), 301 );
+            exit();
+        endif;
+    endforeach;
+}
+ 
+add_action('template_redirect', 'true_301_redirect1');
+
+function true_request1( $query ){
+ 
+    $url_zapros = urldecode($_SERVER['REQUEST_URI']);
+ 
+    /* для страниц */
+    if( $url_zapros == '/vuzy-moskvy/' ){
+        $query['pagename'] = urlencode('ceny/vuzy-moskvy');
+        unset($query['name']);
+    }
+ 
+    return $query;
+}
+ 
+add_filter( 'request', 'true_request1', 9999, 1 );
+
+function true_posts_links1( $url, $post ){
+    if( !is_object( $post ) )
+        $post = get_post( $post_id );
+ 
+    $replace = $post->post_name;
+ 
+    /* замены для записей и страниц,
+        к сожалению тут только по ID замену можно сделать */
+ 
+    if( $post->ID == 422 ) 
+        $replace = 'vuzy-moskvy';
+
+    $url = str_replace($post->post_name, $replace, $url );
+    return $url;
+}
+ 
+add_filter( 'post_link', 'true_posts_links1', 'edit_files', 2 );
+add_filter( 'page_link', 'true_posts_links1', 'edit_files', 2 );
+add_filter( 'post_type_link', 'true_posts_links1', 'edit_files', 2 );
+
+
+
+// Изменяем URL страниц из левого сайдбара типа:
+// http://wpbestdiploms.loc/study/vse-dokumenty/vysshee-obrazovanie/diplom-specialista/
+// function true_301_redirect() {
+// 	/* в массиве указываем все старые=>новые ссылки  */
+// 	$rules = array(
+// 		array('old'=>'/category/без_рубрики/','new'=>'/category/Без_рубрики/'), // рубрика
+// 		array('old'=>'/контакты/','new'=>'/Контакты/'), // страница
+// 		array('old'=>'/study/vse-dokumenty/vysshee-obrazovanie/','new'=>'/хеллоу-мир/'), // запись
+// 		array('old'=>'/tag/метка/','new'=>'/tag/Метка/') // метка
+// 	);
+// 	foreach( $rules as $rule ) :
+// 		// если URL совпадает с одним из указанных в массиве, то редиректим
+// 		if( urldecode($_SERVER['REQUEST_URI']) == $rule['old'] ) :
+// 			wp_redirect( site_url( $rule['new'] ), 301 );
+// 			exit();
+// 		endif;
+// 	endforeach;
+// }
+ 
+// add_action('template_redirect', 'true_301_redirect');
+
+// function true_request( $query ){
+ 
+// 	$url_zapros = urldecode($_SERVER['REQUEST_URI']);
+ 
+// 	/* для рубрик */
+// 	if( $url_zapros == '/category/Без_рубрики/' )
+// 		$query['category_name'] = 'без_рубрики';
+ 
+// 	/* для страниц */
+// 	if( $url_zapros == '/Контакты/' ){
+// 		$query['pagename'] = urlencode('контакты');
+// 		unset($query['name']);
+// 	}
+ 
+// 	/* для записей */
+// 	if( $url_zapros == '/хеллоу-мир/' )
+// 		$query['name'] = 'study/vse-dokumenty/vysshee-obrazovanie';
+ 
+// 	/* для меток */
+// 	if( $url_zapros == '/tag/Метка/' )
+// 		$query['tag'] = 'метка';
+ 
+// 	return $query;
+// }
+ 
+// add_filter( 'request', 'true_request', 9999, 1 );
+
+// function true_posts_links( $url, $post ){
+// 	if( !is_object( $post ) )
+// 		$post = get_post( $post_id );
+ 
+// 	$replace = $post->post_name;
+ 
+// 	/* замены для записей и страниц,
+// 		к сожалению тут только по ID замену можно сделать */
+ 
+// 	if( $post->ID == 651 ) 
+// 		$replace = 'хеллоу-мир';
+// 	if( $post->ID == 12 ) 
+// 		$replace = 'Контакты';
+ 
+// 	$url = str_replace($post->post_name, $replace, $url );
+// 	return $url;
+// }
+ 
+// add_filter( 'post_link', 'true_posts_links', 'edit_files', 2 );
+// add_filter( 'page_link', 'true_posts_links', 'edit_files', 2 );
+// add_filter( 'post_type_link', 'true_posts_links', 'edit_files', 2 );
+
+/**
+ * Remove the slug from published post permalinks. Only affect our custom post type, though.
+ */
+function bestdiploms_remove_cpt_slug( $post_link, $post ) {
+    if ( 'article' === $post->post_type && 'publish' === $post->post_status || 
+    	 'cities' === $post->post_type && 'publish' === $post->post_status ||
+    	 'study' === $post->post_type && 'publish' === $post->post_status ) {
+        $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    }
+    return $post_link;
+}
+add_filter( 'post_type_link', 'bestdiploms_remove_cpt_slug', 10, 2 );
+
+/**
+ * Have WordPress match postname to any of our public post types (post, page, article, cities).
+ * All of our public post types can have /post-name/ as the slug, so they need to be unique across all posts.
+ * By default, WordPress only accounts for posts and pages where the slug is /post-name/.
+ *
+ * @param $query The current query.
+ */
+function bestdiploms_add_cpt_post_names_to_main_query( $query ) {
+	// Bail if this is not the main query.
+	if ( ! $query->is_main_query() ) {
+		return;
+	}
+	// Bail if this query doesn't match our very specific rewrite rule.
+	if ( ! isset( $query->query['page'] ) || 2 !== count( $query->query ) ) {
+		return;
+	}
+	// Bail if we're not querying based on the post name.
+	if ( empty( $query->query['name'] ) ) {
+		return;
+	}
+	// Add CPT to the list of post types WP will include when it queries based on the post name.
+	$query->set( 'post_type', array( 'post', 'page', 'article', 'cities', 'study' ) );
+}
+add_action( 'pre_get_posts', 'bestdiploms_add_cpt_post_names_to_main_query' );
