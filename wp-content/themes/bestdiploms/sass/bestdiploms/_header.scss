@@ -40,7 +40,8 @@
     /*width: 105%;*/
     &> p > a {
         display: block;
-        margin-right: 25%;
+        text-align: center;
+        //margin-right: 25%;
         //min-width: 200px;
         padding: .5rem;
         i.fa {
@@ -49,7 +50,15 @@
         }
     }
     &> p:last-child > a {
-        margin-right: 5%;
+        //margin-right: 5%;
+    }
+}
+p.details-tel {
+    span {
+        display: block;
+        font-size: .8rem;
+        margin-top: -.5rem;
+        text-align: center;
     }
 }
 

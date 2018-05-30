@@ -5,8 +5,12 @@
     }
 }
 
-/* xs (<=543px) */
-@media (max-width: 575px) {  }
+/* xs (<=575px) */
+@media (min-width: 448px) and (max-width: 575px) {  
+    body.custom-background {
+        background-position: center 2.7% !important;
+    }
+}
      
 /* sm (>=576 и <=767) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -83,6 +87,16 @@
      
 /* lg (>=992 и <=1199) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    p.details-tel {
+        & > a {
+            //display: block;
+            text-align: right;
+        }
+        & > span {
+            //display: block;
+            text-align: right;
+        }        
+    }           
     // Главная страница
     .navbar-collapse ul#menu-menu-primary-links li.menu-item a {
         padding-left: 1rem;

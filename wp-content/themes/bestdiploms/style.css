@@ -5337,13 +5337,17 @@ tbody.collapse.show {
   /*width: 105%;*/ }
   .details-body > p > a {
     display: block;
-    margin-right: 25%;
+    text-align: center;
     padding: .5rem; }
     .details-body > p > a i.fa {
       color: #D74343;
       margin-right: .3rem; }
-  .details-body > p:last-child > a {
-    margin-right: 5%; }
+
+p.details-tel span {
+  display: block;
+  font-size: .8rem;
+  margin-top: -.5rem;
+  text-align: center; }
 
 /* Navbar */
 nav.navbar {
@@ -5590,8 +5594,7 @@ nav.navbar {
           box-shadow: 0 0 20px #bbb; }
 
 #main article.page .sb-secondry {
-  text-align: center;
-  margin-top: 2rem; }
+  text-align: center; }
 
 #post-369 h2 {
   color: #364B7F;
@@ -6351,6 +6354,10 @@ div.divaccordion {
       -webkit-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in; }
 
+/* Форма НАПИШИТЕ, КАКОЙ ДОКУМЕНТ ВАС ИНТЕРЕСУЕТ в футере сайта */
+#footer .wpcf7 {
+  max-width: 100%; }
+
 /* Форма ЗАКАЗАТЬ ДИПЛОМ (полная форма) на странице Заказать диплом */
 #post-485 .wrap-kntkt-form-order .form-control {
   font-size: .8rem; }
@@ -6779,7 +6786,7 @@ div.divaccordion {
     font-size: .85rem; }
   #footer .footer-content .site-branding-footer img {
     display: block;
-    margin: 0 auto; }
+    margin-left: -1rem; }
   #footer .study-link-title a.active {
     color: #EE575A; }
     #footer .study-link-title a.active:hover {
@@ -6879,13 +6886,18 @@ div.divaccordion {
 @media only screen and (max-width: 991px) {
   /* CSS для ширины от 768px до 991px */
   body.custom-background {
-    background-position: center 1.5% !important; }
-  .header-top .details-body > p > a {
-    margin-right: 0; }
-  .header-top .navbar {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    background-position: center 2% !important; }
+  .header-top .details-body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .header-top .details-body > p > a {
+      padding-bottom: 0;
+      padding-top: 0; }
   nav.navbar #navbarNavAltMarkup ul li {
     text-align: center; }
     nav.navbar #navbarNavAltMarkup ul li > a {
@@ -6965,6 +6977,9 @@ div.divaccordion {
   .type-study h2 {
     margin-top: 3rem; }
   #post-369 .price-item section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6973,7 +6988,11 @@ div.divaccordion {
     #post-369 .price-item section a img {
       margin-bottom: .5rem; }
     #post-369 .price-item section div.price-props {
+      display: contents;
       margin-left: 0; }
+      #post-369 .price-item section div.price-props a.video-link {
+        margin-top: .5rem;
+        position: initial; }
   #post-328 h4 {
     line-height: 3;
     margin-bottom: 0;
@@ -7029,8 +7048,22 @@ div.divaccordion {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
-  #footer .footer-content .details-body-row .details-body-footer > p > a i.fa {
-    display: none; }
+  #footer .footer-content .details-body-row .details-body-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+    #footer .footer-content .details-body-row .details-body-footer p {
+      -ms-flex-item-align: center;
+          align-self: center;
+      text-align: center; }
+      #footer .footer-content .details-body-row .details-body-footer p a {
+        margin-right: 0; }
+  #footer .footer-content .details-body-row .details-body-footer > p > a {
+    margin-right: 0; }
+  #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
+    margin-right: 0; }
   #footer .footer-content .form-bar .fa {
     display: none; } }
 
@@ -7043,13 +7076,6 @@ div.divaccordion {
     position: relative;
     top: 3rem;
     right: -50%; }
-  .header-top .details-body > p > a {
-    padding: .5rem .5rem;
-    font-size: .75rem; }
-  .header-top i.fa {
-    display: none; }
-  .header-top .details-tel a {
-    font-size: .9rem; }
   .valid_goznak div.site-title {
     color: #32509B;
     font-size: 1.7rem;
@@ -7097,8 +7123,22 @@ div.divaccordion {
     padding-top: 2rem; }
     #footer .widget.widget_nav_menu {
       display: none; }
+  #footer .footer-content p.h4 {
+    margin-top: 1rem;
+    padding-top: 1rem; }
+  #footer .footer-content .details-body-row .details-body-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+    #footer .footer-content .details-body-row .details-body-footer p {
+      -ms-flex-item-align: center;
+          align-self: center;
+      text-align: center; }
+      #footer .footer-content .details-body-row .details-body-footer p a {
+        margin-right: 0; }
   #footer .footer-content .details-body-row .details-body-footer > p > a {
-    font-size: .75rem !important;
     min-width: 140px; }
   #footer .footer-content .form-bar p:last-child .btn.btn-danger {
     width: 100%; }
@@ -7108,6 +7148,14 @@ div.divaccordion {
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
   /* CSS для ширины до 575px (включительно) */
+  .header-top .details-body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   #post-6 .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
     width: 80%; }
   .wrap-form-order h4 {
@@ -7169,7 +7217,6 @@ div.divaccordion {
   #footer .footer-content .form-bar p:last-child .btn.btn-danger {
     font-size: .7rem;
     letter-spacing: 0;
-    padding-left: 6px;
     width: 88%; }
   #footer .details-body-footer > p > a {
     font-size: .75rem; }
@@ -7197,19 +7244,13 @@ div.divaccordion {
       margin-bottom: .1rem; } }
 
 /* размер (<=482px) */
-@media (max-width: 482px) {
-  .header-top .details-body > p:last-child > a {
-    display: none; } }
-
 /* размер (<=448px) */
 @media (max-width: 448px) {
   /* CSS для ширины до 448px (включительно) */
   body.custom-background {
-    background-position: center 2% !important; }
+    background-position: center 2.5% !important; }
   body.page-id-369.custom-background {
     background-position: center 1% !important; }
-  .header-top .details-body > p:last-child > a {
-    display: none; }
   .wrap-faq-form-order .form-oder,
   .wrap-kntkt-form-order .form-oder,
   .wrap-rev-form-order .form-oder {
@@ -7254,17 +7295,23 @@ div.divaccordion {
       padding-top: 0; }
   #sidebar-primary .study-cats p.widget-title {
     width: 130%; }
-  #footer .footer-content h4 {
+  #footer .footer-content p.h4 {
     font-size: 1rem; }
-  #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
-    display: none; }
-  #footer form {
-    display: none; }
+  #footer .footer-content .form-bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #footer .footer-content .form-bar p {
+      width: 100%; }
+  #footer .footer-content .form-bar p:last-child {
+    width: 70%;
+    -ms-flex-item-align: center;
+        align-self: center; }
+    #footer .footer-content .form-bar p:last-child i.fa {
+      display: inline-block; }
   #footer .footer-widget-row {
-    display: none; }
-  #footer .details-body-footer {
-    margin-top: 2rem;
-    margin-left: 1rem; } }
+    display: none; } }
 
 /* размер (<=320px) */
 @media (max-width: 320px) {
@@ -7279,7 +7326,11 @@ div.divaccordion {
   #footer .footer-content .details-body-row .details-body-footer > p > a {
     min-width: 130px; } }
 
-/* xs (<=543px) */
+/* xs (<=575px) */
+@media (min-width: 448px) and (max-width: 575px) {
+  body.custom-background {
+    background-position: center 2.7% !important; } }
+
 /* sm (>=576 и <=767) */
 /* md (>=768 и <=991) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -7333,6 +7384,10 @@ div.divaccordion {
 
 /* lg (>=992 и <=1199) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  p.details-tel > a {
+    text-align: right; }
+  p.details-tel > span {
+    text-align: right; }
   .navbar-collapse ul#menu-menu-primary-links li.menu-item a {
     padding-left: 1rem;
     padding-right: 1rem; }

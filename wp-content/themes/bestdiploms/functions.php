@@ -689,8 +689,7 @@ add_filter( 'post_type_link', 'true_posts_links1', 'edit_files', 2 );
  */
 function bestdiploms_remove_cpt_slug( $post_link, $post ) {
     if ( 'article' === $post->post_type && 'publish' === $post->post_status || 
-    	 'cities' === $post->post_type && 'publish' === $post->post_status ||
-    	 'study' === $post->post_type && 'publish' === $post->post_status ) {
+    	 'cities' === $post->post_type && 'publish' === $post->post_status ) {
         $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
     }
     return $post_link;
@@ -718,6 +717,6 @@ function bestdiploms_add_cpt_post_names_to_main_query( $query ) {
 		return;
 	}
 	// Add CPT to the list of post types WP will include when it queries based on the post name.
-	$query->set( 'post_type', array( 'post', 'page', 'article', 'cities', 'study' ) );
+	$query->set( 'post_type', array( 'post', 'page', 'article', 'cities' ) );
 }
 add_action( 'pre_get_posts', 'bestdiploms_add_cpt_post_names_to_main_query' );

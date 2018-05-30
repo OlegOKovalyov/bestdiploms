@@ -22,16 +22,28 @@
 @media only screen and  (max-width: 991px) {
   /* CSS для ширины от 768px до 991px */
     body.custom-background {
-        background-position: center 1.5% !important;
+        background-position: center 2% !important;
     }
     .header-top {
-        .details-body > p > a {
-            margin-right: 0;
-        }
-        .navbar {
-            justify-content: flex-end;
-        }
-    }
+        .details-body {
+            align-items: center;            
+            flex-direction: column;
+            & > p {
+                & > a {
+                    padding-bottom: 0;
+                    padding-top: 0;
+                }
+            }
+        } 
+    }    
+    // .header-top {
+    //     .details-body > p > a {
+    //         margin-right: 0;
+    //     }
+    //     .navbar {
+    //         justify-content: flex-end;
+    //     }
+    // }
     nav.navbar #navbarNavAltMarkup ul { 
         li {
             text-align: center;
@@ -120,13 +132,19 @@
     }
     #post-369 { // Страница Цены
         .price-item section {
+            align-items: center;
             flex-direction: column;
             padding-left: .5rem;
             a img {
                 margin-bottom: .5rem;
             }
             div.price-props {
+                display: contents;
                 margin-left: 0;
+                a.video-link {
+                    margin-top: .5rem;
+                    position: initial;                    
+                }
             }
         }
     }
@@ -200,8 +218,25 @@
             justify-content: space-around;
         } 
     }
+    #footer .footer-content .details-body-row .details-body-footer {
+        flex-direction: column;
+        width: 100%;
+        p {
+            align-self: center;
+            text-align: center;
+            a {
+                margin-right: 0;
+            }
+        }
+    }     
+    #footer .footer-content .details-body-row .details-body-footer > p > a {
+        margin-right: 0;
+    }
+    #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
+        margin-right: 0;
+    }
     #footer .footer-content .details-body-row .details-body-footer > p > a i.fa {
-        display: none;
+        //display: none;
     }
     #footer .footer-content .form-bar .fa {
         display: none;
@@ -224,16 +259,16 @@
     }
     .header-top {
         .details-body > p > a {
-            padding: .5rem .5rem;            
+            //padding: .5rem .5rem;            
             //font-size: .85rem;
-            font-size: .75rem;            
+            //font-size: .75rem;            
             //margin-right: 0;
         }
          i.fa {
-             display: none;
+             //display: none;
          }        
         .details-tel a {
-            font-size: .9rem;
+            //font-size: .9rem;
         }
     }
     .valid_goznak {
@@ -311,8 +346,23 @@
             display: none;
         }
     }
+    #footer .footer-content p.h4 {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    #footer .footer-content .details-body-row .details-body-footer {
+        flex-direction: column;
+        width: 100%;
+        p {
+            align-self: center;
+            text-align: center;
+            a {
+                margin-right: 0;
+            }
+        }
+    }    
     #footer .footer-content .details-body-row .details-body-footer > p > a {
-        font-size: .75rem !important;
+        //font-size: .75rem !important;
         min-width: 140px;
     }
     #footer .footer-content .form-bar p:last-child .btn.btn-danger {
@@ -328,6 +378,19 @@
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
   /* CSS для ширины до 575px (включительно) */
+    .header-top {
+        .details-body {
+            align-items: center;            
+            flex-direction: column;
+        } 
+    }
+    .header-topper {
+        .site-branding {
+            .custom-logo-link > img {
+                //top: 7rem;
+            }
+        }
+    }      
     #post-6, { // Главная страница
         .wpcf7-form-control.wpcf7-submit.btn.btn-danger {
             width: 80%;
@@ -424,7 +487,7 @@
             p:last-child .btn.btn-danger {
                 font-size: .7rem;
                 letter-spacing: 0;
-                padding-left: 6px;
+                //padding-left: 6px;
                 width: 88%;
             }
         }
@@ -452,6 +515,17 @@
             }
         }
     }
+    // #footer .footer-content .details-body-row .details-body-footer {
+    //     flex-direction: column;
+    //     width: 100%;
+    //     p {
+    //         align-self: center;
+    //         text-align: center;
+    //         a {
+    //             margin-right: 0;
+    //         }
+    //     }
+    // }
     #footer .footer-content .details-body-row p.smallp {
         margin-left: 10px;
         margin-right: 10px;
@@ -481,7 +555,7 @@
 @media (max-width: 482px) {
     .header-top {
         .details-body > p:last-child > a {
-            display: none;
+            //display: none;
         }
     }
 }
@@ -490,14 +564,14 @@
 @media (max-width: 448px) {
   /* CSS для ширины до 448px (включительно) */
     body.custom-background {
-        background-position: center 2% !important;
+        background-position: center 2.5% !important;
     }
     body.page-id-369.custom-background {
         background-position: center 1% !important;
     }    
     .header-top {
         .details-body > p:last-child > a {
-            display: none;
+            //display: none;
         }
     }
     .wrap-faq-form-order,
@@ -548,22 +622,39 @@
     #sidebar-primary .study-cats p.widget-title {
         width: 130%;
     }   
-    #footer .footer-content h4 {
+    #footer .footer-content p.h4 {
         font-size: 1rem;
     }
+    .page-id-328 div.wpcf7, 
+    .page-id-487 div.wpcf7 {
+        //max-width: 100%;
+    }
+    #footer .footer-content .form-bar {
+        flex-direction: column;
+        p {
+            width: 100%;
+        }
+    }
+    #footer .footer-content .form-bar p:last-child {
+        width: 70%;
+        align-self: center;
+        i.fa {
+            display: inline-block;
+        }
+    }
     #footer .footer-content .details-body-row .details-body-footer > p:last-child > a {
-        display: none;
+        //display: none;
     }
     #footer {
         form {
-            display: none;
+            //display: none;
         }
         .footer-widget-row {
             display: none;
         }
         .details-body-footer {
-            margin-top: 2rem;
-            margin-left: 1rem;
+            //margin-top: 2rem;
+            //margin-left: 1rem;
         }
     }
 }
